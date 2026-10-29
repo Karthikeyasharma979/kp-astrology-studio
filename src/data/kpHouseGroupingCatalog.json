@@ -1,0 +1,4305 @@
+[
+  {
+    "cusp": 1,
+    "category": "1st Cusp (Lagna / Self / Health / Longevity)",
+    "subjectsCount": 5,
+    "totalEvents": 30,
+    "subjects": [
+      {
+        "subject": "LAGNA LORD",
+        "eventsCount": 5,
+        "events": [
+          {
+            "id": "kp.c1.t0.r3.1",
+            "event": "Very Strong Lagna Lord",
+            "srNo": "1",
+            "houses": [
+              2,
+              3,
+              9,
+              10,
+              11,
+              4
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t0.r4.2",
+            "event": "Middle Strength Lagna Lord",
+            "srNo": "2",
+            "houses": [
+              2,
+              3,
+              9,
+              10,
+              11,
+              4
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t0.r5.3",
+            "event": "Weak Lagna Lord - 1",
+            "srNo": "3",
+            "houses": [
+              2,
+              3,
+              9,
+              10,
+              11,
+              4
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t0.r6.4",
+            "event": "Weak Lagna Lord - 2",
+            "srNo": "4",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t0.r7.5",
+            "event": "Very Weak Lagna Lord",
+            "srNo": "5",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "LAGNA STRENGTH",
+        "eventsCount": 2,
+        "events": [
+          {
+            "id": "kp.c1.t0.r9.1",
+            "event": "Strong Lagna",
+            "srNo": "1",
+            "houses": [
+              2,
+              3,
+              10,
+              6,
+              9,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t0.r10.2",
+            "event": "Weak Lagna",
+            "srNo": "2",
+            "houses": [
+              6,
+              8,
+              12,
+              5
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "LONGEVITY",
+        "eventsCount": 3,
+        "events": [
+          {
+            "id": "kp.c1.t0.r12.1",
+            "event": "Long life (over 66 yrs)",
+            "srNo": "1",
+            "houses": [
+              1,
+              5,
+              9,
+              10,
+              3,
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t0.r13.2",
+            "event": "Middle life (up to 66 yrs)",
+            "srNo": "2",
+            "houses": [
+              1,
+              5,
+              9,
+              10,
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t0.r14.3",
+            "event": "Short life (up to 33 yrs)",
+            "srNo": "3",
+            "houses": [
+              6,
+              8,
+              2
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "HEALTH",
+        "eventsCount": 13,
+        "events": [
+          {
+            "id": "kp.c1.t0.r16.1",
+            "event": "Good Health",
+            "srNo": "1",
+            "houses": [
+              1,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t0.r17.2",
+            "event": "Ill Health",
+            "srNo": "2",
+            "houses": [
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t0.r18.3",
+            "event": "Minor disease/ sickness",
+            "srNo": "3",
+            "houses": [
+              1,
+              6,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r0.4",
+            "event": "Long disease",
+            "srNo": "4",
+            "houses": [
+              1,
+              6,
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r1.5",
+            "event": "Life long disease",
+            "srNo": "5",
+            "houses": [
+              1,
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r2.6",
+            "event": "Surgery",
+            "srNo": "6",
+            "houses": [
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r3.7",
+            "event": "Cure disease/ recovery/ escape from accident or danger",
+            "srNo": "7",
+            "houses": [
+              1,
+              5,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r4.8",
+            "event": "Treatment not effective",
+            "srNo": "8",
+            "houses": [
+              4,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r5.9",
+            "event": "Discharge from hospital",
+            "srNo": "9",
+            "houses": [
+              2,
+              4,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r6.10",
+            "event": "Accident",
+            "srNo": "10",
+            "houses": [
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r7.11",
+            "event": "Danger to life / unnatural/ accidental death",
+            "srNo": "11",
+            "houses": [
+              4,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r8.12",
+            "event": "Suicide",
+            "srNo": "12",
+            "houses": [
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r9.13",
+            "event": "Death",
+            "srNo": "13",
+            "houses": [
+              12
+            ],
+            "verificationStatus": "needs-review"
+          }
+        ]
+      },
+      {
+        "subject": "OTHER",
+        "eventsCount": 7,
+        "events": [
+          {
+            "id": "kp.c1.t1.r11.1",
+            "event": "Success in political career",
+            "srNo": "1",
+            "houses": [
+              1,
+              6,
+              9,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r12.2",
+            "event": "Failure in politics",
+            "srNo": "2",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r13.3",
+            "event": "Attainment of Siddhi initiation",
+            "srNo": "3",
+            "houses": [
+              3,
+              9,
+              10,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r14.4",
+            "event": "To be-popular",
+            "srNo": "4",
+            "houses": [
+              1,
+              10,
+              3,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r15.5",
+            "event": "To act on a decision",
+            "srNo": "5",
+            "houses": [
+              1,
+              10,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r16.6",
+            "event": "Foreign settlement",
+            "srNo": "6",
+            "houses": [
+              9,
+              3,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c1.t1.r17.7",
+            "event": "Criminative, relentless mind",
+            "srNo": "7",
+            "houses": [
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cusp": 2,
+    "category": "2nd Cusp (Wealth / Family / Speech / Assets)",
+    "subjectsCount": 3,
+    "totalEvents": 18,
+    "subjects": [
+      {
+        "subject": "WEALTH",
+        "eventsCount": 5,
+        "events": [
+          {
+            "id": "kp.c2.t1.r19.1",
+            "event": "To amass wealth/gain money/have profit",
+            "srNo": "1",
+            "houses": [
+              2,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t1.r20.2",
+            "event": "Poverty/loss of money",
+            "srNo": "2",
+            "houses": [
+              8,
+              12,
+              5
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t1.r21.3",
+            "event": "Increase in bank deposit",
+            "srNo": "3",
+            "houses": [
+              2,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t1.r22.4",
+            "event": "Independent earning",
+            "srNo": "4",
+            "houses": [
+              4,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.tracking_movable_item_search",
+            "event": "Tracking of movable item search",
+            "srNo": "MIS",
+            "houses": [
+              2,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "LEVEL OF WEALTH",
+        "eventsCount": 6,
+        "events": [
+          {
+            "id": "kp.c2.t1.r24.1",
+            "event": "No wealthధనం లేని స్థితి",
+            "srNo": "1",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t1.r25.2",
+            "event": "Some wealth",
+            "srNo": "2",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t2.r0.3",
+            "event": "Enormous wealth",
+            "srNo": "3",
+            "houses": [
+              2,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t2.r1.4",
+            "event": "Dare to do independence business",
+            "srNo": "4",
+            "houses": [
+              2,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t2.r2.5",
+            "event": "Doing independent business",
+            "srNo": "5",
+            "houses": [
+              1,
+              2,
+              7,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t2.r3.6",
+            "event": "Gain from independent business",
+            "srNo": "6",
+            "houses": [
+              2,
+              6,
+              10
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "OTHER",
+        "eventsCount": 7,
+        "events": [
+          {
+            "id": "kp.c2.t2.r5.1",
+            "event": "Separation from family",
+            "srNo": "1",
+            "houses": [
+              1,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t2.r6.2",
+            "event": "Adopt a child",
+            "srNo": "2",
+            "houses": [
+              2,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t2.r7.3",
+            "event": ".2nd marriage",
+            "srNo": "3",
+            "houses": [
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t2.r8.4",
+            "event": "Keeping a keep",
+            "srNo": "4",
+            "houses": [
+              11,
+              7
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t2.r9.5",
+            "event": "Recovery of lost property",
+            "srNo": "5",
+            "houses": [
+              2,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t2.r10.6",
+            "event": "Once for all lost of property",
+            "srNo": "6",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c2.t2.r11.7",
+            "event": "Eyes to be healthy",
+            "srNo": "7",
+            "houses": [
+              3,
+              10,
+              11,
+              2
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cusp": 3,
+    "category": "3rd Cusp (Siblings / Courage / Travel / Contracts)",
+    "subjectsCount": 1,
+    "totalEvents": 25,
+    "subjects": [
+      {
+        "subject": "OTHER",
+        "eventsCount": 25,
+        "events": [
+          {
+            "id": "kp.c3.t2.r13.1",
+            "event": "Have co-borns",
+            "srNo": "1",
+            "houses": [
+              2,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t2.r14.2",
+            "event": "Separation from younger siblings",
+            "srNo": "2",
+            "houses": [
+              2,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t2.r15.3",
+            "event": "Death of younger siblings",
+            "srNo": "3",
+            "houses": [
+              3,
+              5,
+              10
+            ],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c3.t2.r16.4",
+            "event": "Harmony with younger siblings",
+            "srNo": "4",
+            "houses": [
+              1,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t2.r17.5",
+            "event": "Enemies with younger siblings",
+            "srNo": "5",
+            "houses": [
+              6,
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t2.r18.6",
+            "event": "Discussion about adopting of child",
+            "srNo": "6",
+            "houses": [
+              2,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t2.r19.7",
+            "event": "Transfer of job",
+            "srNo": "7",
+            "houses": [
+              3,
+              12,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t2.r20.8",
+            "event": "Danger to life",
+            "srNo": "8",
+            "houses": [
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t2.r21.9",
+            "event": "Lottery Gain",
+            "srNo": "9",
+            "houses": [
+              5,
+              6,
+              11,
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t2.r22.10",
+            "event": "To be a successful Broker",
+            "srNo": "10",
+            "houses": [
+              3,
+              10,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t2.r23.11",
+            "event": "For success in personal interview",
+            "srNo": "11",
+            "houses": [
+              3,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t2.r24.12",
+            "event": "Boldness to take a job",
+            "srNo": "12",
+            "houses": [
+              2,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t2.r25.13",
+            "event": "Publishing a book",
+            "srNo": "13",
+            "houses": [
+              3,
+              11,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t3.r0.14",
+            "event": "To run newspaper etc",
+            "srNo": "14",
+            "houses": [
+              3,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t3.r1.15",
+            "event": "For journey",
+            "srNo": "15",
+            "houses": [
+              3,
+              12,
+              1
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t3.r2.16",
+            "event": "Receipt of a letter",
+            "srNo": "16",
+            "houses": [
+              3,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t3.r3.17",
+            "event": "Hearing news about a missing person",
+            "srNo": "17",
+            "houses": [
+              3,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t3.r4.18",
+            "event": "Getting a telephone",
+            "srNo": "18",
+            "houses": [
+              3,
+              9,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t3.r5.19",
+            "event": "For a successful negotiation",
+            "srNo": "19",
+            "houses": [
+              3,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t3.r6.20",
+            "event": "To make a contract,agreement",
+            "srNo": "20",
+            "houses": [
+              3,
+              12,
+              11,
+              1
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t3.r7.21",
+            "event": "Good time to sign an agreement",
+            "srNo": "21",
+            "houses": [
+              3,
+              1,
+              11,
+              7
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t3.r8.22",
+            "event": "Appointment or to meet a person",
+            "srNo": "22",
+            "houses": [
+              1,
+              3,
+              9,
+              11,
+              7
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t3.r9.23",
+            "event": "For purchase of TV, electrical goods",
+            "srNo": "23",
+            "houses": [
+              3,
+              12,
+              5,
+              1
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t3.r10.24",
+            "event": "Success in appeal",
+            "srNo": "24",
+            "houses": [
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c3.t3.r11.25",
+            "event": "Loss in appeal",
+            "srNo": "25",
+            "houses": [
+              5,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cusp": 4,
+    "category": "4th Cusp (Education / Property / Vehicles / Mother)",
+    "subjectsCount": 2,
+    "totalEvents": 21,
+    "subjects": [
+      {
+        "subject": "EDUCATION",
+        "eventsCount": 11,
+        "events": [
+          {
+            "id": "kp.c4.t3.r13.1",
+            "event": "Lower level education",
+            "srNo": "1",
+            "houses": [
+              4,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t3.r14.2",
+            "event": "Higher education",
+            "srNo": "2",
+            "houses": [
+              4,
+              9,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t3.r15.3",
+            "event": "College admission",
+            "srNo": "3",
+            "houses": [
+              4,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t3.r16.4",
+            "event": "Break education",
+            "srNo": "4",
+            "houses": [
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t3.r17.5",
+            "event": "Completion/suffer in education",
+            "srNo": "5",
+            "houses": [
+              3,
+              8,
+              5
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t3.r18.6",
+            "event": "Success in exam",
+            "srNo": "6",
+            "houses": [
+              4,
+              9,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t3.r19.7",
+            "event": "Failure in exam",
+            "srNo": "7",
+            "houses": [
+              6,
+              8,
+              12,
+              3
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t3.r20.8",
+            "event": "Success in competitive exam",
+            "srNo": "8",
+            "houses": [
+              4,
+              9,
+              11,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t3.r21.9",
+            "event": "Gain a degree with difficulties",
+            "srNo": "9",
+            "houses": [
+              8,
+              2,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t3.r22.10",
+            "event": "Gain a degree with correspondence",
+            "srNo": "10",
+            "houses": [
+              3,
+              9,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t3.r23.11",
+            "event": "No education",
+            "srNo": "11",
+            "houses": [
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "FIXED ASSETS",
+        "eventsCount": 10,
+        "events": [
+          {
+            "id": "kp.c4.t3.r25.1",
+            "event": "Own, purchase,construct house/ land (property)",
+            "srNo": "1",
+            "houses": [
+              4,
+              11,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t3.r26.2",
+            "event": "Purchase of property through loan",
+            "srNo": "2",
+            "houses": [
+              4,
+              11,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t4.r0.3",
+            "event": "Purchase of property by instalments",
+            "srNo": "3",
+            "houses": [
+              4,
+              11,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t4.r1.4",
+            "event": "Rent a property",
+            "srNo": "4",
+            "houses": [
+              4,
+              11,
+              12,
+              6,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t4.r2.5",
+            "event": "Own vehicle",
+            "srNo": "5",
+            "houses": [
+              4,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t4.r3.89",
+            "event": "Gain/Profit in business",
+            "srNo": "",
+            "houses": [
+              2,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t4.r4.90",
+            "event": "Loss in business",
+            "srNo": "",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t4.r5.91",
+            "event": "Getting partnership",
+            "srNo": "",
+            "houses": [
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t4.r6.92",
+            "event": "Having a business partner",
+            "srNo": "",
+            "houses": [
+              6,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c4.t4.r7.93",
+            "event": "Partnership breaks",
+            "srNo": "",
+            "houses": [
+              8,
+              2,
+              6,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cusp": 5,
+    "category": "5th Cusp (Children / Speculation / Love / Creativity)",
+    "subjectsCount": 3,
+    "totalEvents": 29,
+    "subjects": [
+      {
+        "subject": "CHILDREN",
+        "eventsCount": 9,
+        "events": [
+          {
+            "id": "kp.c5.t4.r9.1",
+            "event": "Pregnancy/child birth",
+            "srNo": "1",
+            "houses": [
+              5,
+              11,
+              2
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r10.2",
+            "event": "Sterility/no child",
+            "srNo": "2",
+            "houses": [
+              4,
+              10,
+              1
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r11.3",
+            "event": "Child birth denial/ abortion",
+            "srNo": "3",
+            "houses": [
+              4,
+              10,
+              1,
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r12.4",
+            "event": "Normal delivery",
+            "srNo": "4",
+            "houses": [
+              2,
+              5,
+              11,
+              3,
+              9
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r13.5",
+            "event": "Delivery by operation",
+            "srNo": "5",
+            "houses": [
+              2,
+              5,
+              11,
+              12,
+              6,
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r14.6",
+            "event": "Twin birth",
+            "srNo": "6",
+            "houses": [
+              2,
+              5,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r15.7",
+            "event": "Separation from child",
+            "srNo": "7",
+            "houses": [
+              4,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r16.8",
+            "event": "Death of child",
+            "srNo": "8",
+            "houses": [
+              4,
+              6,
+              11
+            ],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c5.t4.r17.9",
+            "event": "Adopt a child",
+            "srNo": "9",
+            "houses": [
+              4,
+              8,
+              2,
+              6,
+              10
+            ],
+            "verificationStatus": "needs-review"
+          }
+        ]
+      },
+      {
+        "subject": "LOVE AFFAIR",
+        "eventsCount": 9,
+        "events": [
+          {
+            "id": "kp.c5.t4.r19.1",
+            "event": "Have a love partner/ success in love",
+            "srNo": "1",
+            "houses": [
+              11,
+              2,
+              7
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r20.2",
+            "event": "Enjoying premarital sex",
+            "srNo": "2",
+            "houses": [
+              5,
+              12,
+              8,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r21.3",
+            "event": "Scandalous love affair",
+            "srNo": "3",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r22.4",
+            "event": "Termination of love affair",
+            "srNo": "4",
+            "houses": [
+              5,
+              6,
+              8,
+              12,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r23.5",
+            "event": "Love marriage",
+            "srNo": "5",
+            "houses": [
+              7,
+              11,
+              2
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r24.6",
+            "event": "Having an affair with one's partner",
+            "srNo": "6",
+            "houses": [
+              8,
+              5,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r25.7",
+            "event": "No marriage with a love partner",
+            "srNo": "7",
+            "houses": [
+              6,
+              12,
+              4
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t4.r26.8",
+            "event": "Inter-community marriage",
+            "srNo": "8",
+            "houses": [
+              2,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t5.r0.9",
+            "event": "Keeping a keep/ mistress",
+            "srNo": "9",
+            "houses": [
+              7,
+              11,
+              2
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "OTHER",
+        "eventsCount": 11,
+        "events": [
+          {
+            "id": "kp.c5.t5.r2.1",
+            "event": "Speculative gain",
+            "srNo": "1",
+            "houses": [
+              2,
+              5,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t5.r3.2",
+            "event": "Gambling gain",
+            "srNo": "2",
+            "houses": [
+              5,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t5.r4.114",
+            "event": "Gambling alternative / financial speculation",
+            "srNo": "",
+            "houses": [
+              8,
+              6,
+              2
+            ],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c5.t5.r5.3",
+            "event": "To be a cinema'actor",
+            "srNo": "3",
+            "houses": [
+              5,
+              10,
+              11,
+              7
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t5.r6.4",
+            "event": "To be a popular astrologer",
+            "srNo": "4",
+            "houses": [
+              5,
+              9,
+              10,
+              11,
+              2,
+              7
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t5.r7.5",
+            "event": "To learn Manthra",
+            "srNo": "5",
+            "houses": [
+              3,
+              5,
+              11,
+              4
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t5.r8.6",
+            "event": "Intelligent thinking",
+            "srNo": "6",
+            "houses": [
+              5,
+              11,
+              3,
+              9,
+              10,
+              1
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t5.r9.7",
+            "event": "Loose thinking",
+            "srNo": "7",
+            "houses": [
+              4,
+              8,
+              6,
+              1,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t5.r10.8",
+            "event": "Addiction to alcohol",
+            "srNo": "8",
+            "houses": [
+              3,
+              6,
+              2,
+              1,
+              4
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t5.r11.9",
+            "event": "Cure disease/ recovery from sickness",
+            "srNo": "9",
+            "houses": [
+              1,
+              5,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c5.t5.r12.10",
+            "event": "Treatment not effective",
+            "srNo": "10",
+            "houses": [
+              4,
+              10
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cusp": 6,
+    "category": "6th Cusp (Job / Disease / Debt / Competition)",
+    "subjectsCount": 6,
+    "totalEvents": 20,
+    "subjects": [
+      {
+        "subject": "SICKNESS/DISEASE",
+        "eventsCount": 3,
+        "events": [
+          {
+            "id": "kp.c6.t5.r14.1",
+            "event": "Small disease",
+            "srNo": "1",
+            "houses": [
+              1,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t5.r15.2",
+            "event": "Long disease",
+            "srNo": "2",
+            "houses": [
+              1,
+              6,
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t5.r16.3",
+            "event": "Life long disease",
+            "srNo": "3",
+            "houses": [
+              1,
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "JOB (SERVICE)",
+        "eventsCount": 4,
+        "events": [
+          {
+            "id": "kp.c6.t5.r18.1",
+            "event": "Joining a job/service",
+            "srNo": "1",
+            "houses": [
+              2,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t5.r19.2",
+            "event": "No job/obstacles in career",
+            "srNo": "2",
+            "houses": [
+              5,
+              8,
+              12,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t5.r20.3",
+            "event": "Promotion",
+            "srNo": "3",
+            "houses": [
+              2,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t5.r21.4",
+            "event": "Change in job",
+            "srNo": "4",
+            "houses": [
+              1,
+              5,
+              9,
+              3,
+              2,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "MONEY/WEALTH",
+        "eventsCount": 3,
+        "events": [
+          {
+            "id": "kp.c6.t5.r23.1",
+            "event": "Earn money",
+            "srNo": "1",
+            "houses": [
+              2,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t5.r24.2",
+            "event": "Loss of money",
+            "srNo": "2",
+            "houses": [
+              5,
+              7,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t5.r25.3",
+            "event": "Getting donation",
+            "srNo": "3",
+            "houses": [
+              2,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "DEBT",
+        "eventsCount": 4,
+        "events": [
+          {
+            "id": "kp.c6.t5.r27.1",
+            "event": "Having overdraft facility",
+            "srNo": "1",
+            "houses": [
+              2,
+              6,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t6.r0.2",
+            "event": "Borrowing from bank",
+            "srNo": "2",
+            "houses": [
+              2,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t6.r1.3",
+            "event": "In debt",
+            "srNo": "3",
+            "houses": [
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t6.r2.4",
+            "event": "Returning borrowed money",
+            "srNo": "4",
+            "houses": [
+              4,
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "COMPETITION",
+        "eventsCount": 2,
+        "events": [
+          {
+            "id": "kp.c6.t6.r4.1",
+            "event": "Gain in any sort of competition (Election/litigation/s ports match etc) '",
+            "srNo": "1",
+            "houses": [
+              1,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t6.r5.2",
+            "event": "Loss in competition",
+            "srNo": "2",
+            "houses": [
+              4,
+              5,
+              7,
+              8,
+              9,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "OTHER",
+        "eventsCount": 4,
+        "events": [
+          {
+            "id": "kp.c6.t6.r7.1",
+            "event": "Separation of husband and wife",
+            "srNo": "1",
+            "houses": [
+              6,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t6.r8.2",
+            "event": "Getting a tenant",
+            "srNo": "2",
+            "houses": [
+              4,
+              11,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t6.r9.3",
+            "event": "Adopt a child",
+            "srNo": "3",
+            "houses": [
+              6,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c6.t6.r10.4",
+            "event": "Purchase of cattle",
+            "srNo": "4",
+            "houses": [
+              6,
+              11,
+              5,
+              1
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cusp": 7,
+    "category": "7th Cusp (Marriage / Partnership / Business / Legal)",
+    "subjectsCount": 3,
+    "totalEvents": 33,
+    "subjects": [
+      {
+        "subject": "MARRIAGE",
+        "eventsCount": 12,
+        "events": [
+          {
+            "id": "kp.c7.t6.r12.1",
+            "event": "Marriage",
+            "srNo": "1",
+            "houses": [
+              7,
+              11,
+              2
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t6.r13.2",
+            "event": "No marriage",
+            "srNo": "2",
+            "houses": [
+              6,
+              10,
+              1,
+              12,
+              4
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t6.r14.3",
+            "event": "Delay in marriage",
+            "srNo": "3",
+            "houses": [
+              2,
+              7,
+              11,
+              4,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t6.r15.4",
+            "event": "Delay in marriage",
+            "srNo": "4",
+            "houses": [
+              1,
+              6,
+              10,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t6.r16.5",
+            "event": "Breaking of engagement",
+            "srNo": "5",
+            "houses": [
+              2,
+              7,
+              11,
+              1,
+              6,
+              10,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t6.r17.6",
+            "event": "Love marriage",
+            "srNo": "6",
+            "houses": [
+              5,
+              11,
+              7,
+              2
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t6.r18.7",
+            "event": "Inter-community marriage",
+            "srNo": "7",
+            "houses": [
+              2,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t6.r19.8",
+            "event": "Marriage to foreigner",
+            "srNo": "8",
+            "houses": [
+              5,
+              9,
+              2,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t6.r20.9",
+            "event": "Marriage to a girl of pleasurable sex",
+            "srNo": "9",
+            "houses": [
+              8,
+              5,
+              11,
+              2,
+              7
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t6.r21.10",
+            "event": "Marriage to an aged partner",
+            "srNo": "10",
+            "houses": [
+              2,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t6.r22.11",
+            "event": "Marriage to a widow",
+            "srNo": "11",
+            "houses": [
+              2,
+              7,
+              8,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r0.12",
+            "event": "Getting dowry",
+            "srNo": "12",
+            "houses": [
+              2,
+              7,
+              11,
+              8
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "SEPARATION/REUNION",
+        "eventsCount": 15,
+        "events": [
+          {
+            "id": "kp.c7.t7.r2.1",
+            "event": "Marriage and separation",
+            "srNo": "1",
+            "houses": [
+              2,
+              7,
+              11,
+              1,
+              6,
+              10,
+              12,
+              8,
+              4
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r3.2",
+            "event": "Separation after marriage",
+            "srNo": "2",
+            "houses": [
+              2,
+              7,
+              6,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r4.3",
+            "event": "Separation from partner",
+            "srNo": "3",
+            "houses": [
+              6,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r5.4",
+            "event": "Separation of husband & wife",
+            "srNo": "4",
+            "houses": [
+              1,
+              6,
+              10,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r6.5",
+            "event": "Bickering in marriage",
+            "srNo": "5",
+            "houses": [
+              6,
+              8,
+              12,
+              7
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r7.6",
+            "event": "Divorce finalized",
+            "srNo": "6",
+            "houses": [
+              1,
+              6,
+              10,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r8.7",
+            "event": "Reconciliation after separation/divorce",
+            "srNo": "7",
+            "houses": [
+              1,
+              6,
+              10,
+              12,
+              2,
+              5,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r9.8",
+            "event": "Reunion with partner",
+            "srNo": "8",
+            "houses": [
+              2,
+              7,
+              11,
+              5
+            ],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c7.t7.r10.9",
+            "event": "Early death of partner",
+            "srNo": "9",
+            "houses": [
+              1,
+              6,
+              8
+            ],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c7.t7.r11.10",
+            "event": "Death of partner",
+            "srNo": "10",
+            "houses": [
+              1,
+              6,
+              8
+            ],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c7.t7.r12.11",
+            "event": "Second marriage (more than one marriage)",
+            "srNo": "11",
+            "houses": [
+              7,
+              11,
+              2,
+              9
+            ],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c7.t7.r13.166",
+            "event": "Second marriage (Rule 2: 2nd cusp sub-lord)",
+            "srNo": "",
+            "houses": [
+              7,
+              11
+            ],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c7.t7.r14.167",
+            "event": "Second marriage (Rule 3: by Mr. Kanak)",
+            "srNo": "",
+            "houses": [
+              2,
+              9,
+              11
+            ],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c7.t7.r15.12",
+            "event": "Keeping a keep/ mistress",
+            "srNo": "12",
+            "houses": [
+              11,
+              2,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r16.13",
+            "event": "Second child birth",
+            "srNo": "13",
+            "houses": [
+              5,
+              11,
+              2,
+              7
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "BUSINESS",
+        "eventsCount": 6,
+        "events": [
+          {
+            "id": "kp.c7.t7.r18.1",
+            "event": "Joining the business",
+            "srNo": "1",
+            "houses": [
+              2,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r19.2",
+            "event": "Gain/Profit in business",
+            "srNo": "2",
+            "houses": [
+              2,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r20.3",
+            "event": "Loss in business",
+            "srNo": "3",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r21.4",
+            "event": "Getting partnership",
+            "srNo": "4",
+            "houses": [
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r22.5",
+            "event": "Having a business partner",
+            "srNo": "5",
+            "houses": [
+              6,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c7.t7.r23.6",
+            "event": "Partnership breaks",
+            "srNo": "6",
+            "houses": [
+              8,
+              2,
+              6,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cusp": 8,
+    "category": "8th Cusp (Longevity / Danger / Obstacles / Hidden Wealth)",
+    "subjectsCount": 4,
+    "totalEvents": 32,
+    "subjects": [
+      {
+        "subject": "HEALTH & LONGEVITY",
+        "eventsCount": 11,
+        "events": [
+          {
+            "id": "kp.c8.t7.r25.1",
+            "event": "Long life",
+            "srNo": "1",
+            "houses": [
+              1,
+              5,
+              9,
+              10,
+              3,
+              8
+            ],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c8.t8.r0.2",
+            "event": "Short life",
+            "srNo": "2",
+            "houses": [
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c8.t8.r1.3",
+            "event": "Danger to health",
+            "srNo": "3",
+            "houses": [
+              6,
+              8,
+              12,
+              1
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r2.4",
+            "event": "Good health/cure/ recovery/escape from accident or danger for life",
+            "srNo": "4",
+            "houses": [
+              1,
+              5,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r3.5",
+            "event": "Accident",
+            "srNo": "5",
+            "houses": [
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r4.6",
+            "event": "Accidental/ Unnatural death",
+            "srNo": "6",
+            "houses": [
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r5.7",
+            "event": "Suicide/death",
+            "srNo": "7",
+            "houses": [
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r6.8",
+            "event": "Surgery/operation",
+            "srNo": "8",
+            "houses": [
+              8,
+              6,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r7.9",
+            "event": "Calamity",
+            "srNo": "9",
+            "houses": [
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r8.10",
+            "event": "Separation of partner caused by death",
+            "srNo": "10",
+            "houses": [
+              1,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r9.11",
+            "event": "Madness or insanity",
+            "srNo": "11",
+            "houses": [
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "PROPERTY",
+        "eventsCount": 8,
+        "events": [
+          {
+            "id": "kp.c8.t8.r11.1",
+            "event": "Getting wife's property",
+            "srNo": "1",
+            "houses": [
+              8,
+              2,
+              11,
+              6,
+              7
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r12.2",
+            "event": "Getting someone's property through",
+            "srNo": "2",
+            "houses": [
+              6,
+              8,
+              11,
+              3,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r13.3",
+            "event": "Rendering wealth",
+            "srNo": "3",
+            "houses": [
+              2,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r14.4",
+            "event": "Getting gratuity, insurance etc, property of the deceased person",
+            "srNo": "4",
+            "houses": [
+              8,
+              2,
+              6,
+              11,
+              5
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r15.5",
+            "event": "Getting dowry",
+            "srNo": "5",
+            "houses": [
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r16.6",
+            "event": "Giving dowry",
+            "srNo": "6",
+            "houses": [
+              5,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r17.7",
+            "event": "Getting donation",
+            "srNo": "7",
+            "houses": [
+              2,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r18.8",
+            "event": "Giving donation",
+            "srNo": "8",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "DEBT",
+        "eventsCount": 5,
+        "events": [
+          {
+            "id": "kp.c8.t8.r20.1",
+            "event": "Getting loan",
+            "srNo": "1",
+            "houses": [
+              2,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t8.r21.2",
+            "event": "Repaying loan",
+            "srNo": "2",
+            "houses": [
+              2,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t9.r0.3",
+            "event": "Borrowing from friends A to Z , '",
+            "srNo": "3",
+            "houses": [
+              8,
+              5,
+              6,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t9.r1.4",
+            "event": "Ever borrowing",
+            "srNo": "4",
+            "houses": [
+              5,
+              8,
+              1
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t9.r2.5",
+            "event": "Free from debt",
+            "srNo": "5",
+            "houses": [
+              4,
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "OTHER",
+        "eventsCount": 8,
+        "events": [
+          {
+            "id": "kp.c8.t9.r4.1",
+            "event": "Marrying a widow",
+            "srNo": "1",
+            "houses": [
+              8,
+              2,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t9.r5.2",
+            "event": "Child adoption",
+            "srNo": "2",
+            "houses": [
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t9.r6.3",
+            "event": "Lottery gain",
+            "srNo": "3",
+            "houses": [
+              3,
+              6,
+              11,
+              2,
+              5
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t9.r7.4",
+            "event": "To become an astrologer",
+            "srNo": "4",
+            "houses": [
+              3,
+              4,
+              5,
+              9,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t9.r8.5",
+            "event": "Study to become a medical doctor",
+            "srNo": "5",
+            "houses": [
+              4,
+              9,
+              11,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t9.r9.6",
+            "event": "Having disgrace, ill reputation, spoken low in one's life",
+            "srNo": "6",
+            "houses": [
+              1,
+              5,
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t9.r10.206",
+            "event": "Dacoit (person of nuisance for others)",
+            "srNo": "",
+            "houses": [
+              5,
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c8.t9.r11.207",
+            "event": "Leader of dacoits",
+            "srNo": "",
+            "houses": [
+              2,
+              8,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cusp": 9,
+    "category": "9th Cusp (Higher Studies / Father / Abroad / Pilgrimage / Research)",
+    "subjectsCount": 1,
+    "totalEvents": 13,
+    "subjects": [
+      {
+        "subject": "OTHER",
+        "eventsCount": 13,
+        "events": [
+          {
+            "id": "kp.c9.t9.r13.1",
+            "event": "Further studies (Master, Ph.D.)",
+            "srNo": "1",
+            "houses": [
+              4,
+              9,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c9.t9.r14.2",
+            "event": "Going abroad",
+            "srNo": "2",
+            "houses": [
+              3,
+              12,
+              9
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c9.t9.r15.3",
+            "event": "Pilgrimage",
+            "srNo": "3",
+            "houses": [
+              3,
+              9,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c9.t9.r16.4",
+            "event": "Separation from father",
+            "srNo": "4",
+            "houses": [
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c9.t9.r17.5",
+            "event": "Long life of father",
+            "srNo": "5",
+            "houses": [
+              9,
+              11,
+              1,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c9.t9.r18.6",
+            "event": "Short life of father",
+            "srNo": "6",
+            "houses": [
+              8,
+              10,
+              3
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c9.t9.r19.7",
+            "event": "2nd marriage",
+            "srNo": "7",
+            "houses": [
+              2,
+              9,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c9.t9.r20.8",
+            "event": "Spiritual life & Divine worship",
+            "srNo": "8",
+            "houses": [
+              1,
+              5,
+              9,
+              11,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c9.t9.r21.9",
+            "event": "Popularity/success in politics",
+            "srNo": "9",
+            "houses": [
+              9,
+              10,
+              11,
+              2,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c9.t9.r22.10",
+            "event": "A genius in astrology",
+            "srNo": "10",
+            "houses": [
+              9,
+              10,
+              11,
+              2
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c9.t9.r23.11",
+            "event": "Leading scientist",
+            "srNo": "11",
+            "houses": [
+              9,
+              11,
+              10,
+              2,
+              3
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c9.t9.r24.12",
+            "event": "Success in research",
+            "srNo": "12",
+            "houses": [
+              9,
+              11,
+              6,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c9.t10.r0.13",
+            "event": "Inheritance of large property",
+            "srNo": "13",
+            "houses": [
+              2,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cusp": 10,
+    "category": "10th Cusp (Career / Profession / Status / Honor)",
+    "subjectsCount": 3,
+    "totalEvents": 33,
+    "subjects": [
+      {
+        "subject": "JOB (SERVICE)",
+        "eventsCount": 12,
+        "events": [
+          {
+            "id": "kp.c10.t10.r2.1",
+            "event": "Join a paid job",
+            "srNo": "1",
+            "houses": [
+              10,
+              6,
+              2,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r3.2",
+            "event": "Promotion",
+            "srNo": "2",
+            "houses": [
+              2,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r4.3",
+            "event": "Promotion with transfer",
+            "srNo": "3",
+            "houses": [
+              2,
+              3,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r5.4",
+            "event": "No change of work place",
+            "srNo": "4",
+            "houses": [
+              1,
+              4,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r6.5",
+            "event": "Promotion & overseas",
+            "srNo": "5",
+            "houses": [
+              2,
+              3,
+              6,
+              10,
+              11,
+              9,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r7.6",
+            "event": "Getting an award/ prize",
+            "srNo": "6",
+            "houses": [
+              10,
+              11,
+              6,
+              2
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r8.7",
+            "event": "Not getting a single profit",
+            "srNo": "7",
+            "houses": [
+              6,
+              2
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r9.8",
+            "event": "Change in job/ business (change in career)",
+            "srNo": "8",
+            "houses": [
+              1,
+              5,
+              9,
+              3,
+              12,
+              2,
+              6,
+              10,
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r10.9",
+            "event": "Transfer",
+            "srNo": "9",
+            "houses": [
+              3,
+              9,
+              12,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r11.10",
+            "event": "Suspension",
+            "srNo": "10",
+            "houses": [
+              1,
+              8,
+              9,
+              12,
+              5
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r12.11",
+            "event": "Reinstatement",
+            "srNo": "11",
+            "houses": [
+              2,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r13.12",
+            "event": "Retirement (loss of service)",
+            "srNo": "12",
+            "houses": [
+              1,
+              5,
+              9,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "BUSINESS",
+        "eventsCount": 5,
+        "events": [
+          {
+            "id": "kp.c10.t10.r15.1",
+            "event": "Undertaking independent business",
+            "srNo": "1",
+            "houses": [
+              10,
+              7,
+              2
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r16.2",
+            "event": "Doing both paid job and independent business",
+            "srNo": "2",
+            "houses": [
+              10,
+              6,
+              7,
+              2
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t10.r17.3",
+            "event": "Gain/success in independent business",
+            "srNo": "3",
+            "houses": [
+              2,
+              7,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r0.4",
+            "event": "Loss in business (winding up business/ break in career)",
+            "srNo": "4",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r1.5",
+            "event": "Having business partner",
+            "srNo": "5",
+            "houses": [
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "OTHER",
+        "eventsCount": 16,
+        "events": [
+          {
+            "id": "kp.c10.t11.r3.1",
+            "event": "No occupation in life",
+            "srNo": "1",
+            "houses": [
+              6,
+              10,
+              7
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r4.2",
+            "event": "Success in politics",
+            "srNo": "2",
+            "houses": [
+              9,
+              10,
+              11,
+              1,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r5.3",
+            "event": "Failure in politics",
+            "srNo": "3",
+            "houses": [
+              5,
+              8,
+              12,
+              6,
+              7
+            ],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c10.t11.r6.4",
+            "event": "To be successful in share market business",
+            "srNo": "4",
+            "houses": [
+              5,
+              10,
+              2,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r7.5",
+            "event": "Successful Astrologer",
+            "srNo": "5",
+            "houses": [
+              2,
+              9,
+              11,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r8.6",
+            "event": "Pilgrimage",
+            "srNo": "6",
+            "houses": [
+              3,
+              9,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r9.7",
+            "event": "Donation to charity",
+            "srNo": "7",
+            "houses": [
+              9,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r10.8",
+            "event": "Sale of immovable property",
+            "srNo": "8",
+            "houses": [
+              10,
+              5,
+              3
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r11.9",
+            "event": "Inheriting property",
+            "srNo": "9",
+            "houses": [
+              2,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r12.10",
+            "event": "Wife is destined to get property",
+            "srNo": "10",
+            "houses": [
+              10,
+              8,
+              5
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r13.11",
+            "event": "Earning money through illegal",
+            "srNo": "11",
+            "houses": [
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r14.12",
+            "event": "Possible death to younger brother by accident",
+            "srNo": "12",
+            "houses": [
+              10,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r15.13",
+            "event": "Loss of reputation & money/income tax trouble/ill fame",
+            "srNo": "13",
+            "houses": [
+              7,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r16.14",
+            "event": "Honourable life but materially poor",
+            "srNo": "14",
+            "houses": [
+              1,
+              3,
+              9,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r17.15",
+            "event": "Decent living",
+            "srNo": "15",
+            "houses": [
+              2,
+              6,
+              9,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c10.t11.r18.16",
+            "event": "Poor living",
+            "srNo": "16",
+            "houses": [
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cusp": 11,
+    "category": "11th Cusp (Gains / Desires / Friends / Recovery / Elder Siblings)",
+    "subjectsCount": 11,
+    "totalEvents": 51,
+    "subjects": [
+      {
+        "subject": "SAFETY",
+        "eventsCount": 3,
+        "events": [
+          {
+            "id": "kp.c11.t12.r0.1",
+            "event": "Safe from danger/ cure/ recovery",
+            "srNo": "1",
+            "houses": [
+              1,
+              5,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r1.2",
+            "event": "No cure",
+            "srNo": "2",
+            "houses": [
+              6,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r2.3",
+            "event": "Free of disease",
+            "srNo": "3",
+            "houses": [
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "PROFIT",
+        "eventsCount": 6,
+        "events": [
+          {
+            "id": "kp.c11.t12.r4.1",
+            "event": "Gain of money/ wealth",
+            "srNo": "1",
+            "houses": [
+              2,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r5.2",
+            "event": "Loss of money/ wealth",
+            "srNo": "2",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r6.3",
+            "event": "Promotion/ reinstatement/ gain in occupation",
+            "srNo": "3",
+            "houses": [
+              2,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r7.4",
+            "event": "Profit in business",
+            "srNo": "4",
+            "houses": [
+              2,
+              7,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r8.5",
+            "event": "Speculative gain",
+            "srNo": "5",
+            "houses": [
+              2,
+              5,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r9.6",
+            "event": "Lottery gain",
+            "srNo": "6",
+            "houses": [
+              2,
+              6,
+              11,
+              3
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "EDUCATION",
+        "eventsCount": 7,
+        "events": [
+          {
+            "id": "kp.c11.t12.r11.1",
+            "event": "Success in education",
+            "srNo": "1",
+            "houses": [
+              4,
+              9,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r12.2",
+            "event": "Further study (Master, Ph.D.)",
+            "srNo": "2",
+            "houses": [
+              9,
+              11,
+              3,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r13.3",
+            "event": "Getting Ph.D.",
+            "srNo": "3",
+            "houses": [],
+            "verificationStatus": "needs-review"
+          },
+          {
+            "id": "kp.c11.t12.r14.4",
+            "event": "Foreign further study",
+            "srNo": "4",
+            "houses": [
+              6,
+              9,
+              11,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r15.5",
+            "event": "Scholarship",
+            "srNo": "5",
+            "houses": [
+              2,
+              6,
+              11,
+              4
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r16.6",
+            "event": "Scholarship for higher study",
+            "srNo": "6",
+            "houses": [
+              6,
+              9,
+              11,
+              2,
+              4
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r17.7",
+            "event": "Success in interview",
+            "srNo": "7",
+            "houses": [
+              3,
+              9
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "PROPERTY",
+        "eventsCount": 8,
+        "events": [
+          {
+            "id": "kp.c11.t12.r19.1",
+            "event": "Purchase of property",
+            "srNo": "1",
+            "houses": [
+              6,
+              9,
+              4,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r20.2",
+            "event": "Construction of Several houSes",
+            "srNo": "2",
+            "houses": [
+              4,
+              11,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r21.3",
+            "event": "Leasing a property (building/land/ mines)",
+            "srNo": "3",
+            "houses": [
+              6,
+              11,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r22.4",
+            "event": "Getting a tenant",
+            "srNo": "4",
+            "houses": [
+              9,
+              4
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t12.r23.5",
+            "event": "Vacating by tenant",
+            "srNo": "5",
+            "houses": [
+              8,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r0.6",
+            "event": "Recovery of lost property",
+            "srNo": "6",
+            "houses": [
+              2,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r1.7",
+            "event": "No recovery of lost property/theft",
+            "srNo": "7",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r2.8",
+            "event": "Getting hidden treasure under earth",
+            "srNo": "8",
+            "houses": [
+              4,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "CHILDREN",
+        "eventsCount": 3,
+        "events": [
+          {
+            "id": "kp.c11.t13.r4.1",
+            "event": "Getting child",
+            "srNo": "1",
+            "houses": [
+              5,
+              2,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r5.2",
+            "event": "No child",
+            "srNo": "2",
+            "houses": [
+              10,
+              4,
+              1
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r6.3",
+            "event": "Safe and natural delivery",
+            "srNo": "3",
+            "houses": [
+              3,
+              5,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "COMPETITION",
+        "eventsCount": 3,
+        "events": [
+          {
+            "id": "kp.c11.t13.r8.1",
+            "event": "Success in all undertakings",
+            "srNo": "1",
+            "houses": [
+              6,
+              11,
+              1,
+              2,
+              3,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r9.2",
+            "event": "Loss in competition",
+            "srNo": "2",
+            "houses": [
+              5,
+              8,
+              12,
+              4,
+              7,
+              9
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r10.3",
+            "event": "Success in interview",
+            "srNo": "3",
+            "houses": [
+              3,
+              9
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "MARRIAGE",
+        "eventsCount": 4,
+        "events": [
+          {
+            "id": "kp.c11.t13.r12.1",
+            "event": "Success in love affair",
+            "srNo": "1",
+            "houses": [
+              5,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r13.2",
+            "event": "Grand marriage ceremony/ happy marriage",
+            "srNo": "2",
+            "houses": [
+              2,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r14.3",
+            "event": "Happy married life with mutual understanding",
+            "srNo": "3",
+            "houses": [
+              2,
+              5,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r15.4",
+            "event": "Having marriage as one desired",
+            "srNo": "4",
+            "houses": [
+              2,
+              3,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "REUNION",
+        "eventsCount": 3,
+        "events": [
+          {
+            "id": "kp.c11.t13.r17.1",
+            "event": "Reunion with husband (spouse)",
+            "srNo": "1",
+            "houses": [
+              2,
+              7,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r18.2",
+            "event": "Reunion with kith and kin",
+            "srNo": "2",
+            "houses": [
+              3,
+              9,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r19.3",
+            "event": "Return of missing person",
+            "srNo": "3",
+            "houses": [
+              2,
+              4,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "ELDER SISTER/BROTHER",
+        "eventsCount": 2,
+        "events": [
+          {
+            "id": "kp.c11.t13.r21.1",
+            "event": "Separation",
+            "srNo": "1",
+            "houses": [
+              10,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t13.r22.2",
+            "event": "Short life/ death",
+            "srNo": "2",
+            "houses": [
+              12,
+              5,
+              10
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "FRIENDS",
+        "eventsCount": 3,
+        "events": [
+          {
+            "id": "kp.c11.t14.r1.1",
+            "event": "Getting helpful and beneficial friends",
+            "srNo": "1",
+            "houses": [
+              1,
+              2,
+              3,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t14.r2.2",
+            "event": "Losing through friends",
+            "srNo": "2",
+            "houses": [
+              4,
+              5,
+              7,
+              8,
+              9,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t14.r3.3",
+            "event": "Having an unreliable friend",
+            "srNo": "3",
+            "houses": [
+              7,
+              8,
+              9
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "GENERAL",
+        "eventsCount": 9,
+        "events": [
+          {
+            "id": "kp.c11.t14.r5.1",
+            "event": "Publishing a book",
+            "srNo": "1",
+            "houses": [
+              3,
+              11,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t14.r6.2",
+            "event": "Attainment of spiritual life",
+            "srNo": "2",
+            "houses": [
+              5,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t14.r7.3",
+            "event": "Getting passport, visa to go abroad",
+            "srNo": "3",
+            "houses": [
+              3,
+              9,
+              11,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t14.r8.4",
+            "event": "Getting Green card (permanent stay permit)",
+            "srNo": "4",
+            "houses": [
+              1,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t14.r9.5",
+            "event": "Change in place of residence or work",
+            "srNo": "5",
+            "houses": [
+              3,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t14.r10.6",
+            "event": "Prosperity of an institute",
+            "srNo": "6",
+            "houses": [
+              6,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t14.r11.7",
+            "event": "Having a high position in politics",
+            "srNo": "7",
+            "houses": [
+              9,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t14.r12.8",
+            "event": "Success in research",
+            "srNo": "8",
+            "houses": [
+              12,
+              9,
+              11,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c11.t14.r13.9",
+            "event": "Popular in acting",
+            "srNo": "9",
+            "houses": [
+              5,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cusp": 12,
+    "category": "12th Cusp (Foreign / Loss / Hospitalization / Imprisonment / Moksha)",
+    "subjectsCount": 7,
+    "totalEvents": 36,
+    "subjects": [
+      {
+        "subject": "FOREIGN",
+        "eventsCount": 9,
+        "events": [
+          {
+            "id": "kp.c12.t14.r15.1",
+            "event": "Foreign going",
+            "srNo": "1",
+            "houses": [
+              3,
+              9,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t14.r16.2",
+            "event": "Stay in mother land",
+            "srNo": "2",
+            "houses": [
+              2,
+              8,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t14.r17.3",
+            "event": "Coming back from abroad",
+            "srNo": "3",
+            "houses": [
+              3,
+              9,
+              11,
+              2,
+              4,
+              8
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t14.r18.4",
+            "event": "Going abroad for job/business",
+            "srNo": "4",
+            "houses": [
+              3,
+              9,
+              12,
+              6,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t14.r19.5",
+            "event": "Going abroad for study",
+            "srNo": "5",
+            "houses": [
+              3,
+              9,
+              12,
+              11,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t14.r20.6",
+            "event": "Gain in foreign land",
+            "srNo": "6",
+            "houses": [
+              2,
+              3,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r0.7",
+            "event": "Foreign settlement (tested rule)",
+            "srNo": "7",
+            "houses": [
+              3,
+              9,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r1.8",
+            "event": "Foreign settlement (other rules)",
+            "srNo": "8",
+            "houses": [
+              1,
+              3,
+              9,
+              10,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r2.9",
+            "event": "Gain in foreign land/with foreigners",
+            "srNo": "9",
+            "houses": [
+              2,
+              3,
+              6,
+              10,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "IMPRISONMENT",
+        "eventsCount": 4,
+        "events": [
+          {
+            "id": "kp.c12.t15.r4.1",
+            "event": "Imprisonment",
+            "srNo": "1",
+            "houses": [
+              2,
+              3,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r5.2",
+            "event": "House detention",
+            "srNo": "2",
+            "houses": [
+              4,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r6.3",
+            "event": "Release from jail",
+            "srNo": "3",
+            "houses": [
+              2,
+              4,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r7.4",
+            "event": "Getting bail",
+            "srNo": "4",
+            "houses": [
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "HEALTH",
+        "eventsCount": 5,
+        "events": [
+          {
+            "id": "kp.c12.t15.r9.1",
+            "event": "Eye disease (defect to left eye)",
+            "srNo": "1",
+            "houses": [
+              6,
+              8,
+              12,
+              2
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r10.2",
+            "event": "Insanity",
+            "srNo": "2",
+            "houses": [
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r11.3",
+            "event": "Disease causing defect in body",
+            "srNo": "3",
+            "houses": [
+              6,
+              8,
+              12,
+              1
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r12.4",
+            "event": "Mind to dacoit / theft",
+            "srNo": "4",
+            "houses": [
+              6,
+              8,
+              10,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r13.5",
+            "event": "Mind to raping",
+            "srNo": "5",
+            "houses": [
+              5,
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "CALAMITY",
+        "eventsCount": 4,
+        "events": [
+          {
+            "id": "kp.c12.t15.r15.1",
+            "event": "Accident",
+            "srNo": "1",
+            "houses": [
+              8,
+              12,
+              6
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r16.2",
+            "event": "Suicide",
+            "srNo": "2",
+            "houses": [
+              1,
+              6,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r17.3",
+            "event": "Danger to life, ruined life, death",
+            "srNo": "3",
+            "houses": [
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t15.r18.4",
+            "event": "Safe from danger/ cure/recovery",
+            "srNo": "4",
+            "houses": [
+              1,
+              5,
+              11
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "CHANGE",
+        "eventsCount": 2,
+        "events": [
+          {
+            "id": "kp.c12.t15.r20.1",
+            "event": "Change in job place or job or both",
+            "srNo": "1",
+            "houses": [
+              3,
+              12,
+              9,
+              10
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t16.r0.2",
+            "event": "Moving from place to place",
+            "srNo": "2",
+            "houses": [
+              3,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "LUCK",
+        "eventsCount": 3,
+        "events": [
+          {
+            "id": "kp.c12.t16.r2.1",
+            "event": "Good luck (lucky in all)",
+            "srNo": "1",
+            "houses": [
+              2,
+              6,
+              11
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t16.r3.2",
+            "event": "Bad luck/ loss of money/ cheated/ loss in business",
+            "srNo": "2",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t16.r4.3",
+            "event": "Loss of reputation",
+            "srNo": "3",
+            "houses": [
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      },
+      {
+        "subject": "GENERAL",
+        "eventsCount": 9,
+        "events": [
+          {
+            "id": "kp.c12.t16.r6.1",
+            "event": "Spiritual development",
+            "srNo": "1",
+            "houses": [
+              1,
+              10,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t16.r7.2",
+            "event": "Having renunciations",
+            "srNo": "2",
+            "houses": [
+              1,
+              4,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t16.r8.3",
+            "event": "Construction of a religious building",
+            "srNo": "3",
+            "houses": [
+              2,
+              4,
+              11,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t16.r9.4",
+            "event": "Free from debt",
+            "srNo": "4",
+            "houses": [
+              5,
+              8,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t16.r10.5",
+            "event": "Giving donation",
+            "srNo": "5",
+            "houses": [
+              5,
+              8,
+              12,
+              9
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t16.r11.6",
+            "event": "Having bed comfort with one's wife",
+            "srNo": "6",
+            "houses": [
+              1,
+              5,
+              7,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t16.r12.7",
+            "event": "Purchase of a house",
+            "srNo": "7",
+            "houses": [
+              4,
+              6,
+              9,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t16.r13.8",
+            "event": "Construct a house",
+            "srNo": "8",
+            "houses": [
+              4,
+              11,
+              12
+            ],
+            "verificationStatus": "verified"
+          },
+          {
+            "id": "kp.c12.t16.r14.9",
+            "event": "New inventions",
+            "srNo": "9",
+            "houses": [
+              1,
+              5,
+              9,
+              12
+            ],
+            "verificationStatus": "verified"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,3223 @@
+{
+ "source": "Kanakkumar B. Bosmia, 'Easy way to learn KP - Theory of Short Prediction' (2018), Part 2 worked examples",
+ "notes": [
+  "Planet lords are the 00:00 UTC (05:30 IST) Day-Rise-Planetary-Effect snapshot printed in the book.",
+  "Feed ascLords + moonLords + planets straight into the pure evaluateTsp() function; no ephemeris needed.",
+  "Default settings: saturnEffect=true, nodeAgency=true, specialRule3=false.",
+  "'expected.answer' is the book's final answer after any Punarphoo inversion."
+ ],
+ "cases": [
+  {
+   "id": "book-01",
+   "question": "Is my waiting list ticket will confirm?",
+   "number": "8/9",
+   "snapshotDate": "16-Sep-2014",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Saturn",
+    "subSub": "Saturn"
+   },
+   "moonLords": {
+    "sign": "Venus",
+    "star": "Mars",
+    "sub": "Saturn",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Le",
+     "starLord": "Sun",
+     "subSubLord": "Venus"
+    },
+    "Moon": {
+     "sign": "Ta",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Sc",
+     "starLord": "Saturn",
+     "subSubLord": "Venus"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Jupiter": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Venus": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Saturn"
+    },
+    "Saturn": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Rahu"
+    },
+    "Rahu": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Mercury"
+    },
+    "Ketu": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Mercury"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 2,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-02",
+   "question": "Will I get admission in decided collage?",
+   "number": "6/9",
+   "snapshotDate": "8-Oct-2016",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Rahu",
+    "subSub": "Rahu"
+   },
+   "moonLords": {
+    "sign": "Jupiter",
+    "star": "Ketu",
+    "sub": "Jupiter",
+    "subSub": "Jupiter"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Mars"
+    },
+    "Moon": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Jupiter"
+    },
+    "Mars": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Saturn"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Venus"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Rahu"
+    },
+    "Venus": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Rahu"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Jupiter"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Saturn"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Saturn"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 0,
+    "punarphoo": true,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-03",
+   "question": "Will my next job is MNC Company?",
+   "number": "8/9",
+   "snapshotDate": "16-Oct-2016",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Saturn",
+    "subSub": "Saturn"
+   },
+   "moonLords": {
+    "sign": "Jupiter",
+    "star": "Mercury",
+    "sub": "Jupiter",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Sun"
+    },
+    "Moon": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Sg",
+     "starLord": "Venus",
+     "subSubLord": "Jupiter"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Sun"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Mars"
+    },
+    "Venus": {
+     "sign": "Sc",
+     "starLord": "Jupiter",
+     "subSubLord": "Mars"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Mars"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Moon"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Rahu"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 1,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-04",
+   "question": "Will we buy car during 2017?",
+   "number": "4/9",
+   "snapshotDate": "16-Oct-2016",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Moon",
+    "subSub": "Moon"
+   },
+   "moonLords": {
+    "sign": "Jupiter",
+    "star": "Mercury",
+    "sub": "Jupiter",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Sun"
+    },
+    "Moon": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Sg",
+     "starLord": "Venus",
+     "subSubLord": "Jupiter"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Sun"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Mars"
+    },
+    "Venus": {
+     "sign": "Sc",
+     "starLord": "Jupiter",
+     "subSubLord": "Mars"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Mars"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Moon"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Rahu"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": null,
+    "punarphoo": false,
+    "decidedBy": "SPECIAL_ASC_SS_MOON"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-05",
+   "question": "Will I go Australia in this year?",
+   "number": "7/9",
+   "snapshotDate": "16-Oct-2016",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Jupiter",
+    "subSub": "Jupiter"
+   },
+   "moonLords": {
+    "sign": "Jupiter",
+    "star": "Mercury",
+    "sub": "Jupiter",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Sun"
+    },
+    "Moon": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Sg",
+     "starLord": "Venus",
+     "subSubLord": "Jupiter"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Sun"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Mars"
+    },
+    "Venus": {
+     "sign": "Sc",
+     "starLord": "Jupiter",
+     "subSubLord": "Mars"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Mars"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Moon"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Rahu"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 0,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-06",
+   "question": "Nirav get admission in UC Riverside collage?",
+   "number": "8/9",
+   "snapshotDate": "16-Mar-2017",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Saturn",
+    "subSub": "Saturn"
+   },
+   "moonLords": {
+    "sign": "Venus",
+    "star": "Rahu",
+    "sub": "Saturn",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Jupiter",
+     "subSubLord": "Rahu"
+    },
+    "Moon": {
+     "sign": "Li",
+     "starLord": "Rahu",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Venus"
+    },
+    "Mercury": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Mercury"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Venus"
+    },
+    "Venus": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Mars"
+    },
+    "Saturn": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Saturn"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Ketu",
+     "subSubLord": "Mercury"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Sun"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 3,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-07",
+   "question": "Will Bermuda win this match?",
+   "number": "8/9",
+   "snapshotDate": "25-Mar-2007",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Sun",
+    "subSub": "Sun"
+   },
+   "moonLords": {
+    "sign": "Mercury",
+    "star": "Mars",
+    "sub": "Mercury",
+    "subSub": "Venus"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Mercury"
+    },
+    "Moon": {
+     "sign": "Ge",
+     "starLord": "Mars",
+     "subSubLord": "Venus"
+    },
+    "Mars": {
+     "sign": "Cp",
+     "starLord": "Mars",
+     "subSubLord": "Mercury"
+    },
+    "Mercury": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Mercury"
+    },
+    "Jupiter": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Venus"
+    },
+    "Venus": {
+     "sign": "Ar",
+     "starLord": "Venus",
+     "subSubLord": "Jupiter"
+    },
+    "Saturn": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Rahu": {
+     "sign": "Aq",
+     "starLord": "Jupiter",
+     "subSubLord": "Moon"
+    },
+    "Ketu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Moon"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 0,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": "Book label 8/9 does not match these ascendant lords (printing error); lords match 3/9, 3/249, 19/2193. Test with ascLords."
+  },
+  {
+   "id": "book-08",
+   "question": "Will England win this match?",
+   "number": "5/9",
+   "snapshotDate": "4-Apr-2007",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Mars",
+    "subSub": "Mars"
+   },
+   "moonLords": {
+    "sign": "Venus",
+    "star": "Mars",
+    "sub": "Venus",
+    "subSub": "Jupiter"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Moon"
+    },
+    "Moon": {
+     "sign": "Li",
+     "starLord": "Mars",
+     "subSubLord": "Jupiter"
+    },
+    "Mars": {
+     "sign": "Aq",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mercury": {
+     "sign": "Aq",
+     "starLord": "Jupiter",
+     "subSubLord": "Jupiter"
+    },
+    "Jupiter": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Moon"
+    },
+    "Venus": {
+     "sign": "Ar",
+     "starLord": "Venus",
+     "subSubLord": "Mercury"
+    },
+    "Saturn": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Jupiter"
+    },
+    "Rahu": {
+     "sign": "Aq",
+     "starLord": "Jupiter",
+     "subSubLord": "Venus"
+    },
+    "Ketu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Mercury"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 1,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-09",
+   "question": "Will Imran Khan invite PM harendra modi in his oath taking ceremony?",
+   "number": "4/9",
+   "snapshotDate": "31-Jul-2018",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Moon",
+    "subSub": "Moon"
+   },
+   "moonLords": {
+    "sign": "Saturn",
+    "star": "Rahu",
+    "sub": "Moon",
+    "subSub": "Mars"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Cn",
+     "starLord": "Saturn",
+     "subSubLord": "Saturn"
+    },
+    "Moon": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Mars"
+    },
+    "Mars": {
+     "sign": "Cp",
+     "starLord": "Sun",
+     "subSubLord": "Jupiter"
+    },
+    "Mercury": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Mercury"
+    },
+    "Jupiter": {
+     "sign": "Li",
+     "starLord": "Rahu",
+     "subSubLord": "Sun"
+    },
+    "Venus": {
+     "sign": "Le",
+     "starLord": "Sun",
+     "subSubLord": "Saturn"
+    },
+    "Saturn": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Saturn"
+    },
+    "Rahu": {
+     "sign": "Cn",
+     "starLord": "Saturn",
+     "subSubLord": "Mercury"
+    },
+    "Ketu": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Venus"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": null,
+    "punarphoo": true,
+    "decidedBy": "SPECIAL_ASC_SS_MOON"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-10",
+   "question": "Will Jagdish Titler get ticket from Cong-I?",
+   "number": "160/249",
+   "snapshotDate": "9-Apr-2009",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Mercury",
+    "sub": "Venus",
+    "subSub": "Venus"
+   },
+   "moonLords": {
+    "sign": "Mercury",
+    "star": "Moon",
+    "sub": "Saturn",
+    "subSub": "Jupiter"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Ketu"
+    },
+    "Moon": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Jupiter"
+    },
+    "Mars": {
+     "sign": "Aq",
+     "starLord": "Jupiter",
+     "subSubLord": "Saturn"
+    },
+    "Mercury": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Rahu"
+    },
+    "Jupiter": {
+     "sign": "Cp",
+     "starLord": "Mars",
+     "subSubLord": "Mercury"
+    },
+    "Venus": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Jupiter"
+    },
+    "Saturn": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Saturn"
+    },
+    "Rahu": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Moon"
+    },
+    "Ketu": {
+     "sign": "Cn",
+     "starLord": "Saturn",
+     "subSubLord": "Venus"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 1,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-11",
+   "question": "Will my ticket be confirm?",
+   "number": "21/249",
+   "snapshotDate": "5-Apr-2014",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Sun",
+    "subSub": "Mars"
+   },
+   "moonLords": {
+    "sign": "Venus",
+    "star": "Mars",
+    "sub": "Rahu",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Mercury"
+    },
+    "Moon": {
+     "sign": "Ta",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mercury": {
+     "sign": "Pi",
+     "starLord": "Jupiter",
+     "subSubLord": "Rahu"
+    },
+    "Jupiter": {
+     "sign": "Ge",
+     "starLord": "Rahu",
+     "subSubLord": "Saturn"
+    },
+    "Venus": {
+     "sign": "Aq",
+     "starLord": "Mars",
+     "subSubLord": "Jupiter"
+    },
+    "Saturn": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Mercury"
+    },
+    "Rahu": {
+     "sign": "Li",
+     "starLord": "Mars",
+     "subSubLord": "Mercury"
+    },
+    "Ketu": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Venus"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 2,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": "Book label 21/249 does not match these ascendant lords (printing error); lords match 21/2193. Test with ascLords."
+  },
+  {
+   "id": "book-12",
+   "question": "Will my train ticket be confirmed?",
+   "number": "45/249",
+   "snapshotDate": "5-Apr-2014",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Mars",
+    "subSub": "Moon"
+   },
+   "moonLords": {
+    "sign": "Venus",
+    "star": "Mars",
+    "sub": "Rahu",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Mercury"
+    },
+    "Moon": {
+     "sign": "Ta",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mercury": {
+     "sign": "Pi",
+     "starLord": "Jupiter",
+     "subSubLord": "Rahu"
+    },
+    "Jupiter": {
+     "sign": "Ge",
+     "starLord": "Rahu",
+     "subSubLord": "Saturn"
+    },
+    "Venus": {
+     "sign": "Aq",
+     "starLord": "Mars",
+     "subSubLord": "Jupiter"
+    },
+    "Saturn": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Mercury"
+    },
+    "Rahu": {
+     "sign": "Li",
+     "starLord": "Mars",
+     "subSubLord": "Mercury"
+    },
+    "Ketu": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Venus"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": null,
+    "punarphoo": false,
+    "decidedBy": "SPECIAL_ASC_SS_MOON"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": "Book label 45/249 does not match these ascendant lords (printing error); lords match 45/2193. Test with ascLords."
+  },
+  {
+   "id": "book-13",
+   "question": "Will India win IPL T20 final on 6-4-2014?",
+   "number": "121/249",
+   "snapshotDate": "6-Apr-2014",
+   "ascLords": {
+    "sign": "Mercury",
+    "star": "Mars",
+    "sub": "Mars",
+    "subSub": "Mars"
+   },
+   "moonLords": {
+    "sign": "Mercury",
+    "star": "Rahu",
+    "sub": "Rahu",
+    "subSub": "Jupiter"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Venus"
+    },
+    "Moon": {
+     "sign": "Ge",
+     "starLord": "Rahu",
+     "subSubLord": "Jupiter"
+    },
+    "Mars": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Mars"
+    },
+    "Mercury": {
+     "sign": "Pi",
+     "starLord": "Jupiter",
+     "subSubLord": "Mars"
+    },
+    "Jupiter": {
+     "sign": "Ge",
+     "starLord": "Rahu",
+     "subSubLord": "Mercury"
+    },
+    "Venus": {
+     "sign": "Aq",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Saturn": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Mercury"
+    },
+    "Rahu": {
+     "sign": "Li",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Ketu": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Mercury"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 3,
+    "punarphoo": true,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-14",
+   "question": "Will my debtor go without asking payment?",
+   "number": "79/249",
+   "snapshotDate": "3-Sep-2014",
+   "ascLords": {
+    "sign": "Moon",
+    "star": "Mercury",
+    "sub": "Moon",
+    "subSub": "Moon"
+   },
+   "moonLords": {
+    "sign": "Mars",
+    "star": "Mercury",
+    "sub": "Moon",
+    "subSub": "Venus"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Rahu"
+    },
+    "Moon": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Venus"
+    },
+    "Mars": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Mars"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Sun"
+    },
+    "Jupiter": {
+     "sign": "Cn",
+     "starLord": "Saturn",
+     "subSubLord": "Rahu"
+    },
+    "Venus": {
+     "sign": "Le",
+     "starLord": "Ketu",
+     "subSubLord": "Mercury"
+    },
+    "Saturn": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Ketu"
+    },
+    "Rahu": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Sun"
+    },
+    "Ketu": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Sun"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": null,
+    "punarphoo": false,
+    "decidedBy": "SPECIAL_ASC_SS_MOON"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-15",
+   "question": "Will Somanath Bharti be arrested/surrender?",
+   "number": "68/249",
+   "snapshotDate": "24-Sep-2015",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Saturn",
+    "subSub": "Sun"
+   },
+   "moonLords": {
+    "sign": "Saturn",
+    "star": "Sun",
+    "sub": "Venus",
+    "subSub": "Mercury"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Jupiter"
+    },
+    "Moon": {
+     "sign": "Cp",
+     "starLord": "Sun",
+     "subSubLord": "Mercury"
+    },
+    "Mars": {
+     "sign": "Le",
+     "starLord": "Ketu",
+     "subSubLord": "Venus"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Ketu"
+    },
+    "Jupiter": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Mercury"
+    },
+    "Venus": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Venus"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Saturn",
+     "subSubLord": "Mars"
+    },
+    "Rahu": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Saturn"
+    },
+    "Ketu": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Jupiter"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 1,
+    "punarphoo": true,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": "Book label 68/249 does not match these ascendant lords (printing error); lords match 68/2193. Test with ascLords."
+  },
+  {
+   "id": "book-16",
+   "question": "Will I get back theft money?",
+   "number": "4/249",
+   "snapshotDate": "22-Feb-2016",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Moon",
+    "subSub": "Moon"
+   },
+   "moonLords": {
+    "sign": "Sun",
+    "star": "Ketu",
+    "sub": "Ketu",
+    "subSub": "Venus"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Jupiter"
+    },
+    "Moon": {
+     "sign": "Le",
+     "starLord": "Ketu",
+     "subSubLord": "Venus"
+    },
+    "Mars": {
+     "sign": "Sc",
+     "starLord": "Jupiter",
+     "subSubLord": "Jupiter"
+    },
+    "Mercury": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Sun"
+    },
+    "Jupiter": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Rahu"
+    },
+    "Venus": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Rahu"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Ketu"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Sun",
+     "subSubLord": "Mercury"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Jupiter",
+     "subSubLord": "Moon"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": null,
+    "punarphoo": true,
+    "decidedBy": "SPECIAL_ASC_SS_MOON"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-17",
+   "question": "Any chance for Raheel Sharif to get extension as an army chief?",
+   "number": "124/249",
+   "snapshotDate": "29-Oct-2016",
+   "ascLords": {
+    "sign": "Mercury",
+    "star": "Mars",
+    "sub": "Saturn",
+    "subSub": "Saturn"
+   },
+   "moonLords": {
+    "sign": "Mercury",
+    "star": "Moon",
+    "sub": "Sun",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Li",
+     "starLord": "Rahu",
+     "subSubLord": "Rahu"
+    },
+    "Moon": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Sg",
+     "starLord": "Sun",
+     "subSubLord": "Saturn"
+    },
+    "Mercury": {
+     "sign": "Li",
+     "starLord": "Rahu",
+     "subSubLord": "Ketu"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Venus"
+    },
+    "Venus": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Rahu"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Mars"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Moon"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Sun"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 1,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-18",
+   "question": "Nirav get admission in UC Santa Barbra collage?",
+   "number": "45/249",
+   "snapshotDate": "16-Mar-2017",
+   "ascLords": {
+    "sign": "Mercury",
+    "star": "Mars",
+    "sub": "Sun",
+    "subSub": "Sun"
+   },
+   "moonLords": {
+    "sign": "Venus",
+    "star": "Rahu",
+    "sub": "Saturn",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Jupiter",
+     "subSubLord": "Rahu"
+    },
+    "Moon": {
+     "sign": "Li",
+     "starLord": "Rahu",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Venus"
+    },
+    "Mercury": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Mercury"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Venus"
+    },
+    "Venus": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Mars"
+    },
+    "Saturn": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Saturn"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Ketu",
+     "subSubLord": "Mercury"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Sun"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 2,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-19",
+   "question": "Will it beneficiary for Me to join TCS?",
+   "number": "131/249",
+   "snapshotDate": "13-Feb-2018",
+   "ascLords": {
+    "sign": "Venus",
+    "star": "Rahu",
+    "sub": "Jupiter",
+    "subSub": "Jupiter"
+   },
+   "moonLords": {
+    "sign": "Jupiter",
+    "star": "Sun",
+    "sub": "Mars",
+    "subSub": "Mars"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Aq",
+     "starLord": "Mars",
+     "subSubLord": "Mercury"
+    },
+    "Moon": {
+     "sign": "Sg",
+     "starLord": "Sun",
+     "subSubLord": "Mars"
+    },
+    "Mars": {
+     "sign": "Sc",
+     "starLord": "Saturn",
+     "subSubLord": "Rahu"
+    },
+    "Mercury": {
+     "sign": "Cp",
+     "starLord": "Mars",
+     "subSubLord": "Mercury"
+    },
+    "Jupiter": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Saturn"
+    },
+    "Venus": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Moon"
+    },
+    "Saturn": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Venus"
+    },
+    "Rahu": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Jupiter"
+    },
+    "Ketu": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Venus"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 1,
+    "punarphoo": true,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-20",
+   "question": "Will I get bail tomorrow?",
+   "number": "119/249",
+   "snapshotDate": "21-Feb-2018",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Venus",
+    "sub": "Rahu",
+    "subSub": "Jupiter"
+   },
+   "moonLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Jupiter",
+    "subSub": "Venus"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Venus"
+    },
+    "Moon": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Venus"
+    },
+    "Mars": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Ketu"
+    },
+    "Mercury": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Ketu"
+    },
+    "Jupiter": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Sun"
+    },
+    "Venus": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Jupiter"
+    },
+    "Saturn": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Rahu"
+    },
+    "Rahu": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Rahu"
+    },
+    "Ketu": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Jupiter"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 1,
+    "punarphoo": true,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": "Book label 119/249 does not match these ascendant lords (printing error); lords match 119/2193. Test with ascLords."
+  },
+  {
+   "id": "book-21",
+   "question": "Will I get job in central universities this year, i have applied in four universities.",
+   "number": "156/249",
+   "snapshotDate": "2-Jan-2018",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Saturn",
+    "sub": "Rahu",
+    "subSub": "Rahu"
+   },
+   "moonLords": {
+    "sign": "Mercury",
+    "star": "Rahu",
+    "sub": "Venus",
+    "subSub": "Rahu"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Sg",
+     "starLord": "Venus",
+     "subSubLord": "Jupiter"
+    },
+    "Moon": {
+     "sign": "Ge",
+     "starLord": "Rahu",
+     "subSubLord": "Rahu"
+    },
+    "Mars": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Ketu"
+    },
+    "Mercury": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Jupiter": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Moon"
+    },
+    "Venus": {
+     "sign": "Sg",
+     "starLord": "Venus",
+     "subSubLord": "Rahu"
+    },
+    "Saturn": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Mars"
+    },
+    "Rahu": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Ketu": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Rahu"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": null,
+    "punarphoo": true,
+    "decidedBy": "SPECIAL_ASC_SS_MOON"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-22",
+   "question": "Will the crude oil inventory will be more than expectea on 7th Sep- tember 2016?",
+   "number": "40/249",
+   "snapshotDate": "6-Sep-2016",
+   "ascLords": {
+    "sign": "Venus",
+    "star": "Mars",
+    "sub": "Jupiter",
+    "subSub": "Jupiter"
+   },
+   "moonLords": {
+    "sign": "Venus",
+    "star": "Rahu",
+    "sub": "Saturn",
+    "subSub": "Sun"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Moon"
+    },
+    "Moon": {
+     "sign": "Li",
+     "starLord": "Rahu",
+     "subSubLord": "Sun"
+    },
+    "Mars": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Rahu"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Mercury"
+    },
+    "Venus": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Mercury"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Saturn",
+     "subSubLord": "Moon"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Jupiter"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Rahu"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 2,
+    "punarphoo": true,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-23",
+   "question": "Will Sachin complete his 100's century to day 30_3_2011?",
+   "number": "203/249",
+   "snapshotDate": "30-Mar-2011",
+   "ascLords": {
+    "sign": "Saturn",
+    "star": "Moon",
+    "sub": "Sun",
+    "subSub": "Sun"
+   },
+   "moonLords": {
+    "sign": "Saturn",
+    "star": "Mars",
+    "sub": "Rahu",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Jupiter"
+    },
+    "Moon": {
+     "sign": "Cp",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Saturn"
+    },
+    "Mercury": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Rahu"
+    },
+    "Jupiter": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Jupiter"
+    },
+    "Venus": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Mercury"
+    },
+    "Saturn": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Mercury"
+    },
+    "Rahu": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Moon"
+    },
+    "Ketu": {
+     "sign": "Ge",
+     "starLord": "Mars",
+     "subSubLord": "Rahu"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 1,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-24",
+   "question": "Will I get leave permission?",
+   "number": "203/249",
+   "snapshotDate": "8-Apr-2009",
+   "ascLords": {
+    "sign": "Saturn",
+    "star": "Moon",
+    "sub": "Sun",
+    "subSub": "Sun"
+   },
+   "moonLords": {
+    "sign": "Mercury",
+    "star": "Sun",
+    "sub": "Saturn",
+    "subSub": "Sun"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Rahu"
+    },
+    "Moon": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Sun"
+    },
+    "Mars": {
+     "sign": "Aq",
+     "starLord": "Jupiter",
+     "subSubLord": "Moon"
+    },
+    "Mercury": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Mercury"
+    },
+    "Jupiter": {
+     "sign": "Cp",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Venus": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Saturn"
+    },
+    "Saturn": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Mercury"
+    },
+    "Rahu": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Rahu"
+    },
+    "Ketu": {
+     "sign": "Cn",
+     "starLord": "Saturn",
+     "subSubLord": "Venus"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 2,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-25",
+   "question": "Will Varun Gandhi free from NSA?",
+   "number": "992/2193",
+   "snapshotDate": "13-Apr-2009",
+   "ascLords": {
+    "sign": "Mercury",
+    "star": "Moon",
+    "sub": "Mars",
+    "subSub": "Sun"
+   },
+   "moonLords": {
+    "sign": "Mars",
+    "star": "Saturn",
+    "sub": "Venus",
+    "subSub": "Rahu"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Mars"
+    },
+    "Moon": {
+     "sign": "Sc",
+     "starLord": "Saturn",
+     "subSubLord": "Rahu"
+    },
+    "Mars": {
+     "sign": "Aq",
+     "starLord": "Jupiter",
+     "subSubLord": "Ketu"
+    },
+    "Mercury": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Jupiter"
+    },
+    "Jupiter": {
+     "sign": "Cp",
+     "starLord": "Mars",
+     "subSubLord": "Sun"
+    },
+    "Venus": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Ketu"
+    },
+    "Saturn": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Saturn"
+    },
+    "Rahu": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Venus"
+    },
+    "Ketu": {
+     "sign": "Cn",
+     "starLord": "Saturn",
+     "subSubLord": "Mercury"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 0,
+    "punarphoo": true,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-26",
+   "question": "Will Saina win any medal ?",
+   "number": "308/2193",
+   "snapshotDate": "12-Aug-2008",
+   "ascLords": {
+    "sign": "Venus",
+    "star": "Moon",
+    "sub": "Venus",
+    "subSub": "Venus"
+   },
+   "moonLords": {
+    "sign": "Jupiter",
+    "star": "Ketu",
+    "sub": "Ketu",
+    "subSub": "Mars"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Sun"
+    },
+    "Moon": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Mars"
+    },
+    "Mars": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Jupiter"
+    },
+    "Mercury": {
+     "sign": "Le",
+     "starLord": "Ketu",
+     "subSubLord": "Moon"
+    },
+    "Jupiter": {
+     "sign": "Sg",
+     "starLord": "Venus",
+     "subSubLord": "Sun"
+    },
+    "Venus": {
+     "sign": "Le",
+     "starLord": "Ketu",
+     "subSubLord": "Saturn"
+    },
+    "Saturn": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Mercury"
+    },
+    "Rahu": {
+     "sign": "Cp",
+     "starLord": "Mars",
+     "subSubLord": "Jupiter"
+    },
+    "Ketu": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Jupiter"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 2,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-27",
+   "question": "Dr. Abdul Kalam will elected as a president of India?",
+   "number": "1454/2193",
+   "snapshotDate": "7-Mar-2007",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Mercury",
+    "sub": "Saturn",
+    "subSub": "Saturn"
+   },
+   "moonLords": {
+    "sign": "Mercury",
+    "star": "Mars",
+    "sub": "Rahu",
+    "subSub": "Mercury"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Aq",
+     "starLord": "Jupiter",
+     "subSubLord": "Mercury"
+    },
+    "Moon": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Mercury"
+    },
+    "Mars": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Mercury"
+    },
+    "Mercury": {
+     "sign": "Aq",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Jupiter": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Jupiter"
+    },
+    "Venus": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Mercury"
+    },
+    "Saturn": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Moon"
+    },
+    "Rahu": {
+     "sign": "Aq",
+     "starLord": "Jupiter",
+     "subSubLord": "Mercury"
+    },
+    "Ketu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Mercury"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 2,
+    "punarphoo": true,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-28",
+   "question": "Will my conference in Delhi will be successful?",
+   "number": "33/2193",
+   "snapshotDate": "5-Apr-2014",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Moon",
+    "subSub": "Mercury"
+   },
+   "moonLords": {
+    "sign": "Venus",
+    "star": "Mars",
+    "sub": "Rahu",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Mercury"
+    },
+    "Moon": {
+     "sign": "Ta",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mercury": {
+     "sign": "Pi",
+     "starLord": "Jupiter",
+     "subSubLord": "Rahu"
+    },
+    "Jupiter": {
+     "sign": "Ge",
+     "starLord": "Rahu",
+     "subSubLord": "Saturn"
+    },
+    "Venus": {
+     "sign": "Aq",
+     "starLord": "Mars",
+     "subSubLord": "Jupiter"
+    },
+    "Saturn": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Mercury"
+    },
+    "Rahu": {
+     "sign": "Li",
+     "starLord": "Mars",
+     "subSubLord": "Mercury"
+    },
+    "Ketu": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Venus"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 2,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-29",
+   "question": "Will Hillery Clinton become us president in 2009?",
+   "number": "1339/2193",
+   "snapshotDate": "7-Jun-2007",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Saturn",
+    "sub": "Sun",
+    "subSub": "Mars"
+   },
+   "moonLords": {
+    "sign": "Saturn",
+    "star": "Mars",
+    "sub": "Venus",
+    "subSub": "Sun"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Ta",
+     "starLord": "Moon",
+     "subSubLord": "Saturn"
+    },
+    "Moon": {
+     "sign": "Aq",
+     "starLord": "Mars",
+     "subSubLord": "Sun"
+    },
+    "Mars": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Mercury"
+    },
+    "Mercury": {
+     "sign": "Ge",
+     "starLord": "Rahu",
+     "subSubLord": "Moon"
+    },
+    "Jupiter": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Venus": {
+     "sign": "Cn",
+     "starLord": "Saturn",
+     "subSubLord": "Ketu"
+    },
+    "Saturn": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Jupiter"
+    },
+    "Rahu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Moon"
+    },
+    "Ketu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Rahu"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 1,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-30",
+   "question": "If I reject goods of Devang, will I get any trouble?",
+   "number": "79/2193",
+   "snapshotDate": "22-Apr-2014",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Mercury",
+    "subSub": "Rahu"
+   },
+   "moonLords": {
+    "sign": "Saturn",
+    "star": "Sun",
+    "sub": "Saturn",
+    "subSub": "Mercury"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Saturn"
+    },
+    "Moon": {
+     "sign": "Cp",
+     "starLord": "Sun",
+     "subSubLord": "Mercury"
+    },
+    "Mars": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Jupiter"
+    },
+    "Mercury": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Rahu"
+    },
+    "Jupiter": {
+     "sign": "Ge",
+     "starLord": "Rahu",
+     "subSubLord": "Ketu"
+    },
+    "Venus": {
+     "sign": "Aq",
+     "starLord": "Jupiter",
+     "subSubLord": "Rahu"
+    },
+    "Saturn": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Rahu"
+    },
+    "Rahu": {
+     "sign": "Li",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Ketu": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Mercury"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 0,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-31",
+   "question": "Will Anupam Jolly ji come back before 8.30 PM?",
+   "number": "117/2193",
+   "snapshotDate": "16-Sep-2014",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Venus",
+    "sub": "Mars",
+    "subSub": "Moon"
+   },
+   "moonLords": {
+    "sign": "Venus",
+    "star": "Mars",
+    "sub": "Saturn",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Le",
+     "starLord": "Sun",
+     "subSubLord": "Venus"
+    },
+    "Moon": {
+     "sign": "Ta",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Sc",
+     "starLord": "Saturn",
+     "subSubLord": "Venus"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Jupiter": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Venus": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Saturn"
+    },
+    "Saturn": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Rahu"
+    },
+    "Rahu": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Mercury"
+    },
+    "Ketu": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Mercury"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": null,
+    "punarphoo": false,
+    "decidedBy": "SPECIAL_ASC_SS_MOON"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-32",
+   "question": "As per news on TV ex PM Mr. Manmohan singh will inquire by CBI?",
+   "number": "1072/2193",
+   "snapshotDate": "16-Dec-2014",
+   "ascLords": {
+    "sign": "Mercury",
+    "star": "Mars",
+    "sub": "Rahu",
+    "subSub": "Sun"
+   },
+   "moonLords": {
+    "sign": "Mercury",
+    "star": "Moon",
+    "sub": "Saturn",
+    "subSub": "Mercury"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Jupiter"
+    },
+    "Moon": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Mercury"
+    },
+    "Mars": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Mercury"
+    },
+    "Mercury": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Saturn"
+    },
+    "Jupiter": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Ketu"
+    },
+    "Venus": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Rahu"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Saturn",
+     "subSubLord": "Jupiter"
+    },
+    "Rahu": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Jupiter"
+    },
+    "Ketu": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Jupiter"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 2,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-33",
+   "question": "Will PDP-BJP alliance is possible?",
+   "number": null,
+   "snapshotDate": "23-Dec-2014",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Venus",
+    "sub": "Moon",
+    "subSub": "Mercury"
+   },
+   "moonLords": {
+    "sign": "Jupiter",
+    "star": "Venus",
+    "sub": "Rahu",
+    "subSub": "Venus"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Venus"
+    },
+    "Moon": {
+     "sign": "Sg",
+     "starLord": "Venus",
+     "subSubLord": "Venus"
+    },
+    "Mars": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Rahu"
+    },
+    "Mercury": {
+     "sign": "Sg",
+     "starLord": "Venus",
+     "subSubLord": "Mercury"
+    },
+    "Jupiter": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Mercury"
+    },
+    "Venus": {
+     "sign": "Sg",
+     "starLord": "Venus",
+     "subSubLord": "Moon"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Saturn",
+     "subSubLord": "Venus"
+    },
+    "Rahu": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Rahu"
+    },
+    "Ketu": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Ketu"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 3,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-34",
+   "question": "Will my IVF be successful?",
+   "number": "5/2193",
+   "snapshotDate": "30-Jan-2015",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Ketu",
+    "subSub": "Mars"
+   },
+   "moonLords": {
+    "sign": "Venus",
+    "star": "Moon",
+    "sub": "Mercury",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Saturn"
+    },
+    "Moon": {
+     "sign": "Ta",
+     "starLord": "Moon",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Ketu"
+    },
+    "Mercury": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Mars"
+    },
+    "Jupiter": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Venus": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Saturn"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Saturn",
+     "subSubLord": "Jupiter"
+    },
+    "Rahu": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Saturn"
+    },
+    "Ketu": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Venus"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 2,
+    "punarphoo": true,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-35",
+   "question": "I have read on one of gambling website of UK that gamoler's favorite is USA President election nomination from democratic party for election",
+   "number": "205/2193",
+   "snapshotDate": "19-Feb-2015",
+   "ascLords": {
+    "sign": "Venus",
+    "star": "Sun",
+    "sub": "Jupiter",
+    "subSub": "Sun"
+   },
+   "moonLords": {
+    "sign": "Saturn",
+    "star": "Mars",
+    "sub": "Moon",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Aq",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Moon": {
+     "sign": "Aq",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Jupiter"
+    },
+    "Mercury": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Mars"
+    },
+    "Jupiter": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Mercury"
+    },
+    "Venus": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Mercury"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Saturn",
+     "subSubLord": "Rahu"
+    },
+    "Rahu": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Venus"
+    },
+    "Ketu": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 3,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-36",
+   "question": "I have read on one of gambling website of UK that gambler's favorite is USA President election nomination from Republican party for election",
+   "number": "32/2193",
+   "snapshotDate": "19-Feb-2015",
+   "ascLords": {
+    "sign": "Venus",
+    "star": "Moon",
+    "sub": "Jupiter",
+    "subSub": "Jupiter"
+   },
+   "moonLords": {
+    "sign": "Saturn",
+    "star": "Mars",
+    "sub": "Moon",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Aq",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Moon": {
+     "sign": "Aq",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Jupiter"
+    },
+    "Mercury": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Mars"
+    },
+    "Jupiter": {
+     "sign": "Cn",
+     "starLord": "Mercury",
+     "subSubLord": "Mercury"
+    },
+    "Venus": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Mercury"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Saturn",
+     "subSubLord": "Rahu"
+    },
+    "Rahu": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Venus"
+    },
+    "Ketu": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 1,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": "Book label 32/2193 does not match these ascendant lords (printing error); lords match 32/249, 272/2193. Test with ascLords."
+  },
+  {
+   "id": "book-37",
+   "question": "Will the crude oil inventory will be more than expected on 31st August 2016?",
+   "number": "898/2193",
+   "snapshotDate": "27-Aug-2016",
+   "ascLords": {
+    "sign": "Sun",
+    "star": "Sun",
+    "sub": "Sun",
+    "subSub": "Jupiter"
+   },
+   "moonLords": {
+    "sign": "Mercury",
+    "star": "Mars",
+    "sub": "Venus",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Le",
+     "starLord": "Ketu",
+     "subSubLord": "Venus"
+    },
+    "Moon": {
+     "sign": "Ge",
+     "starLord": "Mars",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Venus"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Mars"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Saturn"
+    },
+    "Venus": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Venus"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Saturn",
+     "subSubLord": "Venus"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Saturn"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Ketu"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 3,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-38",
+   "question": "Will the crude oil inventory will be less than expected on 28 th September 2016?",
+   "number": "1734/2193",
+   "snapshotDate": "22-Sep-2016",
+   "ascLords": {
+    "sign": "Saturn",
+    "star": "Moon",
+    "sub": "Jupiter",
+    "subSub": "Jupiter"
+   },
+   "moonLords": {
+    "sign": "Venus",
+    "star": "Moon",
+    "sub": "Saturn",
+    "subSub": "Moon"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Ketu"
+    },
+    "Moon": {
+     "sign": "Ta",
+     "starLord": "Moon",
+     "subSubLord": "Moon"
+    },
+    "Mars": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Saturn"
+    },
+    "Mercury": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Mercury"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Rahu"
+    },
+    "Venus": {
+     "sign": "Li",
+     "starLord": "Mars",
+     "subSubLord": "Jupiter"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Ketu"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Jupiter"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Rahu"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 0,
+    "punarphoo": true,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-39",
+   "question": "Will the crude oil inventory will be more than expected on 12^ October 2016?",
+   "number": "359/2193",
+   "snapshotDate": "8-Oct-2016",
+   "ascLords": {
+    "sign": "Venus",
+    "star": "Mars",
+    "sub": "Saturn",
+    "subSub": "Mars"
+   },
+   "moonLords": {
+    "sign": "Jupiter",
+    "star": "Ketu",
+    "sub": "Jupiter",
+    "subSub": "Jupiter"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Mars"
+    },
+    "Moon": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Jupiter"
+    },
+    "Mars": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Saturn"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Sun",
+     "subSubLord": "Venus"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Rahu"
+    },
+    "Venus": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Rahu"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Jupiter"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Saturn"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Saturn"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 1,
+    "punarphoo": true,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-40",
+   "question": "Will Pakistani Journalist Cyril Almedia be arrested by Pakistan government for his news reporting?",
+   "number": "12/2193",
+   "snapshotDate": "12-Oct-2016",
+   "ascLords": {
+    "sign": "Mars",
+    "star": "Ketu",
+    "sub": "Venus",
+    "subSub": "Moon"
+   },
+   "moonLords": {
+    "sign": "Saturn",
+    "star": "Mars",
+    "sub": "Saturn",
+    "subSub": "Venus"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Mercury"
+    },
+    "Moon": {
+     "sign": "Cp",
+     "starLord": "Mars",
+     "subSubLord": "Venus"
+    },
+    "Mars": {
+     "sign": "Sg",
+     "starLord": "Venus",
+     "subSubLord": "Jupiter"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Jupiter"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Mercury"
+    },
+    "Venus": {
+     "sign": "Li",
+     "starLord": "Jupiter",
+     "subSubLord": "Mercury"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Rahu"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Jupiter"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": null,
+    "punarphoo": true,
+    "decidedBy": "SPECIAL_ASC_SS_MOON"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-41",
+   "question": "Will I buy IPhone before 26 May 2017?",
+   "number": "2148/2193",
+   "snapshotDate": "16-Oct-2016",
+   "ascLords": {
+    "sign": "Jupiter",
+    "star": "Mercury",
+    "sub": "Sun",
+    "subSub": "Venus"
+   },
+   "moonLords": {
+    "sign": "Jupiter",
+    "star": "Mercury",
+    "sub": "Jupiter",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Sun"
+    },
+    "Moon": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Sg",
+     "starLord": "Venus",
+     "subSubLord": "Jupiter"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Sun"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Mars"
+    },
+    "Venus": {
+     "sign": "Sc",
+     "starLord": "Jupiter",
+     "subSubLord": "Mars"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Mars"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Moon"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Rahu"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 1,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-42",
+   "question": "Will Mansi be married before 2017?",
+   "number": "744/2193",
+   "snapshotDate": "16-Oct-2016",
+   "ascLords": {
+    "sign": "Sun",
+    "star": "Ketu",
+    "sub": "Venus",
+    "subSub": "Mars"
+   },
+   "moonLords": {
+    "sign": "Jupiter",
+    "star": "Mercury",
+    "sub": "Jupiter",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Sun"
+    },
+    "Moon": {
+     "sign": "Pi",
+     "starLord": "Mercury",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Sg",
+     "starLord": "Venus",
+     "subSubLord": "Jupiter"
+    },
+    "Mercury": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Sun"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Moon",
+     "subSubLord": "Mars"
+    },
+    "Venus": {
+     "sign": "Sc",
+     "starLord": "Jupiter",
+     "subSubLord": "Mars"
+    },
+    "Saturn": {
+     "sign": "Sc",
+     "starLord": "Mercury",
+     "subSubLord": "Mars"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Venus",
+     "subSubLord": "Moon"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Rahu"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 0,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-43",
+   "question": "Any chance to increase income limit from 2.5 to more in budget 2017- 2018?",
+   "number": "1952/2193",
+   "snapshotDate": "1-Feb-2017",
+   "ascLords": {
+    "sign": "Saturn",
+    "star": "Jupiter",
+    "sub": "Jupiter",
+    "subSub": "Mercury"
+   },
+   "moonLords": {
+    "sign": "Jupiter",
+    "star": "Saturn",
+    "sub": "Mercury",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Cp",
+     "starLord": "Moon",
+     "subSubLord": "Venus"
+    },
+    "Moon": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Mars"
+    },
+    "Mercury": {
+     "sign": "Sg",
+     "starLord": "Sun",
+     "subSubLord": "Rahu"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Sun"
+    },
+    "Venus": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Mercury"
+    },
+    "Saturn": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Saturn"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Ketu",
+     "subSubLord": "Moon"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Saturn"
+    }
+   },
+   "expected": {
+    "answer": "YES",
+    "rulesSatisfied": 1,
+    "punarphoo": true,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": null
+  },
+  {
+   "id": "book-44",
+   "question": "Any chance for Morya as CM of UP?",
+   "number": "131/2193",
+   "snapshotDate": null,
+   "ascLords": {
+    "sign": "Venus",
+    "star": "Rahu",
+    "sub": "Jupiter",
+    "subSub": "Jupiter"
+   },
+   "moonLords": {
+    "sign": "Venus",
+    "star": "Rahu",
+    "sub": "Saturn",
+    "subSub": "Saturn"
+   },
+   "planets": {
+    "Sun": {
+     "sign": "Pi",
+     "starLord": "Jupiter",
+     "subSubLord": "Rahu"
+    },
+    "Moon": {
+     "sign": "Li",
+     "starLord": "Rahu",
+     "subSubLord": "Saturn"
+    },
+    "Mars": {
+     "sign": "Ar",
+     "starLord": "Ketu",
+     "subSubLord": "Venus"
+    },
+    "Mercury": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Mercury"
+    },
+    "Jupiter": {
+     "sign": "Vi",
+     "starLord": "Mars",
+     "subSubLord": "Venus"
+    },
+    "Venus": {
+     "sign": "Pi",
+     "starLord": "Saturn",
+     "subSubLord": "Mars"
+    },
+    "Saturn": {
+     "sign": "Sg",
+     "starLord": "Ketu",
+     "subSubLord": "Saturn"
+    },
+    "Rahu": {
+     "sign": "Le",
+     "starLord": "Ketu",
+     "subSubLord": "Mercury"
+    },
+    "Ketu": {
+     "sign": "Aq",
+     "starLord": "Rahu",
+     "subSubLord": "Sun"
+    }
+   },
+   "expected": {
+    "answer": "NO",
+    "rulesSatisfied": 1,
+    "punarphoo": false,
+    "decidedBy": "MAJORITY"
+   },
+   "snapshotTime": "00:00 UTC (05:30 IST)",
+   "numberNote": "Book label 131/2193 does not match these ascendant lords (printing error); lords match 131/249, 1147/2193. Test with ascLords."
+  }
+ ]
+}

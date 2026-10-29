@@ -1,0 +1,2686 @@
+{
+  "generatedAt": "2026-10-28T02:15:34.070Z",
+  "appVersion": "1.0.0",
+  "tables": {
+    "t9": {
+      "counts": 9,
+      "sha256": "68540c2cac10d23ec975d325857d089606f3e8d51bfb6575da2dccaebe0d565d",
+      "rows": [
+        {
+          "no": 1,
+          "startUnits": 0,
+          "startDMS": "Aries 0°00'00\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Ketu",
+          "subSubLord": "Ketu"
+        },
+        {
+          "no": 4,
+          "startUnits": 39600,
+          "startDMS": "Aries 3°40'00\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Moon",
+          "subSubLord": "Moon"
+        },
+        {
+          "no": 8,
+          "startUnits": 100800,
+          "startDMS": "Aries 9°20'00\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Saturn",
+          "subSubLord": "Saturn"
+        },
+        {
+          "no": 9,
+          "startUnits": 123600,
+          "startDMS": "Aries 11°26'40\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Mercury",
+          "subSubLord": "Mercury"
+        }
+      ],
+      "contiguous": false
+    },
+    "t27": {
+      "counts": 27,
+      "sha256": "f834f07aaa9368c9dd3f984e026775fef532298d616bbb1a15dafcbc00cdee65",
+      "rows": [
+        {
+          "no": 1,
+          "startUnits": 0,
+          "startDMS": "Aries 0°00'00\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Ketu",
+          "subSubLord": "Ketu"
+        },
+        {
+          "no": 3,
+          "startUnits": 288000,
+          "startDMS": "Aries 26°40'00\"",
+          "signLord": "Mars",
+          "starLord": "Sun",
+          "subLord": "Sun",
+          "subSubLord": "Sun"
+        },
+        {
+          "no": 7,
+          "startUnits": 864000,
+          "startDMS": "Gemini 20°00'00\"",
+          "signLord": "Mercury",
+          "starLord": "Jupiter",
+          "subLord": "Jupiter",
+          "subSubLord": "Jupiter"
+        },
+        {
+          "no": 14,
+          "startUnits": 1872000,
+          "startDMS": "Virgo 23°20'00\"",
+          "signLord": "Mercury",
+          "starLord": "Mars",
+          "subLord": "Mars",
+          "subSubLord": "Mars"
+        },
+        {
+          "no": 27,
+          "startUnits": 3744000,
+          "startDMS": "Pisces 16°40'00\"",
+          "signLord": "Jupiter",
+          "starLord": "Mercury",
+          "subLord": "Mercury",
+          "subSubLord": "Mercury"
+        }
+      ],
+      "contiguous": true
+    },
+    "t249": {
+      "counts": 249,
+      "sha256": "c4c67d6bc7e9845a1c656cf7e99f8e960c20b9201bca7a00f415138b09510c12",
+      "rows": [
+        {
+          "no": 1,
+          "startUnits": 0,
+          "startDMS": "Aries 0°00'00\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Ketu",
+          "subSubLord": "Ketu"
+        },
+        {
+          "no": 2,
+          "startUnits": 8400,
+          "startDMS": "Aries 0°46'40\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Venus",
+          "subSubLord": "Venus"
+        },
+        {
+          "no": 9,
+          "startUnits": 123600,
+          "startDMS": "Aries 11°26'40\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Mercury",
+          "subSubLord": "Mercury"
+        },
+        {
+          "no": 10,
+          "startUnits": 144000,
+          "startDMS": "Aries 13°20'00\"",
+          "signLord": "Mars",
+          "starLord": "Venus",
+          "subLord": "Venus",
+          "subSubLord": "Venus"
+        },
+        {
+          "no": 22,
+          "startUnits": 315600,
+          "startDMS": "Aries 29°13'20\"",
+          "signLord": "Mars",
+          "starLord": "Sun",
+          "subLord": "Rahu",
+          "subSubLord": "Rahu"
+        },
+        {
+          "no": 23,
+          "startUnits": 324000,
+          "startDMS": "Taurus 0°00'00\"",
+          "signLord": "Venus",
+          "starLord": "Sun",
+          "subLord": "Rahu",
+          "subSubLord": "Saturn"
+        },
+        {
+          "no": 24,
+          "startUnits": 337200,
+          "startDMS": "Taurus 1°13'20\"",
+          "signLord": "Venus",
+          "starLord": "Sun",
+          "subLord": "Jupiter",
+          "subSubLord": "Jupiter"
+        },
+        {
+          "no": 56,
+          "startUnits": 864000,
+          "startDMS": "Gemini 20°00'00\"",
+          "signLord": "Mercury",
+          "starLord": "Jupiter",
+          "subLord": "Jupiter",
+          "subSubLord": "Jupiter"
+        },
+        {
+          "no": 100,
+          "startUnits": 1555200,
+          "startDMS": "Leo 24°00'00\"",
+          "signLord": "Sun",
+          "starLord": "Venus",
+          "subLord": "Mercury",
+          "subSubLord": "Mercury"
+        },
+        {
+          "no": 160,
+          "startUnits": 2476800,
+          "startDMS": "Scorpio 19°20'00\"",
+          "signLord": "Mars",
+          "starLord": "Mercury",
+          "subLord": "Venus",
+          "subSubLord": "Venus"
+        },
+        {
+          "no": 203,
+          "startUnits": 3160800,
+          "startDMS": "Capricorn 22°40'00\"",
+          "signLord": "Saturn",
+          "starLord": "Moon",
+          "subLord": "Sun",
+          "subSubLord": "Sun"
+        },
+        {
+          "no": 249,
+          "startUnits": 3865200,
+          "startDMS": "Pisces 27°53'20\"",
+          "signLord": "Jupiter",
+          "starLord": "Mercury",
+          "subLord": "Saturn",
+          "subSubLord": "Saturn"
+        }
+      ],
+      "contiguous": true,
+      "signSplitFirstNos": [
+        22,
+        62,
+        105,
+        145,
+        188,
+        228
+      ]
+    },
+    "t2193": {
+      "counts": 2193,
+      "sha256": "e91db2f67e521a5d31255497097b88037982ab79e58d60ba64d76fa9335d4a99",
+      "rows": [
+        {
+          "no": 1,
+          "startUnits": 0,
+          "startDMS": "Aries 0°00'00\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Ketu",
+          "subSubLord": "Ketu"
+        },
+        {
+          "no": 5,
+          "startUnits": 3010,
+          "startDMS": "Aries 0°16'43.33\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Ketu",
+          "subSubLord": "Mars"
+        },
+        {
+          "no": 9,
+          "startUnits": 7210,
+          "startDMS": "Aries 0°40'03.33\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Ketu",
+          "subSubLord": "Mercury"
+        },
+        {
+          "no": 10,
+          "startUnits": 8400,
+          "startDMS": "Aries 0°46'40\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Venus",
+          "subSubLord": "Venus"
+        },
+        {
+          "no": 117,
+          "startUnits": 194900,
+          "startDMS": "Aries 18°02'46.67\"",
+          "signLord": "Mars",
+          "starLord": "Venus",
+          "subLord": "Mars",
+          "subSubLord": "Moon"
+        },
+        {
+          "no": 119,
+          "startUnits": 198840,
+          "startDMS": "Aries 18°24'40\"",
+          "signLord": "Mars",
+          "starLord": "Venus",
+          "subLord": "Rahu",
+          "subSubLord": "Jupiter"
+        },
+        {
+          "no": 1000,
+          "startUnits": 1765860,
+          "startDMS": "Virgo 13°30'20\"",
+          "signLord": "Mercury",
+          "starLord": "Moon",
+          "subLord": "Rahu",
+          "subSubLord": "Sun"
+        },
+        {
+          "no": 1205,
+          "startUnits": 2144700,
+          "startDMS": "Libra 18°35'00\"",
+          "signLord": "Venus",
+          "starLord": "Rahu",
+          "subLord": "Moon",
+          "subSubLord": "Saturn"
+        },
+        {
+          "no": 2192,
+          "startUnits": 3881540,
+          "startDMS": "Pisces 29°24'06.67\"",
+          "signLord": "Jupiter",
+          "starLord": "Mercury",
+          "subLord": "Saturn",
+          "subSubLord": "Rahu"
+        },
+        {
+          "no": 2193,
+          "startUnits": 3884960,
+          "startDMS": "Pisces 29°43'06.67\"",
+          "signLord": "Jupiter",
+          "starLord": "Mercury",
+          "subLord": "Saturn",
+          "subSubLord": "Jupiter"
+        }
+      ],
+      "contiguous": true,
+      "signSplitFirstNos": [
+        192,
+        546,
+        923,
+        1277,
+        1654,
+        2008
+      ]
+    }
+  },
+  "random": {
+    "9": {
+      "min": 1,
+      "max": 9,
+      "distinct": 9,
+      "nonInteger": 0
+    },
+    "27": {
+      "min": 1,
+      "max": 27,
+      "distinct": 27,
+      "nonInteger": 0
+    },
+    "249": {
+      "min": 1,
+      "max": 249,
+      "distinct": 249,
+      "nonInteger": 0
+    },
+    "2193": {
+      "min": 1,
+      "max": 2193,
+      "distinct": 2193,
+      "nonInteger": 0
+    },
+    "usesCryptoRandom": true
+  },
+  "aspects": {
+    "Sun": [
+      7
+    ],
+    "Moon": [
+      7
+    ],
+    "Mars": [
+      4,
+      7,
+      8
+    ],
+    "Mercury": [
+      7
+    ],
+    "Jupiter": [
+      5,
+      7,
+      9
+    ],
+    "Venus": [
+      7
+    ],
+    "Saturn": [
+      3,
+      7,
+      10
+    ]
+  },
+  "snapshotDates": {
+    "2026-10-27T05:29:59+05:30": "2026-10-26",
+    "2026-10-27T05:30:00+05:30": "2026-10-27",
+    "2026-10-27T23:59:59+05:30": "2026-10-27",
+    "2026-10-28T00:10:00+05:30": "2026-10-27",
+    "2026-03-01T05:29:59+05:30": "2026-02-28",
+    "2024-03-01T05:00:00+05:30": "2024-02-29"
+  },
+  "ephemerisSnapshots": {
+    "2014-09-16": {
+      "ayanamsaName": "KP_NEW",
+      "ayanamsaDMS": "23°57'56.33\"",
+      "planets": {
+        "Sun": {
+          "longitudeDMS": "Leo 29°05'37.33\"",
+          "signLord": "Sun",
+          "starLord": "Sun",
+          "subLord": "Mars",
+          "subSubLord": "Venus",
+          "retrograde": false
+        },
+        "Moon": {
+          "longitudeDMS": "Taurus 28°05'57.33\"",
+          "signLord": "Venus",
+          "starLord": "Mars",
+          "subLord": "Saturn",
+          "subSubLord": "Saturn",
+          "retrograde": false,
+          "longitudeDecimal": 58.099233
+        },
+        "Mars": {
+          "longitudeDMS": "Scorpio 7°25'38\"",
+          "signLord": "Mars",
+          "starLord": "Saturn",
+          "subLord": "Ketu",
+          "subSubLord": "Venus",
+          "retrograde": false
+        },
+        "Mercury": {
+          "longitudeDMS": "Virgo 24°44'26.67\"",
+          "signLord": "Mercury",
+          "starLord": "Mars",
+          "subLord": "Rahu",
+          "subSubLord": "Saturn",
+          "retrograde": false
+        },
+        "Jupiter": {
+          "longitudeDMS": "Cancer 19°12'14.33\"",
+          "signLord": "Moon",
+          "starLord": "Mercury",
+          "subLord": "Ketu",
+          "subSubLord": "Saturn",
+          "retrograde": false
+        },
+        "Venus": {
+          "longitudeDMS": "Leo 18°46'28\"",
+          "signLord": "Sun",
+          "starLord": "Venus",
+          "subLord": "Rahu",
+          "subSubLord": "Saturn",
+          "retrograde": false
+        },
+        "Saturn": {
+          "longitudeDMS": "Libra 25°11'17\"",
+          "signLord": "Venus",
+          "starLord": "Jupiter",
+          "subLord": "Mercury",
+          "subSubLord": "Rahu",
+          "retrograde": false,
+          "longitudeDecimal": 205.188097
+        },
+        "Rahu": {
+          "longitudeDMS": "Virgo 26°38'15.67\"",
+          "signLord": "Mercury",
+          "starLord": "Mars",
+          "subLord": "Jupiter",
+          "subSubLord": "Mercury",
+          "retrograde": true
+        },
+        "Ketu": {
+          "longitudeDMS": "Pisces 26°38'15.67\"",
+          "signLord": "Jupiter",
+          "starLord": "Mercury",
+          "subLord": "Jupiter",
+          "subSubLord": "Mercury",
+          "retrograde": true
+        }
+      }
+    },
+    "2016-02-22": {
+      "ayanamsaName": "KP_NEW",
+      "ayanamsaDMS": "23°59'08.67\"",
+      "planets": {
+        "Sun": {
+          "longitudeDMS": "Aquarius 8°48'15.67\"",
+          "signLord": "Saturn",
+          "starLord": "Rahu",
+          "subLord": "Jupiter",
+          "subSubLord": "Jupiter",
+          "retrograde": false
+        },
+        "Moon": {
+          "longitudeDMS": "Leo 0°07'03\"",
+          "signLord": "Sun",
+          "starLord": "Ketu",
+          "subLord": "Ketu",
+          "subSubLord": "Venus",
+          "retrograde": false,
+          "longitudeDecimal": 120.117514
+        },
+        "Mars": {
+          "longitudeDMS": "Scorpio 0°45'36.33\"",
+          "signLord": "Mars",
+          "starLord": "Jupiter",
+          "subLord": "Mars",
+          "subSubLord": "Jupiter",
+          "retrograde": false
+        },
+        "Mercury": {
+          "longitudeDMS": "Capricorn 16°50'43.33\"",
+          "signLord": "Saturn",
+          "starLord": "Moon",
+          "subLord": "Saturn",
+          "subSubLord": "Sun",
+          "retrograde": false
+        },
+        "Jupiter": {
+          "longitudeDMS": "Leo 26°16'40.67\"",
+          "signLord": "Sun",
+          "starLord": "Venus",
+          "subLord": "Ketu",
+          "subSubLord": "Rahu",
+          "retrograde": true
+        },
+        "Venus": {
+          "longitudeDMS": "Capricorn 11°58'27.33\"",
+          "signLord": "Saturn",
+          "starLord": "Moon",
+          "subLord": "Rahu",
+          "subSubLord": "Rahu",
+          "retrograde": false
+        },
+        "Saturn": {
+          "longitudeDMS": "Scorpio 21°33'09\"",
+          "signLord": "Mars",
+          "starLord": "Mercury",
+          "subLord": "Venus",
+          "subSubLord": "Ketu",
+          "retrograde": false,
+          "longitudeDecimal": 231.552515
+        },
+        "Rahu": {
+          "longitudeDMS": "Leo 28°52'11.67\"",
+          "signLord": "Sun",
+          "starLord": "Sun",
+          "subLord": "Mars",
+          "subSubLord": "Mercury",
+          "retrograde": true
+        },
+        "Ketu": {
+          "longitudeDMS": "Aquarius 28°52'11.67\"",
+          "signLord": "Saturn",
+          "starLord": "Jupiter",
+          "subLord": "Sun",
+          "subSubLord": "Mars",
+          "retrograde": true
+        }
+      }
+    },
+    "2016-10-16": {
+      "ayanamsaName": "KP_NEW",
+      "ayanamsaDMS": "23°59'41.33\"",
+      "planets": {
+        "Sun": {
+          "longitudeDMS": "Virgo 29°03'46.67\"",
+          "signLord": "Mercury",
+          "starLord": "Mars",
+          "subLord": "Saturn",
+          "subSubLord": "Sun",
+          "retrograde": false
+        },
+        "Moon": {
+          "longitudeDMS": "Pisces 26°28'36.67\"",
+          "signLord": "Jupiter",
+          "starLord": "Mercury",
+          "subLord": "Jupiter",
+          "subSubLord": "Saturn",
+          "retrograde": false,
+          "longitudeDecimal": 356.476862
+        },
+        "Mars": {
+          "longitudeDMS": "Sagittarius 18°38'04.67\"",
+          "signLord": "Jupiter",
+          "starLord": "Venus",
+          "subLord": "Rahu",
+          "subSubLord": "Jupiter",
+          "retrograde": false
+        },
+        "Mercury": {
+          "longitudeDMS": "Virgo 20°51'01.67\"",
+          "signLord": "Mercury",
+          "starLord": "Moon",
+          "subLord": "Venus",
+          "subSubLord": "Sun",
+          "retrograde": false
+        },
+        "Jupiter": {
+          "longitudeDMS": "Virgo 13°51'49.67\"",
+          "signLord": "Mercury",
+          "starLord": "Moon",
+          "subLord": "Rahu",
+          "subSubLord": "Mars",
+          "retrograde": false
+        },
+        "Venus": {
+          "longitudeDMS": "Scorpio 3°13'50.67\"",
+          "signLord": "Mars",
+          "starLord": "Jupiter",
+          "subLord": "Rahu",
+          "subSubLord": "Mars",
+          "retrograde": false
+        },
+        "Saturn": {
+          "longitudeDMS": "Scorpio 18°50'34.67\"",
+          "signLord": "Mars",
+          "starLord": "Mercury",
+          "subLord": "Ketu",
+          "subSubLord": "Mars",
+          "retrograde": false,
+          "longitudeDecimal": 228.843008
+        },
+        "Rahu": {
+          "longitudeDMS": "Leo 16°18'39\"",
+          "signLord": "Sun",
+          "starLord": "Venus",
+          "subLord": "Moon",
+          "subSubLord": "Moon",
+          "retrograde": true
+        },
+        "Ketu": {
+          "longitudeDMS": "Aquarius 16°18'39\"",
+          "signLord": "Saturn",
+          "starLord": "Rahu",
+          "subLord": "Venus",
+          "subSubLord": "Rahu",
+          "retrograde": true
+        }
+      }
+    },
+    "2017-03-16": {
+      "ayanamsaName": "KP_NEW",
+      "ayanamsaDMS": "24°00'02\"",
+      "planets": {
+        "Sun": {
+          "longitudeDMS": "Pisces 1°35'20\"",
+          "signLord": "Jupiter",
+          "starLord": "Jupiter",
+          "subLord": "Rahu",
+          "subSubLord": "Rahu",
+          "retrograde": false
+        },
+        "Moon": {
+          "longitudeDMS": "Libra 10°29'02.33\"",
+          "signLord": "Venus",
+          "starLord": "Rahu",
+          "subLord": "Saturn",
+          "subSubLord": "Saturn",
+          "retrograde": false,
+          "longitudeDecimal": 190.484008
+        },
+        "Mars": {
+          "longitudeDMS": "Aries 10°18'20.67\"",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "subLord": "Saturn",
+          "subSubLord": "Venus",
+          "retrograde": false
+        },
+        "Mercury": {
+          "longitudeDMS": "Pisces 10°10'59\"",
+          "signLord": "Jupiter",
+          "starLord": "Saturn",
+          "subLord": "Venus",
+          "subSubLord": "Mercury",
+          "retrograde": false
+        },
+        "Jupiter": {
+          "longitudeDMS": "Virgo 27°00'57.33\"",
+          "signLord": "Mercury",
+          "starLord": "Mars",
+          "subLord": "Jupiter",
+          "subSubLord": "Venus",
+          "retrograde": true
+        },
+        "Venus": {
+          "longitudeDMS": "Pisces 16°21'54.67\"",
+          "signLord": "Jupiter",
+          "starLord": "Saturn",
+          "subLord": "Jupiter",
+          "subSubLord": "Mars",
+          "retrograde": true
+        },
+        "Saturn": {
+          "longitudeDMS": "Sagittarius 3°25'27.67\"",
+          "signLord": "Jupiter",
+          "starLord": "Ketu",
+          "subLord": "Sun",
+          "subSubLord": "Mercury",
+          "retrograde": false,
+          "longitudeDecimal": 243.424322
+        },
+        "Rahu": {
+          "longitudeDMS": "Leo 8°18'32.33\"",
+          "signLord": "Sun",
+          "starLord": "Ketu",
+          "subLord": "Jupiter",
+          "subSubLord": "Mercury",
+          "retrograde": true
+        },
+        "Ketu": {
+          "longitudeDMS": "Aquarius 8°18'32.33\"",
+          "signLord": "Saturn",
+          "starLord": "Rahu",
+          "subLord": "Rahu",
+          "subSubLord": "Sun",
+          "retrograde": true
+        }
+      }
+    },
+    "2018-07-31": {
+      "ayanamsaName": "KP_NEW",
+      "ayanamsaDMS": "24°01'11\"",
+      "planets": {
+        "Sun": {
+          "longitudeDMS": "Cancer 13°44'40.33\"",
+          "signLord": "Moon",
+          "starLord": "Saturn",
+          "subLord": "Rahu",
+          "subSubLord": "Saturn",
+          "retrograde": false
+        },
+        "Moon": {
+          "longitudeDMS": "Aquarius 18°15'01\"",
+          "signLord": "Saturn",
+          "starLord": "Rahu",
+          "subLord": "Moon",
+          "subSubLord": "Mars",
+          "retrograde": false,
+          "longitudeDecimal": 318.250261
+        },
+        "Mars": {
+          "longitudeDMS": "Capricorn 9°05'54\"",
+          "signLord": "Saturn",
+          "starLord": "Sun",
+          "subLord": "Venus",
+          "subSubLord": "Jupiter",
+          "retrograde": true
+        },
+        "Mercury": {
+          "longitudeDMS": "Cancer 28°28'35\"",
+          "signLord": "Moon",
+          "starLord": "Mercury",
+          "subLord": "Saturn",
+          "subSubLord": "Mercury",
+          "retrograde": true
+        },
+        "Jupiter": {
+          "longitudeDMS": "Libra 19°56'28.67\"",
+          "signLord": "Venus",
+          "starLord": "Rahu",
+          "subLord": "Mars",
+          "subSubLord": "Moon",
+          "retrograde": false
+        },
+        "Venus": {
+          "longitudeDMS": "Leo 28°44'33.33\"",
+          "signLord": "Sun",
+          "starLord": "Sun",
+          "subLord": "Mars",
+          "subSubLord": "Saturn",
+          "retrograde": false
+        },
+        "Saturn": {
+          "longitudeDMS": "Sagittarius 9°35'56.33\"",
+          "signLord": "Jupiter",
+          "starLord": "Ketu",
+          "subLord": "Saturn",
+          "subSubLord": "Saturn",
+          "retrograde": true,
+          "longitudeDecimal": 249.598986
+        },
+        "Rahu": {
+          "longitudeDMS": "Cancer 11°42'25.33\"",
+          "signLord": "Moon",
+          "starLord": "Saturn",
+          "subLord": "Moon",
+          "subSubLord": "Mercury",
+          "retrograde": true
+        },
+        "Ketu": {
+          "longitudeDMS": "Capricorn 11°42'25.33\"",
+          "signLord": "Saturn",
+          "starLord": "Moon",
+          "subLord": "Mars",
+          "subSubLord": "Venus",
+          "retrograde": true
+        }
+      }
+    }
+  },
+  "tspCases": {
+    "book-01": {
+      "A": "Saturn",
+      "rule1": {
+        "deciding": "Rahu",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Jupiter",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Mars",
+        "passed": true
+      },
+      "rulesSatisfied": 2,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Mars",
+        "Mercury"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Mercury"
+      ]
+    },
+    "book-02": {
+      "A": "Rahu",
+      "rule1": {
+        "deciding": "Saturn",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Venus",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rulesSatisfied": 0,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": "MOON_STAR_NODE_AGENT_OF_SATURN",
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    },
+    "book-03": {
+      "A": "Saturn",
+      "rule1": {
+        "deciding": "Mars",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Mercury",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Venus",
+        "passed": false
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    },
+    "book-04": {
+      "A": "Moon",
+      "rule1": null,
+      "rule2": null,
+      "rule3": null,
+      "rulesSatisfied": null,
+      "decidedBy": "SPECIAL_ASC_SS_MOON",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    },
+    "book-05": {
+      "A": "Jupiter",
+      "rule1": {
+        "deciding": "Mars",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Moon",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Venus",
+        "passed": false
+      },
+      "rulesSatisfied": 0,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    },
+    "book-06": {
+      "A": "Saturn",
+      "rule1": {
+        "deciding": "Saturn",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Ketu",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Ketu",
+        "passed": true
+      },
+      "rulesSatisfied": 3,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Sun"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    },
+    "book-07": {
+      "A": "Sun",
+      "rule1": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Saturn",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Rahu",
+        "passed": false
+      },
+      "rulesSatisfied": 0,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Jupiter",
+        "Mercury",
+        "Saturn"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Mercury",
+        "Sun",
+        "Venus"
+      ]
+    },
+    "book-08": {
+      "A": "Mars",
+      "rule1": {
+        "deciding": "Saturn",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Mars",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Jupiter",
+        "Mars",
+        "Mercury",
+        "Saturn"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Mercury",
+        "Sun",
+        "Venus"
+      ]
+    },
+    "book-09": {
+      "A": "Moon",
+      "rule1": null,
+      "rule2": null,
+      "rule3": null,
+      "rulesSatisfied": null,
+      "decidedBy": "SPECIAL_ASC_SS_MOON",
+      "baseAnswer": "YES",
+      "punarphooReason": "SATURN_ASPECT",
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Mars",
+        "Mercury",
+        "Moon",
+        "Saturn",
+        "Sun"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Mercury",
+        "Moon",
+        "Saturn",
+        "Sun"
+      ]
+    },
+    "book-10": {
+      "A": "Venus",
+      "rule1": {
+        "deciding": "Jupiter",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Saturn",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Mars",
+        "passed": false
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Jupiter",
+        "Moon",
+        "Saturn"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Moon",
+        "Saturn"
+      ]
+    },
+    "book-11": {
+      "A": "Mars",
+      "rule1": {
+        "deciding": "Saturn",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Mars",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Jupiter",
+        "passed": false
+      },
+      "rulesSatisfied": 2,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Jupiter",
+        "Mars",
+        "Saturn",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Saturn"
+      ]
+    },
+    "book-12": {
+      "A": "Moon",
+      "rule1": null,
+      "rule2": null,
+      "rule3": null,
+      "rulesSatisfied": null,
+      "decidedBy": "SPECIAL_ASC_SS_MOON",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Jupiter",
+        "Mars",
+        "Saturn",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Saturn"
+      ]
+    },
+    "book-13": {
+      "A": "Mars",
+      "rule1": {
+        "deciding": "Mars",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Mars",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Mars",
+        "passed": true
+      },
+      "rulesSatisfied": 3,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": "MOON_STAR_NODE_AGENT_OF_SATURN",
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Jupiter",
+        "Mars",
+        "Saturn",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Saturn"
+      ]
+    },
+    "book-14": {
+      "A": "Moon",
+      "rule1": null,
+      "rule2": null,
+      "rule3": null,
+      "rulesSatisfied": null,
+      "decidedBy": "SPECIAL_ASC_SS_MOON",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Mars",
+        "Mercury"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Mercury"
+      ]
+    },
+    "book-15": {
+      "A": "Sun",
+      "rule1": {
+        "deciding": "Jupiter",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Sun",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Venus",
+        "passed": false
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": "SATURN_ASPECT",
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Mercury",
+        "Sun"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Mars",
+        "Mercury",
+        "Saturn",
+        "Sun"
+      ]
+    },
+    "book-16": {
+      "A": "Moon",
+      "rule1": null,
+      "rule2": null,
+      "rule3": null,
+      "rulesSatisfied": null,
+      "decidedBy": "SPECIAL_ASC_SS_MOON",
+      "baseAnswer": "YES",
+      "punarphooReason": "SATURN_ASPECT",
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Jupiter",
+        "Moon",
+        "Saturn",
+        "Sun"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Mars",
+        "Moon",
+        "Saturn",
+        "Sun"
+      ]
+    },
+    "book-17": {
+      "A": "Saturn",
+      "rule1": {
+        "deciding": "Mars",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Sun",
+        "passed": false
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    },
+    "book-18": {
+      "A": "Sun",
+      "rule1": {
+        "deciding": "Rahu",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Jupiter",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Ketu",
+        "passed": true
+      },
+      "rulesSatisfied": 2,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Sun"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    },
+    "book-19": {
+      "A": "Jupiter",
+      "rule1": {
+        "deciding": "Saturn",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Jupiter",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Ketu",
+        "passed": false
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": "CONJUNCTION",
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Mercury",
+        "Moon"
+      ],
+      "agentsOfKetu": [
+        "Mercury",
+        "Moon",
+        "Saturn"
+      ]
+    },
+    "book-20": {
+      "A": "Jupiter",
+      "rule1": {
+        "deciding": "Sun",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Jupiter",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Rahu",
+        "passed": false
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": "MOON_STAR_NODE_AGENT_OF_SATURN",
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Mercury",
+        "Moon"
+      ],
+      "agentsOfKetu": [
+        "Moon",
+        "Saturn"
+      ]
+    },
+    "book-21": {
+      "A": "Rahu",
+      "rule1": null,
+      "rule2": null,
+      "rule3": null,
+      "rulesSatisfied": null,
+      "decidedBy": "SPECIAL_ASC_SS_MOON",
+      "baseAnswer": "YES",
+      "punarphooReason": "SATURN_ASPECT",
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Mercury",
+        "Moon"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Moon",
+        "Saturn"
+      ]
+    },
+    "book-22": {
+      "A": "Jupiter",
+      "rule1": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Sun",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Sun",
+        "passed": true
+      },
+      "rulesSatisfied": 2,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": "MOON_STAR_NODE_AGENT_OF_SATURN",
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Saturn",
+        "Sun"
+      ]
+    },
+    "book-23": {
+      "A": "Sun",
+      "rule1": {
+        "deciding": "Jupiter",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Saturn",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Jupiter"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Mercury",
+        "Saturn"
+      ]
+    },
+    "book-24": {
+      "A": "Sun",
+      "rule1": {
+        "deciding": "Rahu",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Moon",
+        "passed": true
+      },
+      "rulesSatisfied": 2,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Jupiter",
+        "Moon",
+        "Saturn"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Moon",
+        "Saturn"
+      ]
+    },
+    "book-25": {
+      "A": "Sun",
+      "rule1": {
+        "deciding": "Mars",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Jupiter",
+        "passed": false
+      },
+      "rulesSatisfied": 0,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": "MOON_IN_SATURN_STAR",
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Jupiter",
+        "Moon",
+        "Saturn"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Moon",
+        "Saturn"
+      ]
+    },
+    "book-26": {
+      "A": "Venus",
+      "rule1": {
+        "deciding": "Saturn",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Ketu",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Venus",
+        "passed": true
+      },
+      "rulesSatisfied": 2,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Mars",
+        "Saturn",
+        "Sun"
+      ],
+      "agentsOfKetu": [
+        "Mercury",
+        "Moon",
+        "Sun"
+      ]
+    },
+    "book-27": {
+      "A": "Saturn",
+      "rule1": {
+        "deciding": "Moon",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Mercury",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Mars",
+        "passed": true
+      },
+      "rulesSatisfied": 2,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": "SATURN_ASPECT",
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Jupiter",
+        "Mercury",
+        "Saturn",
+        "Sun"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Mercury",
+        "Sun",
+        "Venus"
+      ]
+    },
+    "book-28": {
+      "A": "Mercury",
+      "rule1": {
+        "deciding": "Rahu",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Jupiter",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Mars",
+        "passed": true
+      },
+      "rulesSatisfied": 2,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Jupiter",
+        "Mars",
+        "Saturn",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Saturn"
+      ]
+    },
+    "book-29": {
+      "A": "Mars",
+      "rule1": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Rahu",
+        "passed": true
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Moon",
+        "Saturn"
+      ],
+      "agentsOfKetu": [
+        "Moon",
+        "Sun",
+        "Venus"
+      ]
+    },
+    "book-30": {
+      "A": "Rahu",
+      "rule1": {
+        "deciding": "Saturn",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Mars",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Jupiter",
+        "passed": false
+      },
+      "rulesSatisfied": 0,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Jupiter",
+        "Mars",
+        "Mercury",
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Mercury",
+        "Saturn",
+        "Sun"
+      ]
+    },
+    "book-31": {
+      "A": "Moon",
+      "rule1": null,
+      "rule2": null,
+      "rule3": null,
+      "rulesSatisfied": null,
+      "decidedBy": "SPECIAL_ASC_SS_MOON",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Mars",
+        "Mercury"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Mercury"
+      ]
+    },
+    "book-32": {
+      "A": "Sun",
+      "rule1": {
+        "deciding": "Jupiter",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Mercury",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Mercury",
+        "passed": true
+      },
+      "rulesSatisfied": 2,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Mercury",
+        "Moon"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Mercury",
+        "Moon"
+      ]
+    },
+    "book-33": {
+      "A": "Mercury",
+      "rule1": {
+        "deciding": "Mercury",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Venus",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Venus",
+        "passed": true
+      },
+      "rulesSatisfied": 3,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Mercury",
+        "Moon"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Mercury"
+      ]
+    },
+    "book-34": {
+      "A": "Mars",
+      "rule1": {
+        "deciding": "Ketu",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Rahu",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rulesSatisfied": 2,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": "SATURN_ASPECT",
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Mars",
+        "Mercury",
+        "Moon"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Mercury"
+      ]
+    },
+    "book-35": {
+      "A": "Sun",
+      "rule1": {
+        "deciding": "Saturn",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Mars",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Saturn",
+        "passed": true
+      },
+      "rulesSatisfied": 3,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Mars",
+        "Mercury",
+        "Moon",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Mars",
+        "Mercury",
+        "Venus"
+      ]
+    },
+    "book-36": {
+      "A": "Jupiter",
+      "rule1": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Moon",
+        "passed": true
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Mars",
+        "Mercury",
+        "Moon",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Jupiter",
+        "Mars",
+        "Mercury",
+        "Venus"
+      ]
+    },
+    "book-37": {
+      "A": "Jupiter",
+      "rule1": {
+        "deciding": "Saturn",
+        "passed": true
+      },
+      "rule2": {
+        "deciding": "Sun",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Saturn",
+        "passed": true
+      },
+      "rulesSatisfied": 3,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "YES",
+      "punarphooReason": null,
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Mars",
+        "Saturn",
+        "Sun"
+      ]
+    },
+    "book-38": {
+      "A": "Jupiter",
+      "rule1": {
+        "deciding": "Rahu",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Sun",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Venus",
+        "passed": false
+      },
+      "rulesSatisfied": 0,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": "SATURN_ASPECT",
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Mercury",
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Mercury",
+        "Saturn"
+      ]
+    },
+    "book-39": {
+      "A": "Mars",
+      "rule1": {
+        "deciding": "Saturn",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Ketu",
+        "passed": true
+      },
+      "rule3": {
+        "deciding": "Mercury",
+        "passed": false
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": "MOON_STAR_NODE_AGENT_OF_SATURN",
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    },
+    "book-40": {
+      "A": "Moon",
+      "rule1": null,
+      "rule2": null,
+      "rule3": null,
+      "rulesSatisfied": null,
+      "decidedBy": "SPECIAL_ASC_SS_MOON",
+      "baseAnswer": "YES",
+      "punarphooReason": "SATURN_ASPECT",
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    },
+    "book-41": {
+      "A": "Venus",
+      "rule1": {
+        "deciding": "Mars",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Jupiter",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Venus",
+        "passed": true
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    },
+    "book-42": {
+      "A": "Mars",
+      "rule1": {
+        "deciding": "Jupiter",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Venus",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Moon",
+        "passed": false
+      },
+      "rulesSatisfied": 0,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Saturn",
+        "Sun",
+        "Venus"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    },
+    "book-43": {
+      "A": "Mercury",
+      "rule1": {
+        "deciding": "Rahu",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Sun",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Ketu",
+        "passed": true
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": "MOON_IN_SATURN_STAR",
+      "answer": "YES",
+      "agentsOfRahu": [
+        "Sun"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    },
+    "book-44": {
+      "A": "Jupiter",
+      "rule1": {
+        "deciding": "Venus",
+        "passed": false
+      },
+      "rule2": {
+        "deciding": "Mars",
+        "passed": false
+      },
+      "rule3": {
+        "deciding": "Saturn",
+        "passed": true
+      },
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "baseAnswer": "NO",
+      "punarphooReason": null,
+      "answer": "NO",
+      "agentsOfRahu": [
+        "Sun"
+      ],
+      "agentsOfKetu": [
+        "Saturn"
+      ]
+    }
+  },
+  "fixturesPassed": 44,
+  "fixturesFailed": [],
+  "tspVariants": {
+    "saturnEffectOff": {
+      "book-01": "YES",
+      "book-02": "NO",
+      "book-03": "NO",
+      "book-04": "YES",
+      "book-05": "NO",
+      "book-06": "YES",
+      "book-07": "NO",
+      "book-08": "NO",
+      "book-09": "YES",
+      "book-10": "NO",
+      "book-11": "YES",
+      "book-12": "YES",
+      "book-13": "YES",
+      "book-14": "YES",
+      "book-15": "NO",
+      "book-16": "YES",
+      "book-17": "NO",
+      "book-18": "YES",
+      "book-19": "NO",
+      "book-20": "NO",
+      "book-21": "YES",
+      "book-22": "YES",
+      "book-23": "NO",
+      "book-24": "YES",
+      "book-25": "NO",
+      "book-26": "YES",
+      "book-27": "YES",
+      "book-28": "YES",
+      "book-29": "NO",
+      "book-30": "NO",
+      "book-31": "YES",
+      "book-32": "YES",
+      "book-33": "YES",
+      "book-34": "YES",
+      "book-35": "YES",
+      "book-36": "NO",
+      "book-37": "YES",
+      "book-38": "NO",
+      "book-39": "NO",
+      "book-40": "YES",
+      "book-41": "NO",
+      "book-42": "NO",
+      "book-43": "NO",
+      "book-44": "NO"
+    },
+    "nodeAgencyOff": {
+      "book-01": "NO",
+      "book-02": "NO",
+      "book-03": "NO",
+      "book-04": "YES",
+      "book-05": "NO",
+      "book-06": "YES",
+      "book-07": "NO",
+      "book-08": "NO",
+      "book-09": "NO",
+      "book-10": "NO",
+      "book-11": "YES",
+      "book-12": "YES",
+      "book-13": "YES",
+      "book-14": "YES",
+      "book-15": "YES",
+      "book-16": "NO",
+      "book-17": "NO",
+      "book-18": "NO",
+      "book-19": "YES",
+      "book-20": "NO",
+      "book-21": "YES",
+      "book-22": "YES",
+      "book-23": "NO",
+      "book-24": "NO",
+      "book-25": "YES",
+      "book-26": "YES",
+      "book-27": "NO",
+      "book-28": "NO",
+      "book-29": "NO",
+      "book-30": "NO",
+      "book-31": "YES",
+      "book-32": "YES",
+      "book-33": "YES",
+      "book-34": "YES",
+      "book-35": "YES",
+      "book-36": "NO",
+      "book-37": "YES",
+      "book-38": "YES",
+      "book-39": "NO",
+      "book-40": "NO",
+      "book-41": "NO",
+      "book-42": "NO",
+      "book-43": "YES",
+      "book-44": "NO"
+    },
+    "specialRule3On": {
+      "book-01": "YES",
+      "book-02": "YES",
+      "book-03": "NO",
+      "book-04": "YES",
+      "book-05": "NO",
+      "book-06": "YES",
+      "book-07": "NO",
+      "book-08": "YES",
+      "book-09": "NO",
+      "book-10": "NO",
+      "book-11": "YES",
+      "book-12": "YES",
+      "book-13": "NO",
+      "book-14": "YES",
+      "book-15": "NO",
+      "book-16": "NO",
+      "book-17": "NO",
+      "book-18": "YES",
+      "book-19": "YES",
+      "book-20": "YES",
+      "book-21": "NO",
+      "book-22": "NO",
+      "book-23": "NO",
+      "book-24": "YES",
+      "book-25": "YES",
+      "book-26": "YES",
+      "book-27": "NO",
+      "book-28": "YES",
+      "book-29": "YES",
+      "book-30": "NO",
+      "book-31": "YES",
+      "book-32": "YES",
+      "book-33": "YES",
+      "book-34": "NO",
+      "book-35": "YES",
+      "book-36": "NO",
+      "book-37": "YES",
+      "book-38": "YES",
+      "book-39": "NO",
+      "book-40": "NO",
+      "book-41": "NO",
+      "book-42": "NO",
+      "book-43": "YES",
+      "book-44": "NO"
+    }
+  },
+  "tspEndToEnd": {
+    "4/9": {
+      "ascLords": {
+        "sign": "Aries",
+        "star": "Ketu",
+        "sub": "Moon",
+        "subSub": "Moon"
+      },
+      "moonLords": {
+        "sign": "Pisces",
+        "star": "Mercury",
+        "sub": "Jupiter",
+        "subSub": "Saturn"
+      },
+      "answer": "YES",
+      "rulesSatisfied": null,
+      "decidedBy": "SPECIAL_ASC_SS_MOON",
+      "punarphooReason": null
+    },
+    "7/9": {
+      "ascLords": {
+        "sign": "Aries",
+        "star": "Ketu",
+        "sub": "Jupiter",
+        "subSub": "Jupiter"
+      },
+      "moonLords": {
+        "sign": "Pisces",
+        "star": "Mercury",
+        "sub": "Jupiter",
+        "subSub": "Saturn"
+      },
+      "answer": "NO",
+      "rulesSatisfied": 0,
+      "decidedBy": "MAJORITY",
+      "punarphooReason": null
+    },
+    "8/9": {
+      "ascLords": {
+        "sign": "Aries",
+        "star": "Ketu",
+        "sub": "Saturn",
+        "subSub": "Saturn"
+      },
+      "moonLords": {
+        "sign": "Pisces",
+        "star": "Mercury",
+        "sub": "Jupiter",
+        "subSub": "Saturn"
+      },
+      "answer": "NO",
+      "rulesSatisfied": 1,
+      "decidedBy": "MAJORITY",
+      "punarphooReason": null
+    }
+  },
+  "classicCases": {
+    "C1": {
+      "answer": "NO",
+      "decidedBy": "NONE"
+    },
+    "C2": {
+      "answer": "YES",
+      "decidedBy": "RULE_1_MOON"
+    },
+    "C3": {
+      "answer": "YES",
+      "decidedBy": "RULE_1_ASC"
+    },
+    "C4": {
+      "answer": "YES",
+      "decidedBy": "RULE_2"
+    },
+    "C5": {
+      "answer": "NO",
+      "decidedBy": "NONE"
+    },
+    "C6": {
+      "answer": "YES",
+      "decidedBy": "RULE_2"
+    },
+    "C7": {
+      "answer": "YES",
+      "decidedBy": "RULE_2"
+    },
+    "C8": {
+      "answer": "YES",
+      "decidedBy": "RULE_2"
+    }
+  },
+  "classicChennai": {
+    "rps": {
+      "ascSignLord": "Mars",
+      "ascStarLord": "Sun",
+      "ascSubLord": "Mars",
+      "ascSubSubLord": "Rahu",
+      "moonSignLord": "Mars",
+      "moonStarLord": "Ketu",
+      "moonSubLord": "Moon",
+      "dayLord": "Mercury",
+      "lagna": {
+        "longitude": 28.49267750947331,
+        "sign": {
+          "id": 0,
+          "en": "Aries",
+          "sa": "Mesha",
+          "te": "మేషం",
+          "hi": "मेष",
+          "lord": "Mars",
+          "element": "Fire",
+          "symbol": "♈"
+        },
+        "signLord": "Mars",
+        "starLord": "Sun",
+        "subLord": "Mars",
+        "subSubLord": "Rahu",
+        "degreeInSign": 28.49267750947331
+      },
+      "moon": {
+        "longitude": 4.343542895736448,
+        "sign": {
+          "id": 0,
+          "en": "Aries",
+          "sa": "Mesha",
+          "te": "మేషం",
+          "hi": "मेष",
+          "lord": "Mars",
+          "element": "Fire",
+          "symbol": "♈"
+        },
+        "signLord": "Mars",
+        "starLord": "Ketu",
+        "subLord": "Moon"
+      },
+      "coreRulingPlanets": [
+        {
+          "role": "Ascendant Star Lord",
+          "planet": "Sun",
+          "strength": 1
+        },
+        {
+          "role": "Ascendant Sign Lord",
+          "planet": "Mars",
+          "strength": 2
+        },
+        {
+          "role": "Moon Star Lord",
+          "planet": "Ketu",
+          "strength": 3
+        },
+        {
+          "role": "Moon Sign Lord",
+          "planet": "Mars",
+          "strength": 4
+        },
+        {
+          "role": "Day Lord",
+          "planet": "Mercury",
+          "strength": 5
+        }
+      ],
+      "extendedRulingPlanets": [
+        {
+          "role": "Ascendant Star Lord",
+          "planet": "Sun",
+          "strength": 1
+        },
+        {
+          "role": "Ascendant Sign Lord",
+          "planet": "Mars",
+          "strength": 2
+        },
+        {
+          "role": "Moon Star Lord",
+          "planet": "Ketu",
+          "strength": 3
+        },
+        {
+          "role": "Moon Sign Lord",
+          "planet": "Mars",
+          "strength": 4
+        },
+        {
+          "role": "Day Lord",
+          "planet": "Mercury",
+          "strength": 5
+        },
+        {
+          "role": "Ascendant Sub Lord",
+          "planet": "Mars",
+          "strength": 6
+        },
+        {
+          "role": "Moon Sub Lord",
+          "planet": "Moon",
+          "strength": 7
+        }
+      ],
+      "uniqueRulingPlanets": [
+        "Sun",
+        "Mars",
+        "Ketu",
+        "Mercury"
+      ],
+      "nodeAgents": [
+        {
+          "node": "Rahu",
+          "signLord": "Venus",
+          "starLord": "Rahu",
+          "represents": [
+            "Venus",
+            "Rahu"
+          ]
+        },
+        {
+          "node": "Ketu",
+          "signLord": "Mars",
+          "starLord": "Ketu",
+          "represents": [
+            "Mars",
+            "Ketu"
+          ]
+        }
+      ]
+    },
+    "answer": "NO",
+    "decidedBy": "NONE"
+  },
+  "horary": {
+    "rotation": {
+      "1": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "2": [
+        12,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "3": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "4": [
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "5": [
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "6": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "7": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "8": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "9": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ],
+      "10": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3
+      ],
+      "11": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1,
+        2
+      ],
+      "12": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        1
+      ]
+    },
+    "cusps": {
+      "1": {
+        "cusp1DMS": "Aries 0°00'00\"",
+        "cusp1ErrorArcsec": 0,
+        "ramcDeg": 289.3891823126159,
+        "cuspsDMS": [
+          "Aries 0°00'00\"",
+          "Taurus 1°45'30\"",
+          "Taurus 28°29'02.33\"",
+          "Gemini 23°45'39.33\"",
+          "Cancer 21°02'33.33\"",
+          "Leo 23°11'27\"",
+          "Libra 0°00'00\"",
+          "Scorpio 1°45'30\"",
+          "Scorpio 28°29'02.33\"",
+          "Sagittarius 23°45'39.33\"",
+          "Capricorn 21°02'33.33\"",
+          "Aquarius 23°11'27\""
+        ]
+      },
+      "23": {
+        "cusp1DMS": "Taurus 0°00'00\"",
+        "cusp1ErrorArcsec": 0,
+        "ramcDeg": 315.6440298634232,
+        "cuspsDMS": [
+          "Taurus 0°00'00\"",
+          "Taurus 27°23'27.67\"",
+          "Gemini 22°34'19\"",
+          "Cancer 19°02'38.33\"",
+          "Leo 19°33'17.33\"",
+          "Virgo 24°28'55.67\"",
+          "Scorpio 0°00'00\"",
+          "Scorpio 27°23'27.67\"",
+          "Sagittarius 22°34'19\"",
+          "Capricorn 19°02'38.33\"",
+          "Aquarius 19°33'17.33\"",
+          "Pisces 24°28'55.67\""
+        ]
+      },
+      "24": {
+        "cusp1DMS": "Taurus 1°13'20\"",
+        "cusp1ErrorArcsec": 0,
+        "ramcDeg": 316.7932227537503,
+        "cuspsDMS": [
+          "Taurus 1°13'20\"",
+          "Taurus 28°27'50\"",
+          "Gemini 23°37'42\"",
+          "Cancer 20°11'35\"",
+          "Leo 20°50'58.67\"",
+          "Virgo 25°49'45\"",
+          "Scorpio 1°13'20\"",
+          "Scorpio 28°27'50\"",
+          "Sagittarius 23°37'42\"",
+          "Capricorn 20°11'35\"",
+          "Aquarius 20°50'58.67\"",
+          "Pisces 25°49'45\""
+        ]
+      },
+      "137": {
+        "cusp1DMS": "Libra 18°06'40\"",
+        "cusp1ErrorArcsec": 0,
+        "ramcDeg": 134.7883321167543,
+        "cuspsDMS": [
+          "Libra 18°06'40\"",
+          "Scorpio 17°18'40.33\"",
+          "Sagittarius 17°07'46\"",
+          "Capricorn 18°11'27\"",
+          "Aquarius 20°03'32.33\"",
+          "Pisces 20°36'21\"",
+          "Aries 18°06'40\"",
+          "Taurus 17°18'40.33\"",
+          "Gemini 17°07'46\"",
+          "Cancer 18°11'27\"",
+          "Leo 20°03'32.33\"",
+          "Virgo 20°36'21\""
+        ]
+      },
+      "249": {
+        "cusp1DMS": "Pisces 27°53'20\"",
+        "cusp1ErrorArcsec": 0,
+        "ramcDeg": 287.6551740119405,
+        "cuspsDMS": [
+          "Pisces 27°53'20\"",
+          "Aries 29°58'13\"",
+          "Taurus 26°52'32\"",
+          "Gemini 22°08'38.67\"",
+          "Cancer 19°14'47.33\"",
+          "Leo 21°08'10.67\"",
+          "Virgo 27°53'20\"",
+          "Libra 29°58'13\"",
+          "Scorpio 26°52'32\"",
+          "Sagittarius 22°08'38.67\"",
+          "Capricorn 19°14'47.33\"",
+          "Aquarius 21°08'10.67\""
+        ]
+      }
+    },
+    "natalUnchanged": {
+      "cuspsDMS": [
+        "Aquarius 15°49'28\"",
+        "Pisces 22°31'19\"",
+        "Aries 24°12'49\"",
+        "Taurus 21°11'04.67\"",
+        "Gemini 16°27'09\"",
+        "Cancer 13°29'57\"",
+        "Leo 15°49'28\"",
+        "Virgo 22°31'19\"",
+        "Libra 24°12'49\"",
+        "Scorpio 21°11'04.67\"",
+        "Sagittarius 16°27'09\"",
+        "Capricorn 13°29'57\""
+      ],
+      "rpList": [
+        "Rahu",
+        "Saturn",
+        "Rahu",
+        "Venus",
+        "Saturn"
+      ]
+    }
+  },
+  "notes": [
+    "No feature code, tests, fixtures, or settings were modified to make anything pass (strictly read-only verification task).",
+    "All tested modules and calculation functions (horaryTable, random, vedicAspects, drpeSnapshot, kpCalculator, evaluateTsp, evaluateClassic, nodeAgents, rpAdapter, rotation, horaryCusps, kpRulingPlanets) were already exported by the application codebase.",
+    "Section 6: For cases where a special rule decided (SPECIAL_ASC_SS_MOON or SPECIAL_RULE_3), evaluateTsp does not run the majority rules (res.rules is empty), so rule1, rule2, and rule3 are reported as null per 'missing values as null'.",
+    "Section 6: punarphooReason maps applied Punarphoo cases to canonical enum values (CONJUNCTION, SATURN_ASPECT, MOON_IN_SATURN_STAR, MOON_STAR_NODE_AGENT_OF_SATURN) as specified.",
+    "Section 9: evaluateClassicGulbarga in feature code does not recognize 'applyRule2: false' setting, so Rule 2 was evaluated as part of the real codebase behavior for C7.",
+    "Section 9: C8 table provided rpSet: 'extended7' which was mapped to the engine's rpMode: 'extended7' option.",
+    "Section 10: In horary mode, computeHoraryCusps strictly anchors cusp I sidereal longitude to number's start, resulting in cusp1ErrorArcsec = 0.0."
+  ]
+}

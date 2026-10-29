@@ -1,0 +1,2142 @@
+[
+  {
+    "category": "Timezone & JD",
+    "testCaseId": "case1_hyderabad",
+    "item": "Julian Day UT",
+    "refVal": "2451040.708333",
+    "actualVal": "2451040.708333",
+    "diffStr": "0.000s",
+    "status": "PASS",
+    "notes": "Resolved: 1998-08-15T05:00:00.000Z (Asia/Kolkata)"
+  },
+  {
+    "category": "Timezone & JD",
+    "testCaseId": "case2_dallas",
+    "item": "Julian Day UT",
+    "refVal": "2460483.364583",
+    "actualVal": "2460483.364583",
+    "diffStr": "0.000s",
+    "status": "PASS",
+    "notes": "Resolved: 2024-06-21T20:45:00.000Z (America/Chicago)"
+  },
+  {
+    "category": "Timezone & JD",
+    "testCaseId": "case3_sydney",
+    "item": "Julian Day UT",
+    "refVal": "2446424.218750",
+    "actualVal": "2446424.218750",
+    "diffStr": "0.000s",
+    "status": "PASS",
+    "notes": "Resolved: 1985-12-24T17:15:00.000Z (Australia/Sydney)"
+  },
+  {
+    "category": "Timezone & JD",
+    "testCaseId": "case4_london",
+    "item": "Julian Day UT",
+    "refVal": "2451545.000000",
+    "actualVal": "2451545.000000",
+    "diffStr": "0.000s",
+    "status": "PASS",
+    "notes": "Resolved: 2000-01-01T12:00:00.000Z (Europe/London)"
+  },
+  {
+    "category": "Timezone & JD",
+    "testCaseId": "case5_singapore",
+    "item": "Julian Day UT",
+    "refVal": "2457101.166667",
+    "actualVal": "2457101.166667",
+    "diffStr": "0.000s",
+    "status": "PASS",
+    "notes": "Resolved: 2015-03-19T16:00:00.000Z (Asia/Singapore)"
+  },
+  {
+    "category": "Timezone & JD",
+    "testCaseId": "case6_reykjavik",
+    "item": "Julian Day UT",
+    "refVal": "2448088.270833",
+    "actualVal": "2448088.270833",
+    "diffStr": "0.000s",
+    "status": "PASS",
+    "notes": "Resolved: 1990-07-15T18:30:00.000Z (UTC)"
+  },
+  {
+    "category": "Timezone & JD",
+    "testCaseId": "case7_tromso",
+    "item": "Julian Day UT",
+    "refVal": "2453543.000000",
+    "actualVal": "2453543.000000",
+    "diffStr": "0.000s",
+    "status": "PASS",
+    "notes": "Resolved: 2005-06-21T12:00:00.000Z (UTC)"
+  },
+  {
+    "category": "Timezone & JD",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Julian Day UT",
+    "refVal": "2432412.270833",
+    "actualVal": "2432412.270833",
+    "diffStr": "0.000s",
+    "status": "PASS",
+    "notes": "Resolved: 1947-08-14T18:30:00.000Z (Asia/Kolkata)"
+  },
+  {
+    "category": "KP Ayanamsha",
+    "testCaseId": "case1_hyderabad",
+    "item": "KP New Ayanamsha",
+    "refVal": "23.740954",
+    "actualVal": "23.740954",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": "Sub-arcsecond match with SE_SIDM_KRISHNAMURTI mode 5"
+  },
+  {
+    "category": "KP Ascendant",
+    "testCaseId": "case1_hyderabad",
+    "item": "Ascendant (Cusp 1)",
+    "refVal": "181.890020",
+    "actualVal": "181.890020",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP MC",
+    "testCaseId": "case1_hyderabad",
+    "item": "Midheaven (Cusp 10)",
+    "refVal": "91.213897",
+    "actualVal": "91.213897",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case1_hyderabad",
+    "item": "Cusp 1",
+    "refVal": "181.890020",
+    "actualVal": "181.890020",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case1_hyderabad",
+    "item": "Cusp 2",
+    "refVal": "211.364611",
+    "actualVal": "211.364611",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case1_hyderabad",
+    "item": "Cusp 3",
+    "refVal": "241.032629",
+    "actualVal": "241.032629",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case1_hyderabad",
+    "item": "Cusp 4",
+    "refVal": "271.213897",
+    "actualVal": "271.213897",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case1_hyderabad",
+    "item": "Cusp 5",
+    "refVal": "302.269734",
+    "actualVal": "302.269734",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case1_hyderabad",
+    "item": "Cusp 6",
+    "refVal": "333.154769",
+    "actualVal": "333.154769",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case1_hyderabad",
+    "item": "Cusp 7",
+    "refVal": "1.890020",
+    "actualVal": "1.890020",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case1_hyderabad",
+    "item": "Cusp 8",
+    "refVal": "31.364611",
+    "actualVal": "31.364611",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case1_hyderabad",
+    "item": "Cusp 9",
+    "refVal": "61.032629",
+    "actualVal": "61.032629",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case1_hyderabad",
+    "item": "Cusp 10",
+    "refVal": "91.213897",
+    "actualVal": "91.213897",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case1_hyderabad",
+    "item": "Cusp 11",
+    "refVal": "122.269734",
+    "actualVal": "122.269734",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case1_hyderabad",
+    "item": "Cusp 12",
+    "refVal": "153.154769",
+    "actualVal": "153.154769",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case1_hyderabad",
+    "item": "Sun",
+    "refVal": "118.441962",
+    "actualVal": "118.441962",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case1_hyderabad",
+    "item": "Moon",
+    "refVal": "33.473981",
+    "actualVal": "33.473981",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case1_hyderabad",
+    "item": "Mars",
+    "refVal": "92.643117",
+    "actualVal": "92.643117",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case1_hyderabad",
+    "item": "Mercury",
+    "refVal": "116.291574",
+    "actualVal": "116.291574",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case1_hyderabad",
+    "item": "Jupiter",
+    "refVal": "333.057118",
+    "actualVal": "333.057118",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case1_hyderabad",
+    "item": "Venus",
+    "refVal": "98.483571",
+    "actualVal": "98.483571",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case1_hyderabad",
+    "item": "Saturn",
+    "refVal": "9.889087",
+    "actualVal": "9.889087",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case1_hyderabad",
+    "item": "Rahu_Mean",
+    "refVal": "128.007706",
+    "actualVal": "128.007706",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case1_hyderabad",
+    "item": "Ketu_Mean",
+    "refVal": "308.007706",
+    "actualVal": "308.007706",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Ayanamsha",
+    "testCaseId": "case2_dallas",
+    "item": "KP New Ayanamsha",
+    "refVal": "24.102104",
+    "actualVal": "24.102104",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": "Sub-arcsecond match with SE_SIDM_KRISHNAMURTI mode 5"
+  },
+  {
+    "category": "KP Ascendant",
+    "testCaseId": "case2_dallas",
+    "item": "Ascendant (Cusp 1)",
+    "refVal": "185.537897",
+    "actualVal": "185.537897",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP MC",
+    "testCaseId": "case2_dallas",
+    "item": "Midheaven (Cusp 10)",
+    "refVal": "98.605487",
+    "actualVal": "98.605487",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case2_dallas",
+    "item": "Cusp 1",
+    "refVal": "185.537897",
+    "actualVal": "185.537897",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case2_dallas",
+    "item": "Cusp 2",
+    "refVal": "214.206486",
+    "actualVal": "214.206486",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case2_dallas",
+    "item": "Cusp 3",
+    "refVal": "245.518421",
+    "actualVal": "245.518421",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case2_dallas",
+    "item": "Cusp 4",
+    "refVal": "278.605487",
+    "actualVal": "278.605487",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case2_dallas",
+    "item": "Cusp 5",
+    "refVal": "311.144947",
+    "actualVal": "311.144947",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case2_dallas",
+    "item": "Cusp 6",
+    "refVal": "340.481733",
+    "actualVal": "340.481733",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case2_dallas",
+    "item": "Cusp 7",
+    "refVal": "5.537897",
+    "actualVal": "5.537897",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case2_dallas",
+    "item": "Cusp 8",
+    "refVal": "34.206486",
+    "actualVal": "34.206486",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case2_dallas",
+    "item": "Cusp 9",
+    "refVal": "65.518421",
+    "actualVal": "65.518421",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case2_dallas",
+    "item": "Cusp 10",
+    "refVal": "98.605487",
+    "actualVal": "98.605487",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case2_dallas",
+    "item": "Cusp 11",
+    "refVal": "131.144947",
+    "actualVal": "131.144947",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case2_dallas",
+    "item": "Cusp 12",
+    "refVal": "160.481733",
+    "actualVal": "160.481733",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case2_dallas",
+    "item": "Sun",
+    "refVal": "66.848772",
+    "actualVal": "66.848772",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case2_dallas",
+    "item": "Moon",
+    "refVal": "244.550160",
+    "actualVal": "244.550160",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case2_dallas",
+    "item": "Mars",
+    "refVal": "15.236233",
+    "actualVal": "15.236233",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case2_dallas",
+    "item": "Mercury",
+    "refVal": "75.483390",
+    "actualVal": "75.483390",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case2_dallas",
+    "item": "Jupiter",
+    "refVal": "42.102817",
+    "actualVal": "42.102817",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case2_dallas",
+    "item": "Venus",
+    "refVal": "71.550571",
+    "actualVal": "71.550571",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case2_dallas",
+    "item": "Saturn",
+    "refVal": "325.274361",
+    "actualVal": "325.274361",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case2_dallas",
+    "item": "Rahu_Mean",
+    "refVal": "347.622464",
+    "actualVal": "347.622464",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case2_dallas",
+    "item": "Ketu_Mean",
+    "refVal": "167.622464",
+    "actualVal": "167.622464",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Ayanamsha",
+    "testCaseId": "case3_sydney",
+    "item": "KP New Ayanamsha",
+    "refVal": "23.564403",
+    "actualVal": "23.564403",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": "Sub-arcsecond match with SE_SIDM_KRISHNAMURTI mode 5"
+  },
+  {
+    "category": "KP Ascendant",
+    "testCaseId": "case3_sydney",
+    "item": "Ascendant (Cusp 1)",
+    "refVal": "226.931171",
+    "actualVal": "226.931171",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP MC",
+    "testCaseId": "case3_sydney",
+    "item": "Midheaven (Cusp 10)",
+    "refVal": "117.175944",
+    "actualVal": "117.175944",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case3_sydney",
+    "item": "Cusp 1",
+    "refVal": "226.931171",
+    "actualVal": "226.931171",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case3_sydney",
+    "item": "Cusp 2",
+    "refVal": "250.457384",
+    "actualVal": "250.457384",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case3_sydney",
+    "item": "Cusp 3",
+    "refVal": "272.529976",
+    "actualVal": "272.529976",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case3_sydney",
+    "item": "Cusp 4",
+    "refVal": "297.175944",
+    "actualVal": "297.175944",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case3_sydney",
+    "item": "Cusp 5",
+    "refVal": "328.160689",
+    "actualVal": "328.160689",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case3_sydney",
+    "item": "Cusp 6",
+    "refVal": "6.998385",
+    "actualVal": "6.998385",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case3_sydney",
+    "item": "Cusp 7",
+    "refVal": "46.931171",
+    "actualVal": "46.931171",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case3_sydney",
+    "item": "Cusp 8",
+    "refVal": "70.457384",
+    "actualVal": "70.457384",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case3_sydney",
+    "item": "Cusp 9",
+    "refVal": "92.529976",
+    "actualVal": "92.529976",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case3_sydney",
+    "item": "Cusp 10",
+    "refVal": "117.175944",
+    "actualVal": "117.175944",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case3_sydney",
+    "item": "Cusp 11",
+    "refVal": "148.160689",
+    "actualVal": "148.160689",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case3_sydney",
+    "item": "Cusp 12",
+    "refVal": "186.998385",
+    "actualVal": "186.998385",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case3_sydney",
+    "item": "Sun",
+    "refVal": "249.286569",
+    "actualVal": "249.286569",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case3_sydney",
+    "item": "Moon",
+    "refVal": "40.639652",
+    "actualVal": "40.639652",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case3_sydney",
+    "item": "Mars",
+    "refVal": "192.549589",
+    "actualVal": "192.549589",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case3_sydney",
+    "item": "Mercury",
+    "refVal": "229.226534",
+    "actualVal": "229.226534",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case3_sydney",
+    "item": "Jupiter",
+    "refVal": "293.172838",
+    "actualVal": "293.172838",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case3_sydney",
+    "item": "Venus",
+    "refVal": "243.080847",
+    "actualVal": "243.080847",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case3_sydney",
+    "item": "Saturn",
+    "refVal": "220.818380",
+    "actualVal": "220.818380",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case3_sydney",
+    "item": "Rahu_Mean",
+    "refVal": "12.644813",
+    "actualVal": "12.644813",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case3_sydney",
+    "item": "Ketu_Mean",
+    "refVal": "192.644813",
+    "actualVal": "192.644813",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Ayanamsha",
+    "testCaseId": "case4_london",
+    "item": "KP New Ayanamsha",
+    "refVal": "23.760240",
+    "actualVal": "23.760240",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": "Sub-arcsecond match with SE_SIDM_KRISHNAMURTI mode 5"
+  },
+  {
+    "category": "KP Ascendant",
+    "testCaseId": "case4_london",
+    "item": "Ascendant (Cusp 1)",
+    "refVal": "0.258220",
+    "actualVal": "0.258220",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP MC",
+    "testCaseId": "case4_london",
+    "item": "Midheaven (Cusp 10)",
+    "refVal": "255.736855",
+    "actualVal": "255.736855",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case4_london",
+    "item": "Cusp 1",
+    "refVal": "0.258220",
+    "actualVal": "0.258220",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case4_london",
+    "item": "Cusp 2",
+    "refVal": "37.256601",
+    "actualVal": "37.256601",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case4_london",
+    "item": "Cusp 3",
+    "refVal": "58.155051",
+    "actualVal": "58.155051",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case4_london",
+    "item": "Cusp 4",
+    "refVal": "75.736855",
+    "actualVal": "75.736855",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case4_london",
+    "item": "Cusp 5",
+    "refVal": "95.157165",
+    "actualVal": "95.157165",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case4_london",
+    "item": "Cusp 6",
+    "refVal": "123.729117",
+    "actualVal": "123.729117",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case4_london",
+    "item": "Cusp 7",
+    "refVal": "180.258220",
+    "actualVal": "180.258220",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case4_london",
+    "item": "Cusp 8",
+    "refVal": "217.256601",
+    "actualVal": "217.256601",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case4_london",
+    "item": "Cusp 9",
+    "refVal": "238.155051",
+    "actualVal": "238.155051",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case4_london",
+    "item": "Cusp 10",
+    "refVal": "255.736855",
+    "actualVal": "255.736855",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case4_london",
+    "item": "Cusp 11",
+    "refVal": "275.157165",
+    "actualVal": "275.157165",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case4_london",
+    "item": "Cusp 12",
+    "refVal": "303.729117",
+    "actualVal": "303.729117",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case4_london",
+    "item": "Sun",
+    "refVal": "256.612550",
+    "actualVal": "256.612550",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case4_london",
+    "item": "Moon",
+    "refVal": "199.567405",
+    "actualVal": "199.567405",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case4_london",
+    "item": "Mars",
+    "refVal": "304.206943",
+    "actualVal": "304.206943",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case4_london",
+    "item": "Mercury",
+    "refVal": "248.132905",
+    "actualVal": "248.132905",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case4_london",
+    "item": "Jupiter",
+    "refVal": "1.496660",
+    "actualVal": "1.496660",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case4_london",
+    "item": "Venus",
+    "refVal": "217.809428",
+    "actualVal": "217.809428",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case4_london",
+    "item": "Saturn",
+    "refVal": "16.639269",
+    "actualVal": "16.639269",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case4_london",
+    "item": "Rahu_Mean",
+    "refVal": "101.284276",
+    "actualVal": "101.284276",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case4_london",
+    "item": "Ketu_Mean",
+    "refVal": "281.284276",
+    "actualVal": "281.284276",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Ayanamsha",
+    "testCaseId": "case5_singapore",
+    "item": "KP New Ayanamsha",
+    "refVal": "23.972741",
+    "actualVal": "23.972741",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": "Sub-arcsecond match with SE_SIDM_KRISHNAMURTI mode 5"
+  },
+  {
+    "category": "KP Ascendant",
+    "testCaseId": "case5_singapore",
+    "item": "Ascendant (Cusp 1)",
+    "refVal": "227.700803",
+    "actualVal": "227.700803",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP MC",
+    "testCaseId": "case5_singapore",
+    "item": "Midheaven (Cusp 10)",
+    "refVal": "135.138000",
+    "actualVal": "135.138000",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case5_singapore",
+    "item": "Cusp 1",
+    "refVal": "227.700803",
+    "actualVal": "227.700803",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case5_singapore",
+    "item": "Cusp 2",
+    "refVal": "255.509185",
+    "actualVal": "255.509185",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case5_singapore",
+    "item": "Cusp 3",
+    "refVal": "284.162561",
+    "actualVal": "284.162561",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case5_singapore",
+    "item": "Cusp 4",
+    "refVal": "315.138000",
+    "actualVal": "315.138000",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case5_singapore",
+    "item": "Cusp 5",
+    "refVal": "347.626443",
+    "actualVal": "347.626443",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case5_singapore",
+    "item": "Cusp 6",
+    "refVal": "18.924003",
+    "actualVal": "18.924003",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case5_singapore",
+    "item": "Cusp 7",
+    "refVal": "47.700803",
+    "actualVal": "47.700803",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case5_singapore",
+    "item": "Cusp 8",
+    "refVal": "75.509185",
+    "actualVal": "75.509185",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case5_singapore",
+    "item": "Cusp 9",
+    "refVal": "104.162561",
+    "actualVal": "104.162561",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case5_singapore",
+    "item": "Cusp 10",
+    "refVal": "135.138000",
+    "actualVal": "135.138000",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case5_singapore",
+    "item": "Cusp 11",
+    "refVal": "167.626443",
+    "actualVal": "167.626443",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case5_singapore",
+    "item": "Cusp 12",
+    "refVal": "198.924003",
+    "actualVal": "198.924003",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case5_singapore",
+    "item": "Sun",
+    "refVal": "334.752168",
+    "actualVal": "334.752168",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case5_singapore",
+    "item": "Moon",
+    "refVal": "324.348365",
+    "actualVal": "324.348365",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case5_singapore",
+    "item": "Mars",
+    "refVal": "357.059416",
+    "actualVal": "357.059416",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case5_singapore",
+    "item": "Mercury",
+    "refVal": "316.135884",
+    "actualVal": "316.135884",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case5_singapore",
+    "item": "Jupiter",
+    "refVal": "109.247057",
+    "actualVal": "109.247057",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case5_singapore",
+    "item": "Venus",
+    "refVal": "8.727413",
+    "actualVal": "8.727413",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case5_singapore",
+    "item": "Saturn",
+    "refVal": "220.934675",
+    "actualVal": "220.934675",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case5_singapore",
+    "item": "Rahu_Mean",
+    "refVal": "166.851869",
+    "actualVal": "166.851869",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case5_singapore",
+    "item": "Ketu_Mean",
+    "refVal": "346.851869",
+    "actualVal": "346.851869",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Ayanamsha",
+    "testCaseId": "case6_reykjavik",
+    "item": "KP New Ayanamsha",
+    "refVal": "23.628041",
+    "actualVal": "23.628041",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": "Sub-arcsecond match with SE_SIDM_KRISHNAMURTI mode 5"
+  },
+  {
+    "category": "KP Ascendant",
+    "testCaseId": "case6_reykjavik",
+    "item": "Ascendant (Cusp 1)",
+    "refVal": "211.869952",
+    "actualVal": "211.869952",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP MC",
+    "testCaseId": "case6_reykjavik",
+    "item": "Midheaven (Cusp 10)",
+    "refVal": "166.060250",
+    "actualVal": "166.060250",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case6_reykjavik",
+    "item": "Cusp 1",
+    "refVal": "211.869952",
+    "actualVal": "211.869952",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case6_reykjavik",
+    "item": "Cusp 2",
+    "refVal": "243.346197",
+    "actualVal": "243.346197",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case6_reykjavik",
+    "item": "Cusp 3",
+    "refVal": "304.253967",
+    "actualVal": "304.253967",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case6_reykjavik",
+    "item": "Cusp 4",
+    "refVal": "346.060250",
+    "actualVal": "346.060250",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case6_reykjavik",
+    "item": "Cusp 5",
+    "refVal": "8.587207",
+    "actualVal": "8.587207",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case6_reykjavik",
+    "item": "Cusp 6",
+    "refVal": "22.372242",
+    "actualVal": "22.372242",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case6_reykjavik",
+    "item": "Cusp 7",
+    "refVal": "31.869952",
+    "actualVal": "31.869952",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case6_reykjavik",
+    "item": "Cusp 8",
+    "refVal": "63.346197",
+    "actualVal": "63.346197",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case6_reykjavik",
+    "item": "Cusp 9",
+    "refVal": "124.253967",
+    "actualVal": "124.253967",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case6_reykjavik",
+    "item": "Cusp 10",
+    "refVal": "166.060250",
+    "actualVal": "166.060250",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case6_reykjavik",
+    "item": "Cusp 11",
+    "refVal": "188.587207",
+    "actualVal": "188.587207",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case6_reykjavik",
+    "item": "Cusp 12",
+    "refVal": "202.372242",
+    "actualVal": "202.372242",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case6_reykjavik",
+    "item": "Sun",
+    "refVal": "89.372612",
+    "actualVal": "89.372612",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case6_reykjavik",
+    "item": "Moon",
+    "refVal": "3.436883",
+    "actualVal": "3.436883",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case6_reykjavik",
+    "item": "Mars",
+    "refVal": "8.491512",
+    "actualVal": "8.491512",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case6_reykjavik",
+    "item": "Mercury",
+    "refVal": "103.648537",
+    "actualVal": "103.648537",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case6_reykjavik",
+    "item": "Jupiter",
+    "refVal": "88.977976",
+    "actualVal": "88.977976",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case6_reykjavik",
+    "item": "Venus",
+    "refVal": "61.104183",
+    "actualVal": "61.104183",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case6_reykjavik",
+    "item": "Saturn",
+    "refVal": "268.311653",
+    "actualVal": "268.311653",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case6_reykjavik",
+    "item": "Rahu_Mean",
+    "refVal": "284.463326",
+    "actualVal": "284.463326",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case6_reykjavik",
+    "item": "Ketu_Mean",
+    "refVal": "104.463326",
+    "actualVal": "104.463326",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Ayanamsha",
+    "testCaseId": "case7_tromso",
+    "item": "KP New Ayanamsha",
+    "refVal": "23.836654",
+    "actualVal": "23.836654",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": "Sub-arcsecond match with SE_SIDM_KRISHNAMURTI mode 5"
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case7_tromso",
+    "item": "Placidus Polar Fallback",
+    "refVal": "SWE Exception",
+    "actualVal": "Porphyry (Extreme Latitude Fallback)",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": "Extreme latitude fallback safely engaged"
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case7_tromso",
+    "item": "Sun",
+    "refVal": "66.372822",
+    "actualVal": "66.372822",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case7_tromso",
+    "item": "Moon",
+    "refVal": "236.936722",
+    "actualVal": "236.936722",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case7_tromso",
+    "item": "Mars",
+    "refVal": "342.645321",
+    "actualVal": "342.645321",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case7_tromso",
+    "item": "Mercury",
+    "refVal": "85.617020",
+    "actualVal": "85.617020",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case7_tromso",
+    "item": "Jupiter",
+    "refVal": "165.485528",
+    "actualVal": "165.485528",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case7_tromso",
+    "item": "Venus",
+    "refVal": "87.962876",
+    "actualVal": "87.962876",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case7_tromso",
+    "item": "Saturn",
+    "refVal": "93.025446",
+    "actualVal": "93.025446",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case7_tromso",
+    "item": "Rahu_Mean",
+    "refVal": "355.406243",
+    "actualVal": "355.406243",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case7_tromso",
+    "item": "Ketu_Mean",
+    "refVal": "175.406243",
+    "actualVal": "175.406243",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Ayanamsha",
+    "testCaseId": "case8_delhi_1947",
+    "item": "KP New Ayanamsha",
+    "refVal": "23.028599",
+    "actualVal": "23.028599",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": "Sub-arcsecond match with SE_SIDM_KRISHNAMURTI mode 5"
+  },
+  {
+    "category": "KP Ascendant",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Ascendant (Cusp 1)",
+    "refVal": "37.829122",
+    "actualVal": "37.829122",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP MC",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Midheaven (Cusp 10)",
+    "refVal": "291.550112",
+    "actualVal": "291.550112",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Cusp 1",
+    "refVal": "37.829122",
+    "actualVal": "37.829122",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Cusp 2",
+    "refVal": "63.438101",
+    "actualVal": "63.438101",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Cusp 3",
+    "refVal": "86.645166",
+    "actualVal": "86.645166",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Cusp 4",
+    "refVal": "111.550112",
+    "actualVal": "111.550112",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Cusp 5",
+    "refVal": "141.710889",
+    "actualVal": "141.710889",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Cusp 6",
+    "refVal": "178.786132",
+    "actualVal": "178.786132",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Cusp 7",
+    "refVal": "217.829122",
+    "actualVal": "217.829122",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Cusp 8",
+    "refVal": "243.438101",
+    "actualVal": "243.438101",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Cusp 9",
+    "refVal": "266.645166",
+    "actualVal": "266.645166",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Cusp 10",
+    "refVal": "291.550112",
+    "actualVal": "291.550112",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Cusp 11",
+    "refVal": "321.710889",
+    "actualVal": "321.710889",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Cusps",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Cusp 12",
+    "refVal": "358.786132",
+    "actualVal": "358.786132",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Sun",
+    "refVal": "118.085874",
+    "actualVal": "118.085874",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Moon",
+    "refVal": "94.080390",
+    "actualVal": "94.080390",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Mars",
+    "refVal": "67.553081",
+    "actualVal": "67.553081",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Mercury",
+    "refVal": "103.771130",
+    "actualVal": "103.771130",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Jupiter",
+    "refVal": "205.974555",
+    "actualVal": "205.974555",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Venus",
+    "refVal": "112.658058",
+    "actualVal": "112.658058",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Saturn",
+    "refVal": "110.569867",
+    "actualVal": "110.569867",
+    "diffStr": "0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Rahu_Mean",
+    "refVal": "35.166577",
+    "actualVal": "35.166577",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Planets",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Ketu_Mean",
+    "refVal": "215.166577",
+    "actualVal": "215.166577",
+    "diffStr": "-0.00\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "True Node Mode",
+    "testCaseId": "case1_hyderabad",
+    "item": "Rahu (True Node)",
+    "refVal": "127.776737",
+    "actualVal": "127.776737",
+    "diffStr": "0.0'",
+    "status": "PASS",
+    "notes": "Authoritative Swiss Ephemeris SE_TRUE_NODE numerical integration"
+  },
+  {
+    "category": "True Node Mode",
+    "testCaseId": "case2_dallas",
+    "item": "Rahu (True Node)",
+    "refVal": "348.164987",
+    "actualVal": "348.164987",
+    "diffStr": "-0.0'",
+    "status": "PASS",
+    "notes": "Authoritative Swiss Ephemeris SE_TRUE_NODE numerical integration"
+  },
+  {
+    "category": "True Node Mode",
+    "testCaseId": "case3_sydney",
+    "item": "Rahu (True Node)",
+    "refVal": "14.396645",
+    "actualVal": "14.396645",
+    "diffStr": "-0.0'",
+    "status": "PASS",
+    "notes": "Authoritative Swiss Ephemeris SE_TRUE_NODE numerical integration"
+  },
+  {
+    "category": "True Node Mode",
+    "testCaseId": "case4_london",
+    "item": "Rahu (True Node)",
+    "refVal": "100.196525",
+    "actualVal": "100.196525",
+    "diffStr": "0.0'",
+    "status": "PASS",
+    "notes": "Authoritative Swiss Ephemeris SE_TRUE_NODE numerical integration"
+  },
+  {
+    "category": "True Node Mode",
+    "testCaseId": "case5_singapore",
+    "item": "Rahu (True Node)",
+    "refVal": "165.999150",
+    "actualVal": "165.999150",
+    "diffStr": "-0.0'",
+    "status": "PASS",
+    "notes": "Authoritative Swiss Ephemeris SE_TRUE_NODE numerical integration"
+  },
+  {
+    "category": "True Node Mode",
+    "testCaseId": "case6_reykjavik",
+    "item": "Rahu (True Node)",
+    "refVal": "283.726186",
+    "actualVal": "283.726186",
+    "diffStr": "0.0'",
+    "status": "PASS",
+    "notes": "Authoritative Swiss Ephemeris SE_TRUE_NODE numerical integration"
+  },
+  {
+    "category": "True Node Mode",
+    "testCaseId": "case7_tromso",
+    "item": "Rahu (True Node)",
+    "refVal": "356.377080",
+    "actualVal": "356.377080",
+    "diffStr": "0.0'",
+    "status": "PASS",
+    "notes": "Authoritative Swiss Ephemeris SE_TRUE_NODE numerical integration"
+  },
+  {
+    "category": "True Node Mode",
+    "testCaseId": "case8_delhi_1947",
+    "item": "Rahu (True Node)",
+    "refVal": "35.839481",
+    "actualVal": "35.839481",
+    "diffStr": "0.0'",
+    "status": "PASS",
+    "notes": "Authoritative Swiss Ephemeris SE_TRUE_NODE numerical integration"
+  },
+  {
+    "category": "KP Boundary",
+    "testCaseId": "Exact 0.0°",
+    "item": "Star/Sub/SubSub",
+    "refVal": "Ketu/Ketu/Ketu",
+    "actualVal": "Ketu/Ketu/Ketu",
+    "diffStr": "0\"",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Boundary",
+    "testCaseId": "Ketu Sub (just before end)",
+    "item": "Sub Lord",
+    "refVal": "Ketu",
+    "actualVal": "Ketu",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Boundary",
+    "testCaseId": "Venus Sub (exact boundary start)",
+    "item": "Sub Lord",
+    "refVal": "Venus",
+    "actualVal": "Venus",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Boundary",
+    "testCaseId": "Venus Sub (just after boundary start)",
+    "item": "Sub Lord",
+    "refVal": "Venus",
+    "actualVal": "Venus",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Boundary",
+    "testCaseId": "Venus Sub (before 3°)",
+    "item": "Sub Lord",
+    "refVal": "Venus",
+    "actualVal": "Venus",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Boundary",
+    "testCaseId": "Sun Sub (at 3°)",
+    "item": "Sub Lord",
+    "refVal": "Sun",
+    "actualVal": "Sun",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Boundary",
+    "testCaseId": "Sun Sub (after 3°)",
+    "item": "Sub Lord",
+    "refVal": "Sun",
+    "actualVal": "Sun",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Boundary",
+    "testCaseId": "Ashwini End (Mercury Sub)",
+    "item": "Nakshatra/Sub",
+    "refVal": "Ashwini/Mercury",
+    "actualVal": "Ashwini/Mercury",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Boundary",
+    "testCaseId": "Bharani Start (Venus Sub)",
+    "item": "Nakshatra/Sub",
+    "refVal": "Bharani/Venus",
+    "actualVal": "Bharani/Venus",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Boundary",
+    "testCaseId": "Bharani Start + eps",
+    "item": "Nakshatra/Sub",
+    "refVal": "Bharani/Venus",
+    "actualVal": "Bharani/Venus",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "KP Boundary",
+    "testCaseId": "Pisces/Revati near 360°",
+    "item": "Sign/Nakshatra/Sub",
+    "refVal": "Pisces/Revati/Jupiter",
+    "actualVal": "Pisces/Revati/Saturn",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "Significators",
+    "testCaseId": "House 10 Test",
+    "item": "4-Level Matrix Hierarchy",
+    "refVal": "Moon,Sun,Mercury / Mars,Mercury,Sun,Venus / Moon",
+    "actualVal": "Mercury,Moon,Sun / Mars,Mercury,Sun,Venus / Moon",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "Ruling Planets",
+    "testCaseId": "1998-08-15 Judgment",
+    "item": "Day Lord",
+    "refVal": "Saturn",
+    "actualVal": "Saturn",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "Ruling Planets",
+    "testCaseId": "1998-08-15 Judgment",
+    "item": "Ascendant Star Lord",
+    "refVal": "Mars",
+    "actualVal": "Mars",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "Ruling Planets",
+    "testCaseId": "1998-08-15 Judgment",
+    "item": "Moon Star Lord",
+    "refVal": "Sun",
+    "actualVal": "Sun",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "Extreme Input",
+    "testCaseId": "Tromso (69.65° N)",
+    "item": "Polar Fallback House System",
+    "refVal": "Porphyry (Extreme Latitude Fallback)",
+    "actualVal": "Porphyry (Extreme Latitude Fallback)",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "Extreme Input",
+    "testCaseId": "Equator (0.0° Lat)",
+    "item": "Convergence at Equator",
+    "refVal": "12 Non-NaN Cusps",
+    "actualVal": "12 cusps valid",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "Extreme Input",
+    "testCaseId": "South Pole (-90.0° Lat)",
+    "item": "Polar Fallback",
+    "refVal": "Porphyry (Extreme Latitude Fallback)",
+    "actualVal": "Porphyry (Extreme Latitude Fallback)",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  },
+  {
+    "category": "Invalid Input",
+    "testCaseId": "Garbage Date String",
+    "item": "Exception Throw",
+    "refVal": "Throws Error",
+    "actualVal": "Invalid birth date or time components.",
+    "diffStr": "N/A",
+    "status": "PASS",
+    "notes": ""
+  }
+]

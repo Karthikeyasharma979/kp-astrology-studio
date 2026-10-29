@@ -1,0 +1,60 @@
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FFFDF9] dark:bg-midnight text-gray-900 dark:text-gray-100 overflow-x-hidden transition-colors duration-300;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom subtle scrollbar for horizontal tabs */
+.tab-scrollbar::-webkit-scrollbar {
+  height: 5px;
+}
+.tab-scrollbar::-webkit-scrollbar-track {
+  background: rgba(245, 158, 11, 0.08);
+  border-radius: 9999px;
+}
+.tab-scrollbar::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 9999px;
+}
+.tab-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+.tab-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #f59e0b rgba(245, 158, 11, 0.08);
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .print\:block {
+    display: block !important;
+  }
+}
