@@ -138,7 +138,7 @@ app.use((err, req, res, next) => {
     });
 });
 
-if (process.env.NODE_ENV !== 'test') {
+if (process.env.NODE_ENV !== 'test' && !process.env.VERCEL) {
     app.listen(port, '0.0.0.0', () => {
         console.log(`✨ KP Astrology Studio API Server running on port ${port}`);
         console.log(`   Health check: http://localhost:${port}/api/health`);
