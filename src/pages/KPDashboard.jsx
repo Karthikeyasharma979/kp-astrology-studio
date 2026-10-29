@@ -11,7 +11,7 @@ import { calculateKPKundli, KP_AYANAMSHA_MODES } from '../services/kpCalculator'
 import { KPBirthForm } from '../components/kp/KPBirthForm';
 import { KP_TRANSLATIONS } from '../utils/kpTranslations';
 import { safeSaveSessionResult, safeSaveSessionParams } from '../utils/storageUtils';
-import { API_BASE_URL } from '../utils/apiConfig';
+import { API_BASE_URL } from '../utils/apiConfig.js';
 
 export const KPDashboard = ({ lang = 'te', onLangChange }) => {
     const navigate = useNavigate();

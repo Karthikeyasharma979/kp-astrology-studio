@@ -2,7 +2,7 @@
  * Location, Geocoding and IANA Timezone Resolution Service for AstroSharma
  */
 import tzlookup from 'tz-lookup';
-import { API_BASE_URL } from '../utils/apiConfig';
+import { API_BASE_URL } from '../utils/apiConfig.js';
 
 export const POPULAR_LOCATIONS = [
     // South India - Telangana & Andhra Pradesh

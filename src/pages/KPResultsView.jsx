@@ -23,7 +23,7 @@ import { KPEventSignificatorAnalysis } from '../components/kp/KPEventSignificato
 import { ReportGenerationModal } from '../components/report/ReportGenerationModal';
 import { KP_TRANSLATIONS, getLocalizedPlanet, getLocalizedNakshatra } from '../utils/kpTranslations';
 import { safeSaveSessionResult, safeSaveSessionParams, safeClearEventAnalysisState } from '../utils/storageUtils';
-import { API_BASE_URL } from '../utils/apiConfig';
+import { API_BASE_URL } from '../utils/apiConfig.js';
 
 export const KPResultsView = ({ lang = 'te', onLangChange }) => {
     const location = useLocation();
