@@ -11,6 +11,7 @@ import { calculateKPKundli, KP_AYANAMSHA_MODES } from '../services/kpCalculator'
 import { KPBirthForm } from '../components/kp/KPBirthForm';
 import { KP_TRANSLATIONS } from '../utils/kpTranslations';
 import { safeSaveSessionResult, safeSaveSessionParams } from '../utils/storageUtils';
+import { API_BASE_URL } from '../utils/apiConfig';
 
 export const KPDashboard = ({ lang = 'te', onLangChange }) => {
     const navigate = useNavigate();
@@ -77,9 +78,9 @@ export const KPDashboard = ({ lang = 'te', onLangChange }) => {
         try {
             let calculatedResult = null;
 
-            // 1. Authoritative Swiss Ephemeris from backend API
+            // 1. Authoritative calculations from backend API
             try {
-                const response = await fetch('/api/kp-kundli', {
+                const response = await fetch(`${API_BASE_URL}/api/kp-kundli`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({

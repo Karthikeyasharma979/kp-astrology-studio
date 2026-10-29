@@ -2,6 +2,7 @@
  * Location, Geocoding and IANA Timezone Resolution Service for AstroSharma
  */
 import tzlookup from 'tz-lookup';
+import { API_BASE_URL } from '../utils/apiConfig';
 
 export const POPULAR_LOCATIONS = [
     // South India - Telangana & Andhra Pradesh
@@ -138,7 +139,7 @@ export async function searchLocationsOnline(query, count = 10) {
 
     // 2. Try backend location search endpoint
     try {
-        const response = await fetch(`/api/location/search?q=${encodeURIComponent(trimmed)}&count=${count}`);
+        const response = await fetch(`${API_BASE_URL}/api/location/search?q=${encodeURIComponent(trimmed)}&count=${count}`);
         if (response.ok) {
             const data = await response.json();
             if (data && data.success && Array.isArray(data.data) && data.data.length > 0) {
@@ -255,7 +256,7 @@ export async function reverseGeocodeOnline(lat, lon) {
     const localTzOffset = getTimezoneOffsetForDate(localTz);
 
     try {
-        const response = await fetch(`/api/location/reverse?lat=${numLat}&lon=${numLon}`);
+        const response = await fetch(`${API_BASE_URL}/api/location/reverse?lat=${numLat}&lon=${numLon}`);
         if (response.ok) {
             const data = await response.json();
             if (data && data.success && data.data) {

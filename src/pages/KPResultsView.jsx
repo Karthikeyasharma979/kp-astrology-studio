@@ -23,6 +23,7 @@ import { KPEventSignificatorAnalysis } from '../components/kp/KPEventSignificato
 import { ReportGenerationModal } from '../components/report/ReportGenerationModal';
 import { KP_TRANSLATIONS, getLocalizedPlanet, getLocalizedNakshatra } from '../utils/kpTranslations';
 import { safeSaveSessionResult, safeSaveSessionParams, safeClearEventAnalysisState } from '../utils/storageUtils';
+import { API_BASE_URL } from '../utils/apiConfig';
 
 export const KPResultsView = ({ lang = 'te', onLangChange }) => {
     const location = useLocation();
@@ -224,7 +225,7 @@ export const KPResultsView = ({ lang = 'te', onLangChange }) => {
         let cancelled = false;
         const computeHorary = async () => {
             try {
-                const response = await fetch('/api/kp-kundli', {
+                const response = await fetch(`${API_BASE_URL}/api/kp-kundli`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -371,9 +372,9 @@ export const KPResultsView = ({ lang = 'te', onLangChange }) => {
         try {
             let calculatedResult = null;
 
-            // 1. Authoritative Swiss Ephemeris from backend API
+            // 1. Authoritative calculations from backend API
             try {
-                const response = await fetch('/api/kp-kundli', {
+                const response = await fetch(`${API_BASE_URL}/api/kp-kundli`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
