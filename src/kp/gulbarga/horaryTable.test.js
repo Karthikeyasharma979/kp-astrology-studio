@@ -14,6 +14,7 @@ import {
     getHoraryEntry,
     getHoraryTable,
     lordsAt,
+    getKp249NumberForEntry,
     CIRCLE
 } from '../horaryTable.js';
 import { randomInRange, validateHoraryNumber } from '../random.js';
@@ -227,5 +228,42 @@ describe("Random Generator Unbiased Distribution & Range (§9.2)", () => {
         assert.strictEqual(validateHoraryNumber(12.5, '1-249').valid, false);
         assert.strictEqual(validateHoraryNumber('abc', '1-249').valid, false);
         assert.strictEqual(validateHoraryNumber('', '1-249').valid, false);
+    });
+});
+
+describe("Horary entry labels & 1-249 mapping", () => {
+    test("1–27 end labels name the sign the nakshatra actually ends in", () => {
+        // Krittika: Aries 26°40' -> Taurus 10°00'
+        assert.strictEqual(getHoraryEntry('1-27', 3).endDMS, `Taurus 10°00'00"`);
+        // Ashwini ends inside Aries; Revati ends exactly at the end of Pisces
+        assert.strictEqual(getHoraryEntry('1-27', 1).endDMS, `Aries 13°20'00"`);
+        assert.strictEqual(getHoraryEntry('1-27', 27).endDMS, `Pisces 30°00'00"`);
+        for (const entry of KP_27_TABLE) {
+            const endSign = entry.endDMS.split(' ')[0];
+            const expected = entry.endUnits % (CIRCLE / 12) === 0
+                ? entry.sign
+                : lordsAt(entry.endUnits).sign;
+            assert.strictEqual(endSign, expected, `#${entry.no}/27 end label`);
+        }
+    });
+
+    test("Every 1–249 entry maps to itself", () => {
+        for (const entry of KP_249_TABLE) {
+            assert.strictEqual(getKp249NumberForEntry(entry), entry.no);
+        }
+    });
+
+    test("1–9, 1–27 and 1–2193 entries map to the 1–249 span containing their start", () => {
+        // 1–9 is the first 9 subs of Ashwini
+        assert.strictEqual(getKp249NumberForEntry(getHoraryEntry('1-9', 8)), 8);
+        // Krittika starts at Aries 26°40' = the first Krittika sub (#19/249)
+        assert.strictEqual(getKp249NumberForEntry(getHoraryEntry('1-27', 3)), 19);
+        for (const entry of [...KP_27_TABLE, ...KP_2193_TABLE]) {
+            const no = getKp249NumberForEntry(entry);
+            const kp = KP_249_TABLE[no - 1];
+            assert.ok(entry.startUnits >= kp.startUnits && entry.startUnits < kp.endUnits, `start of entry ${entry.no} inside #${no}/249`);
+            assert.strictEqual(kp.subLord, entry.subLord, `entry ${entry.no} shares the sub lord of #${no}/249`);
+        }
+        assert.strictEqual(getKp249NumberForEntry(null), null);
     });
 });

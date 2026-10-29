@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Target, Search, Filter, Shield, AlertTriangle, CheckCircle2,
@@ -13,6 +13,9 @@ import {
     calculateCommonPlanetRanking,
     evaluateJointDBA,
     evaluateCuspSubLordChecks,
+    getAscendantSignNumber,
+    getBadhakaHouse,
+    resolveRuleHouses,
     CANONICAL_PLANETS
 } from '../../utils/kp/kpHouseGroupingEngine.js';
 import { getLocalizedPlanet, KP_TRANSLATIONS } from '../../utils/kpTranslations.js';
@@ -83,7 +86,8 @@ export const KPEventSignificatorAnalysis = ({
     lang = 'te',
     onLoadBenchmark = null,
     onViewChart = null,
-    onViewDasha = null
+    onViewDasha = null,
+    birthDetails = null
 }) => {
     const isTe = lang === 'te';
     const t = KP_TRANSLATIONS[lang] || KP_TRANSLATIONS.te;
@@ -385,11 +389,11 @@ export const KPEventSignificatorAnalysis = ({
         }
     };
 
-    // Birth instant in UTC
+    // Birth instant in UTC. metadata.utcDate is the chart engine's own timezone-resolved
+    // instant; birthInstantUtc is only a fallback for older cached data.
     const birthInstantUtc = useMemo(() => {
-        return kpData?.birthInstantUtc
-            ? new Date(kpData.birthInstantUtc)
-            : (kpData?.metadata?.utcDate ? new Date(kpData.metadata.utcDate) : new Date());
+        if (kpData?.metadata?.utcDate) return new Date(kpData.metadata.utcDate);
+        return kpData?.birthInstantUtc ? new Date(kpData.birthInstantUtc) : new Date();
     }, [kpData?.birthInstantUtc, kpData?.metadata?.utcDate]);
 
     // Full 120-year Vimshottari Dasha calculation payload cached for chart
@@ -732,16 +736,25 @@ export const KPEventSignificatorAnalysis = ({
         }, 50);
     };
 
-    const currentRequiredHouses = useMemo(() => {
-        return (activeRule?.jointDBA?.houses && activeRule.jointDBA.houses.length > 0)
-            ? activeRule.jointDBA.houses
-            : (activeRule?.housesToBeSignified || []);
-    }, [activeRule]);
+    // Ascendant Sign Number (1-12) used for Badhaka / Maraka resolution
+    const ascSignNum = useMemo(() => getAscendantSignNumber(kpData), [kpData]);
 
-    // Ascendant Sign Number
-    const ascSignNum = useMemo(() => {
-        return kpData?.ascendant?.signNumber || 1;
-    }, [kpData]);
+    // Joint DBA houses with this chart's Badhaka / Maraka substituted in
+    const currentRequiredHouses = useMemo(() => {
+        if (!activeRule) return [];
+        const base = (activeRule.jointDBA?.houses && activeRule.jointDBA.houses.length > 0)
+            ? activeRule.jointDBA.houses
+            : (activeRule.housesToBeSignified || []);
+        return resolveRuleHouses(base, activeRule, ascSignNum);
+    }, [activeRule, ascSignNum]);
+
+    // Label for a house the engine substituted in for a Badhaka / Maraka token
+    const substitutedHouseTag = useCallback((hNum, rawHouses) => {
+        if ((rawHouses || []).includes(hNum)) return null;
+        if (hNum === getBadhakaHouse(ascSignNum)) return isTe ? 'బాధక' : 'Badhaka';
+        if (hNum === 2 || hNum === 7) return isTe ? 'మారక' : 'Maraka';
+        return null;
+    }, [ascSignNum, isTe]);
 
     // MODE A: Common-Planet Ranking calculation output
     const rankingResult = useMemo(() => {
@@ -784,8 +797,8 @@ export const KPEventSignificatorAnalysis = ({
     // Cusp Sub Lord checks evaluation
     const cuspSubLordResults = useMemo(() => {
         if (!kpData?.cusps || !kpData?.significators || !activeRule) return [];
-        return evaluateCuspSubLordChecks(kpData.cusps, kpData.significators, activeRule);
-    }, [kpData?.cusps, kpData?.significators, activeRule]);
+        return evaluateCuspSubLordChecks(kpData.cusps, kpData.significators, activeRule, { ascSign: ascSignNum });
+    }, [kpData?.cusps, kpData?.significators, activeRule, ascSignNum]);
 
     // Auto-select rule when search item clicked
     const handleSelectSearchResult = (rule) => {
@@ -1185,7 +1198,7 @@ export const KPEventSignificatorAnalysis = ({
                                 <span>{isTe ? "సూచించవలసిన భావాలు (Houses to be Signified)" : "Houses to be Signified"}</span>
                             </span>
                             <span className="text-xs font-mono text-gray-500">
-                                {activeRule.housesToBeSignified.length} {isTe ? "భావాలు" : "houses"}
+                                {rankingResult.targetHouses.length} {isTe ? "భావాలు" : "houses"}
                             </span>
                         </div>
 
@@ -1197,6 +1210,11 @@ export const KPEventSignificatorAnalysis = ({
                                     title={`House ${hNum}: ${HOUSE_KEYWORDS[hNum]?.en || ''}`}
                                 >
                                     <span>H{hNum}</span>
+                                    {substitutedHouseTag(hNum, activeRule.housesToBeSignified) && (
+                                        <span className="text-[9px] font-sans font-bold uppercase px-1 py-0.5 rounded bg-white/25">
+                                            {substitutedHouseTag(hNum, activeRule.housesToBeSignified)}
+                                        </span>
+                                    )}
                                 </div>
                             ))}
                         </div>
@@ -1233,12 +1251,17 @@ export const KPEventSignificatorAnalysis = ({
                         </div>
 
                         <div className="flex items-center gap-2 flex-wrap">
-                            {(activeRule.jointDBA?.houses || []).map(hNum => (
+                            {(activeRule.jointDBA?.houses?.length > 0 ? currentRequiredHouses : []).map(hNum => (
                                 <div
                                     key={hNum}
-                                    className="px-3.5 py-2 rounded-xl bg-indigo-600 text-white font-mono font-black text-base sm:text-lg shadow-xs"
+                                    className="px-3.5 py-2 rounded-xl bg-indigo-600 text-white font-mono font-black text-base sm:text-lg shadow-xs flex items-center gap-1.5"
                                 >
-                                    H{hNum}
+                                    <span>H{hNum}</span>
+                                    {substitutedHouseTag(hNum, activeRule.jointDBA.houses) && (
+                                        <span className="text-[9px] font-sans font-bold uppercase px-1 py-0.5 rounded bg-white/25">
+                                            {substitutedHouseTag(hNum, activeRule.jointDBA.houses)}
+                                        </span>
+                                    )}
                                 </div>
                             ))}
                             {(!activeRule.jointDBA?.houses || activeRule.jointDBA.houses.length === 0) && (
@@ -2526,6 +2549,7 @@ export const KPEventSignificatorAnalysis = ({
                         significators={kpData?.significators}
                         activeRule={activeRule}
                         currentRequiredHouses={currentRequiredHouses}
+                        ascSign={ascSignNum}
                         lang={lang}
                         onViewDasha={onViewDasha}
                         onEvaluatePeriod={handleEvaluateFuturePeriod}
@@ -2597,7 +2621,7 @@ export const KPEventSignificatorAnalysis = ({
                 isOpen={isReportModalOpen}
                 onClose={() => setIsReportModalOpen(false)}
                 kpData={kpData}
-                birthDetails={{
+                birthDetails={birthDetails || {
                     name: kpData?.chartLabel || (isTe ? 'జాతుకుడు' : 'Seeker'),
                     birthDate: kpData?.birthInstantUtc?.slice(0, 10),
                     birthTime: kpData?.birthInstantUtc?.slice(11, 16)

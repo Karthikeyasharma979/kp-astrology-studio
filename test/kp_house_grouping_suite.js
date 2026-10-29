@@ -30,6 +30,9 @@ import {
     getBadhakaHouse,
     getMarakaHouses,
     resolveRuleHouses,
+    resolveNegativeHouses,
+    getExcludedBadhakaHouse,
+    getAscendantSignNumber,
     CANONICAL_PLANETS
 } from '../src/utils/kp/kpHouseGroupingEngine.js';
 import { calculateKPKundli, KP_AYANAMSHA_MODES } from '../src/services/kpCalculator.js';
@@ -454,6 +457,97 @@ it('Performs end-to-end House Grouping analysis on Benchmark Chart (15 Aug 1998,
     });
 
     assert.ok(promoRanking.allScoredPlanets.length === 9, 'All 9 planets must be scored');
+});
+
+// 11. ASCENDANT-DEPENDENT BADHAKA / MARAKA RESOLUTION
+console.log('\n--- 11. ASCENDANT-DEPENDENT BADHAKA / MARAKA RESOLUTION ---');
+
+const MOVABLE = 1; // Aries -> Badhaka 11
+const FIXED = 2;   // Taurus -> Badhaka 9
+const DUAL = 3;    // Gemini -> Badhaka 7
+const findRule = (id) => {
+    const rule = KP_HOUSE_GROUPING_RULES.find(r => r.id === id);
+    assert.ok(rule, `Rule ${id} not found in registry`);
+    return rule;
+};
+
+it('Ascendant sign number comes from the chart lagna (0-based signIndex -> 1..12), defaulting to Aries', () => {
+    assert.strictEqual(getAscendantSignNumber({ lagna: { signIndex: 6 } }), 7, 'Libra lagna -> 7');
+    assert.strictEqual(getAscendantSignNumber({ cusps: [{ signIndex: 11 }] }), 12, 'falls back to the 1st cusp');
+    assert.strictEqual(getAscendantSignNumber({}), 1);
+    assert.strictEqual(getAscendantSignNumber(null), 1);
+    // Benchmark chart (Libra lagna) feeds a movable sign -> Badhaka 11
+    const benchmark = calculateKPKundli({
+        birthDate: '1998-08-15', birthTime: '10:30', lat: 17.3850, lon: 78.4867,
+        timezone: 'Asia/Kolkata', ayanamshaMode: KP_AYANAMSHA_MODES.KP_NEW
+    });
+    assert.strictEqual(getAscendantSignNumber(benchmark), 7);
+    assert.strictEqual(getBadhakaHouse(getAscendantSignNumber(benchmark)), 11);
+});
+
+it('"9,11 if not Badhaka" (Strong Lagna) removes the Badhaka house and makes it negative', () => {
+    const rule = findRule('kp.c1.t0.r9.1');
+    assert.deepStrictEqual(resolveRuleHouses(rule.housesToBeSignified, rule, MOVABLE), [2, 3, 6, 9, 10]);
+    assert.deepStrictEqual(resolveRuleHouses(rule.housesToBeSignified, rule, FIXED), [2, 3, 6, 10, 11]);
+    assert.deepStrictEqual(resolveNegativeHouses(rule, MOVABLE), [8, 11]);
+    assert.deepStrictEqual(resolveNegativeHouses(rule, FIXED), [8, 9]);
+    assert.strictEqual(getExcludedBadhakaHouse(rule, MOVABLE), 11);
+});
+
+it('Book spelling "Mararka" is recognised as Maraka (Danger to life adds 2 and 7)', () => {
+    const rule = findRule('kp.c1.t1.r7.11');
+    const houses = resolveRuleHouses(rule.jointDBA.houses, rule, MOVABLE);
+    assert.ok(houses.includes(2) && houses.includes(7), `Maraka 2 & 7 expected, got [${houses}]`);
+    assert.ok(houses.includes(11), 'Badhaka 11 expected for a movable lagna');
+});
+
+it('"Excluding 9= Badhaka for fixed signs" (Long life) makes the real Badhaka negative for each modality', () => {
+    const rule = findRule('kp.c8.t7.r25.1');
+    assert.deepStrictEqual(resolveNegativeHouses(rule, MOVABLE), [11]);
+    assert.deepStrictEqual(resolveNegativeHouses(rule, FIXED), [9]);
+    assert.deepStrictEqual(resolveNegativeHouses(rule, DUAL), [7]);
+    // House 9 stays required except where it is the Badhaka
+    assert.ok(resolveRuleHouses(rule.jointDBA.houses, rule, MOVABLE).includes(9));
+    assert.ok(!resolveRuleHouses(rule.jointDBA.houses, rule, FIXED).includes(9));
+});
+
+it('Joint DBA uses resolved negatives: Long life is not afflicted by house 9 for a movable lagna', () => {
+    const rule = findRule('kp.c8.t7.r25.1');
+    const sigs = { planetSignifications: [{ planetKey: 'Jupiter', primaryHouses: [1, 3, 5, 8, 9, 10] }] };
+    const lords = [{ planet: 'Jupiter', level: 'MD' }];
+    const movable = evaluateJointDBA(sigs, rule, lords, { ascSign: MOVABLE });
+    assert.strictEqual(movable.hasObstruction, false, 'house 9 is not Badhaka for a movable lagna');
+    assert.strictEqual(movable.status, 'satisfied');
+    const fixed = evaluateJointDBA(sigs, rule, lords, { ascSign: FIXED });
+    assert.strictEqual(fixed.hasObstruction, true, 'house 9 is Badhaka for a fixed lagna');
+});
+
+it('Joint DBA keeps caller-resolved houses as-is (jointDBA.housesResolved)', () => {
+    const rule = findRule('kp.c1.t1.r9.13'); // "Badhaka, Maraka, 12"
+    const sigs = { planetSignifications: [{ planetKey: 'Saturn', primaryHouses: [12] }] };
+    const lords = [{ planet: 'Saturn', level: 'MD' }];
+    const expanded = evaluateJointDBA(sigs, rule, lords, { ascSign: MOVABLE });
+    assert.deepStrictEqual(expanded.requiredHouses, [2, 7, 11, 12]);
+    const custom = evaluateJointDBA(sigs, { ...rule, jointDBA: { ...rule.jointDBA, houses: [12], housesResolved: true } }, lords, { ascSign: MOVABLE });
+    assert.deepStrictEqual(custom.requiredHouses, [12]);
+    assert.strictEqual(custom.status, 'satisfied');
+});
+
+it('Cusp sub lord checks resolve Badhaka with the chart Ascendant', () => {
+    const rule = {
+        id: 'test.csl.bdk',
+        housesToBeSignified: [8],
+        originalNotation: { housesToBeSignified: '8, Bdk' },
+        cuspSubLordChecks: [1],
+        negativeHouses: []
+    };
+    const cusps = [{ houseNumber: 1, subLord: 'Saturn', sign: 'Aries', starLord: 'Ketu' }];
+    const sigs = { planetSignifications: [{ planetKey: 'Saturn', primaryHouses: [8, 11] }] };
+    const [check] = evaluateCuspSubLordChecks(cusps, sigs, rule, { ascSign: MOVABLE });
+    assert.deepStrictEqual(check.matchedHouses, [8, 11]);
+    assert.strictEqual(check.status, 'favorable');
+    const [dual] = evaluateCuspSubLordChecks(cusps, sigs, rule, { ascSign: DUAL });
+    assert.deepStrictEqual(dual.matchedHouses, [8], 'Badhaka is 7 for a dual lagna');
 });
 
 console.log('\n=============================================================');

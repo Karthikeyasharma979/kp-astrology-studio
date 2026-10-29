@@ -75,6 +75,17 @@ export function updateGulbargaOutcome(id, outcome) {
 }
 
 /**
+ * Removes a single history item
+ * @param {string} id
+ * @returns {Array<import('./types.js').HistoryItem>} Updated history
+ */
+export function deleteGulbargaHistoryItem(id) {
+    const updated = loadGulbargaHistory().filter(item => item.id !== id);
+    saveGulbargaHistory(updated);
+    return updated;
+}
+
+/**
  * Clears all Gulbarga history
  */
 export function clearGulbargaHistory() {

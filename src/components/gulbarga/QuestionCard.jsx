@@ -33,11 +33,17 @@ export const QuestionCard = ({
     location,
     onLocationChange,
     onGetAnswer,
+    timeMode = 'live',
+    answered = false,
+    canAnswer = false,
+    numberReducedFrom = null,
     lang = 'te'
 }) => {
     const isTe = lang === 'te';
     const isClassic = method === 'classic';
     const seedMissing = !isClassic && !String(numberInput ?? '').trim();
+    const systemMax = (system || '1-249').replace('1-', '');
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Location search & autocomplete state
     const [query, setQuery] = useState(
@@ -155,9 +161,22 @@ export const QuestionCard = ({
     };
 
     const handleGetAnswerClick = async () => {
-        if (seedMissing) return;
-        if (isClassic) await resolveTypedLocation();
-        onGetAnswer();
+        if (!canAnswer || answered || isSubmitting) return;
+        setIsSubmitting(true);
+        try {
+            if (isClassic) await resolveTypedLocation();
+            onGetAnswer();
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    // Enter in the question or seed field submits, like a form
+    const submitOnEnter = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            handleGetAnswerClick();
+        }
     };
 
     // Classic: the judgment time is wall-clock time at the judgment place.
@@ -221,6 +240,7 @@ export const QuestionCard = ({
                     maxLength={300}
                     value={question}
                     onChange={(e) => onQuestionChange(e.target.value)}
+                    onKeyDown={submitOnEnter}
                     placeholder={
                         isTe
                             ? "ఉదాహరణ: నా రైలు టికెట్ కన్ఫర్మ్ అవుతుందా? / నాకు ఈ ఉద్యోగం వస్తుందా?"
@@ -256,9 +276,12 @@ export const QuestionCard = ({
                                 type="text"
                                 value={numberInput}
                                 onChange={(e) => onNumberChange(e.target.value)}
+                                onKeyDown={submitOnEnter}
+                                inputMode="numeric"
+                                aria-invalid={Boolean(numberError)}
                                 placeholder={isClassic
-                                    ? (isTe ? "ఖాళీ (లేదా డైస్ క్లిక్ చేయండి)" : "Leave blank or click dice")
-                                    : (isTe ? "సంఖ్య నమోదు చేయండి (లేదా డైస్)" : "Enter a number or click dice")}
+                                    ? (isTe ? "ఖాళీ లేదా డైస్" : "Blank or dice")
+                                    : (isTe ? `1–${systemMax} సంఖ్య (లేదా డైస్)` : `Enter 1–${systemMax} or roll the dice`)}
                                 className={`w-full px-4 pr-8 py-2.5 rounded-2xl bg-stone-50 dark:bg-slate-800/80 border font-mono font-bold text-sm sm:text-base focus:outline-none focus:ring-2 transition-all ${
                                     numberError
                                         ? 'border-red-400 focus:ring-red-500/50 text-red-600 dark:text-red-400'
@@ -291,8 +314,14 @@ export const QuestionCard = ({
                     </div>
 
                     {numberError ? (
-                        <p className="text-xs font-semibold text-red-500 mt-1">
+                        <p className="text-xs font-semibold text-red-500 mt-1" role="alert">
                             {numberError}
+                        </p>
+                    ) : numberReducedFrom != null ? (
+                        <p className="text-[11px] text-amber-700 dark:text-amber-400 font-medium pt-0.5">
+                            {isTe
+                                ? `${numberReducedFrom} → ${((numberReducedFrom - 1) % Number(systemMax)) + 1} (తగ్గించబడింది)`
+                                : `${numberReducedFrom} reduced to ${((numberReducedFrom - 1) % Number(systemMax)) + 1}`}
                         </p>
                     ) : !numberInput ? (
                         isClassic ? (
@@ -301,8 +330,10 @@ export const QuestionCard = ({
                                 <span>{isTe ? "ఖాళీ: తీర్పు క్షణ లగ్నం వాడబడుతుంది" : "Blank: Time chart Lagna will be used"}</span>
                             </p>
                         ) : (
-                            <p className="text-[11px] text-red-600 dark:text-red-400 font-medium pt-0.5">
-                                {isTe ? "TSP కు హోరరీ సంఖ్య తప్పనిసరి" : "TSP needs a horary seed number"}
+                            <p className="text-[11px] text-gray-500 dark:text-gray-400 font-medium pt-0.5">
+                                {isTe
+                                    ? "ప్రశ్న గురించి ఆలోచిస్తూ మనసుకు తోచిన సంఖ్య చెప్పండి"
+                                    : "Think of your question and pick the first number that comes to mind"}
                             </p>
                         )
                     ) : null}
@@ -315,11 +346,23 @@ export const QuestionCard = ({
                             <Clock className="w-3.5 h-3.5 text-amber-500" />
                             <span>{isTe ? "తీర్పు సమయం" : "Judgment Moment"}</span>
                         </span>
-                        {placeTimezone && (
-                            <span className="normal-case font-mono text-[10px] text-orange-600 dark:text-orange-400">
-                                {placeTimezone.split('/').pop().replace(/_/g, ' ')} ({getTimezoneOffsetForDate(placeTimezone)})
-                            </span>
-                        )}
+                        <span className="flex items-center gap-1.5 normal-case">
+                            {placeTimezone && (
+                                <span className="font-mono text-[10px] text-orange-600 dark:text-orange-400">
+                                    {placeTimezone.split('/').pop().replace(/_/g, ' ')} ({getTimezoneOffsetForDate(placeTimezone)})
+                                </span>
+                            )}
+                            {timeMode === 'live' ? (
+                                <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 text-[10px] font-bold" title={isTe ? "సమాధానం అడిగిన క్షణం వాడబడుతుంది" : "The exact moment you click Get Answer is used"}>
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                                    {isTe ? "ప్రత్యక్ష" : "Live"}
+                                </span>
+                            ) : (
+                                <span className="inline-flex items-center px-1.5 py-0.5 rounded-md bg-stone-100 dark:bg-slate-800 text-stone-600 dark:text-stone-300 text-[10px] font-bold" title={isTe ? "ఈ సమయం స్థిరంగా ఉంది" : "This time is fixed"}>
+                                    {isTe ? "స్థిరం" : "Fixed"}
+                                </span>
+                            )}
+                        </span>
                     </label>
                     <div className="flex items-center gap-2">
                         <input
@@ -332,7 +375,7 @@ export const QuestionCard = ({
                             type="button"
                             onClick={onSetNow}
                             className="px-3 py-2.5 rounded-2xl bg-stone-100 dark:bg-slate-800 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-slate-700 text-xs font-bold transition-colors cursor-pointer shrink-0"
-                            title={isTe ? "ప్రస్తుత సమయం" : "Set to Current Instant"}
+                            title={isTe ? "ప్రస్తుత సమయం (ప్రత్యక్ష)" : "Follow the current time (Live)"}
                         >
                             {isTe ? "ఇప్పుడు" : "Now"}
                         </button>
@@ -519,12 +562,25 @@ export const QuestionCard = ({
                 <button
                     type="button"
                     onClick={handleGetAnswerClick}
-                    disabled={Boolean(numberError) || seedMissing}
-                    className="w-full py-3 px-6 rounded-2xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 disabled:opacity-50 text-white font-bold text-base shadow-lg shadow-orange-500/25 transition-all cursor-pointer flex items-center justify-center gap-2"
+                    disabled={!canAnswer || answered || isSubmitting}
+                    className={`w-full py-3 px-6 rounded-2xl font-bold text-sm sm:text-base transition-all flex items-center justify-center gap-2 ${
+                        answered
+                            ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/50 cursor-default'
+                            : 'bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 disabled:opacity-50 disabled:cursor-not-allowed text-white shadow-lg shadow-orange-500/25 cursor-pointer'
+                    }`}
                 >
-                    <CheckCircle className="w-5 h-5" />
-                    <span>{isTe ? "సమాధానం పొందండి" : "Get Answer"}</span>
+                    {isSubmitting ? <Loader2 className="w-5 h-5 animate-spin" /> : <CheckCircle className="w-5 h-5" />}
+                    <span>
+                        {answered
+                            ? (isTe ? "సమాధానం క్రింద ఉంది — మళ్లీ అడగడానికి వివరాలు మార్చండి" : "Answered below — change any input to ask again")
+                            : (isTe ? "సమాధానం పొందండి" : "Get Answer")}
+                    </span>
                 </button>
+                {!answered && seedMissing && (
+                    <p className="text-center text-[11px] text-gray-500 dark:text-gray-400 mt-2">
+                        {isTe ? "సమాధానం కోసం ముందుగా ఒక సంఖ్యను నమోదు చేయండి." : "Enter a seed number to get an answer."}
+                    </p>
+                )}
             </div>
 
             {/* Interactive Map Picker Modal */}

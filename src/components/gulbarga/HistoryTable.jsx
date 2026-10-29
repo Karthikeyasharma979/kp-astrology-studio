@@ -1,5 +1,5 @@
 import React from 'react';
-import { History, Trash2, CheckCircle2, XCircle, Clock, BarChart2 } from 'lucide-react';
+import { History, Trash2, CheckCircle2, XCircle, X } from 'lucide-react';
 
 /**
  * History Table Component
@@ -10,10 +10,24 @@ export const HistoryTable = ({
     history = [],
     accuracyStats,
     onUpdateOutcome,
+    onDeleteItem,
     onClearHistory,
     lang = 'te'
 }) => {
     const isTe = lang === 'te';
+
+    const handleClearAll = () => {
+        const msg = isTe
+            ? `మొత్తం ${history.length} ప్రశ్నల రికార్డు తొలగించాలా? దీనిని తిరిగి పొందలేరు.`
+            : `Delete all ${history.length} recorded queries? This cannot be undone.`;
+        if (window.confirm(msg)) onClearHistory();
+    };
+
+    const outcomeLabels = {
+        Pending: isTe ? 'పెండింగ్' : 'Pending',
+        Happened: isTe ? 'జరిగింది' : 'Happened',
+        "Didn't happen": isTe ? 'జరగలేదు' : "Didn't happen"
+    };
 
     return (
         <div className="bg-white dark:bg-slate-900/90 rounded-3xl p-5 sm:p-6 border border-amber-200/80 dark:border-white/10 shadow-sm space-y-5">
@@ -26,7 +40,7 @@ export const HistoryTable = ({
                     </h3>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                     {/* TSP Accuracy Badge */}
                     <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-orange-50 dark:bg-orange-950/40 border border-orange-200 dark:border-orange-800/40 text-xs font-mono">
                         <span className="font-sans font-bold text-orange-700 dark:text-orange-300">TSP:</span>
@@ -48,9 +62,10 @@ export const HistoryTable = ({
                     {history.length > 0 && (
                         <button
                             type="button"
-                            onClick={onClearHistory}
+                            onClick={handleClearAll}
                             className="p-1.5 rounded-xl hover:bg-stone-100 dark:hover:bg-slate-800 text-stone-400 hover:text-red-500 transition-colors cursor-pointer"
-                            title="Clear History"
+                            title={isTe ? "మొత్తం రికార్డు తొలగించు" : "Clear all history"}
+                            aria-label={isTe ? "మొత్తం రికార్డు తొలగించు" : "Clear all history"}
                         >
                             <Trash2 className="w-4 h-4" />
                         </button>
@@ -68,27 +83,35 @@ export const HistoryTable = ({
                     <table className="w-full text-left text-xs">
                         <thead className="bg-stone-50 dark:bg-slate-800/70 text-gray-600 dark:text-gray-400 font-semibold border-b border-stone-200 dark:border-white/10">
                             <tr>
-                                <th className="py-2.5 px-3">Date</th>
-                                <th className="py-2.5 px-3">Question</th>
-                                <th className="py-2.5 px-3">Method</th>
-                                <th className="py-2.5 px-3">Seed</th>
-                                <th className="py-2.5 px-3">Answer</th>
-                                <th className="py-2.5 px-3">Punarphoo</th>
-                                <th className="py-2.5 px-3">Real-World Outcome</th>
+                                <th className="py-2.5 px-3">{isTe ? "తేదీ / సమయం" : "Date / Time"}</th>
+                                <th className="py-2.5 px-3">{isTe ? "ప్రశ్న" : "Question"}</th>
+                                <th className="py-2.5 px-3">{isTe ? "పద్ధతి" : "Method"}</th>
+                                <th className="py-2.5 px-3">{isTe ? "సంఖ్య" : "Seed"}</th>
+                                <th className="py-2.5 px-3">{isTe ? "సమాధానం" : "Answer"}</th>
+                                <th className="py-2.5 px-3">{isTe ? "పునర్ఫూ" : "Punarphoo"}</th>
+                                <th className="py-2.5 px-3">{isTe ? "నిజ ఫలితం" : "Real-World Outcome"}</th>
+                                <th className="py-2.5 px-2"><span className="sr-only">{isTe ? "తొలగించు" : "Delete"}</span></th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-stone-100 dark:divide-white/5">
                             {history.map((item) => {
                                 const isYes = item.answer === 'YES';
-                                const dateFormatted = new Date(item.timestamp).toLocaleDateString('en-GB', {
+                                const when = new Date(item.judgedAt || item.timestamp);
+                                const dateFormatted = when.toLocaleDateString('en-GB', {
                                     day: '2-digit',
-                                    month: 'short'
+                                    month: 'short',
+                                    year: when.getFullYear() !== new Date().getFullYear() ? 'numeric' : undefined
+                                });
+                                const timeFormatted = when.toLocaleTimeString('en-GB', {
+                                    hour: '2-digit',
+                                    minute: '2-digit'
                                 });
 
                                 return (
                                     <tr key={item.id} className="hover:bg-stone-50/60 dark:hover:bg-slate-800/30">
                                         <td className="py-2 px-3 font-mono text-gray-500 whitespace-nowrap">
-                                            {dateFormatted}
+                                            <span className="block">{dateFormatted}</span>
+                                            <span className="block text-[10px] text-gray-400">{timeFormatted}</span>
                                         </td>
                                         <td className="py-2 px-3 font-sans font-medium text-gray-900 dark:text-white max-w-[200px] truncate" title={item.question}>
                                             {item.question}
@@ -113,7 +136,7 @@ export const HistoryTable = ({
                                         </td>
                                         <td className="py-2 px-3 font-mono text-gray-500">
                                             {item.punarphoo ? (
-                                                <span className="text-amber-600 dark:text-amber-400 font-bold">Yes (Inverted)</span>
+                                                <span className="text-amber-600 dark:text-amber-400 font-bold">{isTe ? "తలక్రిందులు" : "Inverted"}</span>
                                             ) : (
                                                 '—'
                                             )}
@@ -130,10 +153,23 @@ export const HistoryTable = ({
                                                         : 'bg-stone-50 dark:bg-slate-800 text-stone-600 dark:text-stone-300 border-stone-200 dark:border-white/10'
                                                 }`}
                                             >
-                                                <option value="Pending">Pending</option>
-                                                <option value="Happened">Happened</option>
-                                                <option value="Didn't happen">Didn't happen</option>
+                                                <option value="Pending">{outcomeLabels.Pending}</option>
+                                                <option value="Happened">{outcomeLabels.Happened}</option>
+                                                <option value="Didn't happen">{outcomeLabels["Didn't happen"]}</option>
                                             </select>
+                                        </td>
+                                        <td className="py-2 px-2 text-right">
+                                            {onDeleteItem && (
+                                                <button
+                                                    type="button"
+                                                    onClick={() => onDeleteItem(item.id)}
+                                                    className="p-1 rounded-lg text-stone-300 hover:text-red-500 hover:bg-stone-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+                                                    title={isTe ? "ఈ ప్రశ్నను తొలగించు" : "Delete this entry"}
+                                                    aria-label={isTe ? "ఈ ప్రశ్నను తొలగించు" : "Delete this entry"}
+                                                >
+                                                    <X className="w-3.5 h-3.5" />
+                                                </button>
+                                            )}
                                         </td>
                                     </tr>
                                 );

@@ -71,7 +71,8 @@ export function evaluateClassicGulbarga(rawNumberLords, rps = {}, customSettings
         if (ascSub) rpList.push(ascSub);
         if (moonSub) rpList.push(moonSub);
     }
-    const cleanRps = rpList.filter(Boolean);
+    // One planet often holds several RP roles (e.g. Asc sign lord = Moon star lord); list it once
+    const cleanRps = [...new Set(rpList.filter(Boolean))];
 
     explanation.push(`Ruling Planets (${settings.rpMode === 'extended7' ? 'Extended-7' : 'Classic-5'}) are: ${cleanRps.join(', ')}`);
 

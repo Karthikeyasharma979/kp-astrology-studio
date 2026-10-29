@@ -1063,7 +1063,7 @@ export async function generateMissingPersonReport({
             // 3. Cusp Sub Lord Checks
             let cslResult = null;
             try {
-                cslResult = evaluateCuspSubLordChecks(kpData?.cusps, kpData?.significators, rule);
+                cslResult = evaluateCuspSubLordChecks(kpData?.cusps, kpData?.significators, rule, { ascSign: ascSignNum });
             } catch (err) {
                 console.warn('CSL check warning:', err);
             }

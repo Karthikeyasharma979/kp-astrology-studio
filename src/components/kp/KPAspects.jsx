@@ -3,7 +3,7 @@ import {
     Eye, Sparkles, Filter, Settings2, Info, ChevronDown, ChevronUp,
     CheckCircle2, AlertCircle, Compass, HelpCircle, ArrowRight
 } from 'lucide-react';
-import { formatDMS } from '../../utils/nakshatraUtils';
+import { formatDMS, toOrdinal } from '../../utils/nakshatraUtils';
 import {
     calculatePlanetaryAspects,
     ASPECT_CONVENTIONS,
@@ -485,7 +485,7 @@ export const KPAspects = ({ kpResult, lang = 'te' }) => {
                                                 </span>
                                             </div>
                                             <span className="text-[10px] text-gray-500 dark:text-gray-400 block mt-0.5">
-                                                {isTe ? `${asp.relativeHouseSpan}వ దృష్టి స్థానం` : `${asp.relativeHouseSpan}th house span`}
+                                                {isTe ? `${asp.relativeHouseSpan}వ దృష్టి స్థానం` : `${toOrdinal(asp.relativeHouseSpan)} house span`}
                                             </span>
                                         </td>
 

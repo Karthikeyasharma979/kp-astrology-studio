@@ -20,7 +20,7 @@
  * 3. 'all': Combined view of both KP Western degree aspects and Classical Vedic Drishti.
  */
 
-import { formatDMS } from '../nakshatraUtils.js';
+import { formatDMS, toOrdinal } from '../nakshatraUtils.js';
 
 export const ASPECT_CONVENTIONS = {
     KP_WESTERN: 'kp_western',
@@ -505,7 +505,7 @@ export function calculatePlanetaryAspects(planets, cusps, options = {}) {
                     hCount === 5 ? 'Special 5th House (Panchama) Drishti' :
                     hCount === 9 ? 'Special 9th House (Navama) Drishti' :
                     hCount === 3 ? 'Special 3rd House (Tritiya) Drishti' :
-                    hCount === 10 ? 'Special 10th House (Dashama) Drishti' : `${hCount}th Drishti`;
+                    hCount === 10 ? 'Special 10th House (Dashama) Drishti' : `${toOrdinal(hCount)} Drishti`;
 
                 const drishtiNameTe = hCount === 7 ? 'పూర్ణ సప్తమ దృష్టి (7వ భావం)' :
                     hCount === 4 ? 'విశేష చతుర్థ దృష్టి (4వ భావం)' :

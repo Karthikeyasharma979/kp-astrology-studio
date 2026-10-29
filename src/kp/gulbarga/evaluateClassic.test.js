@@ -168,3 +168,15 @@ describe("Classic Gulbarga Evaluation Suite (§9.5)", () => {
         assert.strictEqual(res7.decidedBy, 'RULE_2');
     });
 });
+
+describe("Classic Gulbarga Ruling Planets list", () => {
+    test("A planet holding several RP roles is listed once", () => {
+        const rps = {
+            ascStarLord: 'Mars', ascSignLord: 'Saturn', moonStarLord: 'Mars',
+            moonSignLord: 'Venus', dayLord: 'Jupiter'
+        };
+        const res = evaluateClassicGulbarga({ signLord: 'Venus', starLord: 'Rahu', subLord: 'Moon' }, rps);
+        assert.deepStrictEqual(res.rpList, ['Mars', 'Saturn', 'Venus', 'Jupiter']);
+        assert.ok(res.explanation.some(l => l.includes('are: Mars, Saturn, Venus, Jupiter')));
+    });
+});

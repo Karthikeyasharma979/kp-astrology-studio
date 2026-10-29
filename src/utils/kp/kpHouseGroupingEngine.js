@@ -64,6 +64,42 @@ export function getMarakaHouses() {
     return [2, 7];
 }
 
+// Notation tokens as spelled in the source book ("Bdhk" and "Mararka" are book spellings)
+const BADHAKA_TOKEN_RE = /\b(bdk|bdhk|badhaka)\b/i;
+const MARAKA_TOKEN_RE = /\b(mrk|maraka|mararka)\b/i;
+// "9,11 if not Badhaka", "not connected to Badhaka", "Excluding 9= Badhaka", "except being Bdhk"
+const BADHAKA_EXCLUSION_RE = /(if\s+not|not\s+connected\s+to|except(?:ing)?|excluding\s+\d+\s*=)\s*(?:being\s+)?(?:the\s+)?(badhaka|bdk|bdhk)\b/i;
+// Static house the book names as Badhaka for one modality ("Excluding 9= Badhaka for ... fixed signs")
+const STATIC_BADHAKA_MENTION_RE = /(\d+)\s*=\s*(?:badhaka|bdk|bdhk)\b/gi;
+
+/**
+ * Converts a 0-based sign index (as carried by chart results) to the 1-12 sign number
+ * expected by getBadhakaHouse.
+ * @param {Object} chart - Chart result with lagna / cusps
+ * @returns {number} 1..12
+ */
+export function getAscendantSignNumber(chart) {
+    const idx = chart?.lagna?.signIndex ?? chart?.lagna?.sign?.id ?? chart?.cusps?.[0]?.signIndex;
+    return Number.isInteger(idx) && idx >= 0 && idx < 12 ? idx + 1 : 1;
+}
+
+function ruleNotationText(rule, includeRemarks) {
+    const n = rule?.originalNotation || {};
+    const parts = [n.housesToBeSignified, n.jointDBA];
+    if (includeRemarks) parts.push(n.remark, rule?.remarks);
+    return parts.filter(Boolean).join(' ');
+}
+
+/**
+ * Returns the Badhaka house when the rule says it must NOT be involved, else null.
+ * @param {Object} rule
+ * @param {number|string} ascSign
+ * @returns {number|null}
+ */
+export function getExcludedBadhakaHouse(rule, ascSign) {
+    return BADHAKA_EXCLUSION_RE.test(ruleNotationText(rule, true)) ? getBadhakaHouse(ascSign) : null;
+}
+
 /**
  * Resolves rule houses dynamically substituting Badhaka/Maraka tokens if applicable
  *
@@ -74,16 +110,40 @@ export function getMarakaHouses() {
  */
 export function resolveRuleHouses(baseHouses, rule, ascSign) {
     const houses = new Set(baseHouses || []);
-    const rawText = `${rule.originalNotation?.housesToBeSignified || ''} ${rule.originalNotation?.jointDBA || ''}`.toLowerCase();
+    const rawText = ruleNotationText(rule, false);
+    const excludedBadhaka = getExcludedBadhakaHouse(rule, ascSign);
 
-    if (rawText.includes('bdk') || rawText.includes('badhaka')) {
-        const bdk = getBadhakaHouse(ascSign);
-        houses.add(bdk);
+    if (excludedBadhaka != null) {
+        houses.delete(excludedBadhaka);
+    } else if (BADHAKA_TOKEN_RE.test(rawText)) {
+        houses.add(getBadhakaHouse(ascSign));
     }
-    if (rawText.includes('mrk') || rawText.includes('maraka')) {
+    if (MARAKA_TOKEN_RE.test(rawText)) {
         getMarakaHouses().forEach(h => houses.add(h));
     }
     return Array.from(houses).sort((a, b) => a - b);
+}
+
+/**
+ * Resolves the rule's negative (obstructing) houses for this Ascendant. When the rule
+ * excludes Badhaka, the actual Badhaka house becomes negative and any house the book
+ * names as Badhaka for a single modality (e.g. "Excluding 9= Badhaka for fixed signs")
+ * stops being negative for the other modalities.
+ *
+ * @param {Object} rule
+ * @param {number|string} ascSign
+ * @returns {Array<number>}
+ */
+export function resolveNegativeHouses(rule, ascSign) {
+    const negatives = new Set(rule?.negativeHouses || []);
+    const excludedBadhaka = getExcludedBadhakaHouse(rule, ascSign);
+    if (excludedBadhaka != null) {
+        for (const m of ruleNotationText(rule, true).matchAll(STATIC_BADHAKA_MENTION_RE)) {
+            negatives.delete(Number(m[1]));
+        }
+        negatives.add(excludedBadhaka);
+    }
+    return Array.from(negatives).sort((a, b) => a - b);
 }
 
 /**
@@ -518,10 +578,14 @@ export function evaluateJointDBA(significators, rule, runningDBALords = [], opti
     }
 
     const dbaRaw = rule.jointDBA?.raw || '';
-    const dbaHouses = resolveRuleHouses(rule.jointDBA?.houses || rule.housesToBeSignified || [], rule, ascSign);
+    // Houses already resolved by the caller (e.g. user-edited custom houses) are used as-is
+    const baseDbaHouses = rule.jointDBA?.houses || rule.housesToBeSignified || [];
+    const dbaHouses = rule.jointDBA?.housesResolved
+        ? Array.from(new Set(baseDbaHouses)).sort((a, b) => a - b)
+        : resolveRuleHouses(baseDbaHouses, rule, ascSign);
     const parenthesizedHouses = rule.jointDBA?.parenthesizedHouses || rule.optionalHouses || [];
     const altGroups = rule.alternativeGroups || [];
-    const negativeHouses = rule.negativeHouses || [];
+    const negativeHouses = resolveNegativeHouses(rule, ascSign);
 
     const planetSignifications = significators.planetSignifications || [];
 
@@ -654,14 +718,17 @@ export function evaluateJointDBA(significators, rule, runningDBALords = [], opti
  * @param {Array<Object>} cusps - 12 Placidus house cusps
  * @param {Object} significators - KP significators
  * @param {Object} rule - Selected rule
+ * @param {Object} [options] - { ascSign: 1..12 } for Badhaka / Maraka resolution
  * @returns {Array<Object>} Cusp Sub Lord evaluation details
  */
-export function evaluateCuspSubLordChecks(cusps, significators, rule) {
+export function evaluateCuspSubLordChecks(cusps, significators, rule, options = {}) {
     if (!cusps || !significators || !rule) return [];
 
+    const { ascSign = 1 } = options;
     const checks = rule.cuspSubLordChecks || [];
     const planetSignifications = significators.planetSignifications || [];
-    const targetHouses = rule.housesToBeSignified || [];
+    const targetHouses = resolveRuleHouses(rule.housesToBeSignified || [], rule, ascSign);
+    const ruleNegativeHouses = resolveNegativeHouses(rule, ascSign);
 
     return checks.map(cuspNum => {
         const cuspObj = cusps[cuspNum - 1];
@@ -670,7 +737,7 @@ export function evaluateCuspSubLordChecks(cusps, significators, rule) {
         const subLordHouses = subLordRecord?.primaryHouses || [];
 
         const matchedHouses = targetHouses.filter(h => subLordHouses.includes(h));
-        const negativeHouses = (rule.negativeHouses || []).filter(h => subLordHouses.includes(h));
+        const negativeHouses = ruleNegativeHouses.filter(h => subLordHouses.includes(h));
 
         let status = 'neutral';
         if (negativeHouses.length > 0) {

@@ -12,6 +12,8 @@
  * 2. Planet -> Houses Signified (with grade breakdown)
  */
 
+import { toOrdinal } from '../nakshatraUtils.js';
+
 /**
  * Calculates 4-fold KP House Significators
  *
@@ -236,7 +238,7 @@ export function getPlanetAspectHouses(planetKey, occupiedHouse) {
     const spans = KP_VEDIC_DRISHTI_RULES[planetKey] || [7];
     return spans.map(span => {
         const targetHouse = ((occupiedHouse - 1 + (span - 1)) % 12) + 1;
-        const nameObj = DRISHTI_SPAN_NAMES[span] || { en: `${span}th Drishti`, te: `${span}వ దృష్టి` };
+        const nameObj = DRISHTI_SPAN_NAMES[span] || { en: `${toOrdinal(span)} Drishti`, te: `${span}వ దృష్టి` };
         return {
             house: targetHouse,
             span,

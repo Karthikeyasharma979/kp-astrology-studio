@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { formatDMS } from '../../utils/nakshatraUtils';
+import { formatDMS, toOrdinal } from '../../utils/nakshatraUtils';
 import { KP_TRANSLATIONS } from '../../utils/kpTranslations';
 import { calculatePlanetaryLordshipMatrix, getPlanetAspectHouses, calculateKPSignificators } from '../../utils/kp/kpSignificators';
 import { calculateKPHora, calculateKPRulingPlanets } from '../../utils/kp/kpRulingPlanets';
@@ -1111,7 +1111,7 @@ export const KPChart = ({
                                                     {(() => {
                                                         const aspHouses = getPlanetAspectHouses(selectedItem.data.key, selectedItem.data.house);
                                                         return aspHouses.length > 0
-                                                            ? aspHouses.map(a => `${a.house} (${a.span}${isTe ? 'వ' : 'th'})`).join(', ')
+                                                            ? aspHouses.map(a => `${a.house} (${isTe ? `${a.span}వ` : toOrdinal(a.span)})`).join(', ')
                                                             : '-';
                                                     })()}
                                                 </span>

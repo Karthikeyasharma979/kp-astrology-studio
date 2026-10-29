@@ -19,6 +19,8 @@ import { calculateKPRulingPlanets } from '../src/utils/kp/kpRulingPlanets.js';
 import { calculateKPKundli } from '../src/services/kpCalculator.js';
 import { resolveLocalToUTC } from '../src/services/locationService.js';
 import * as Astronomy from 'astronomy-engine';
+import { calculateKPKundliSwiss } from '../server/services/swissEphemerisService.js';
+import { toOrdinal } from '../src/utils/nakshatraUtils.js';
 
 let passed = 0;
 let failed = 0;
@@ -532,6 +534,36 @@ it("Calculates Parashari Graha Drishti on houses and integrates aspect indicatio
     const marsRow = matrix.find(r => r.planetKey === 'Mars');
     assert.deepStrictEqual(marsRow.aspects, [1, 4, 5]);
     assert.strictEqual(marsRow.aspectsFormatted, "(1,4,5)");
+});
+
+// 18. Server engine honors the selected ayanamsha mode for cusps and planets
+it("Swiss Ephemeris server engine applies KP_ORIGINAL / KP_STRAIGHT ayanamsha to sidereal cusps and planets", () => {
+    const base = { birthDate: "1998-08-15", birthTime: "10:30", lat: 17.3850, lon: 78.4867, timezone: "Asia/Kolkata" };
+    const kpNew = calculateKPKundliSwiss({ ...base, ayanamshaMode: KP_AYANAMSHA_MODES.KP_NEW });
+    for (const mode of [KP_AYANAMSHA_MODES.KP_ORIGINAL, KP_AYANAMSHA_MODES.KP_STRAIGHT]) {
+        const res = calculateKPKundliSwiss({ ...base, ayanamshaMode: mode });
+        const shift = Number(res.metadata.ayanamshaDeg) - Number(kpNew.metadata.ayanamshaDeg);
+        assert.ok(Math.abs(shift) > 0.001, `${mode} ayanamsha must differ from KP_NEW`);
+        assert.ok(Math.abs(normalizeDeg(kpNew.lagna.siderealLongitude - shift) - res.lagna.siderealLongitude) < 1e-5, `${mode} Ascendant must shift by the ayanamsha difference`);
+        for (let i = 0; i < 12; i++) {
+            assert.ok(Math.abs(normalizeDeg(kpNew.cusps[i].siderealLongitude - shift) - res.cusps[i].siderealLongitude) < 1e-5, `${mode} cusp ${i + 1} must shift`);
+        }
+        for (const p of res.planets) {
+            const ref = kpNew.planets.find(q => q.key === p.key);
+            assert.ok(Math.abs(normalizeDeg(ref.longitude - shift) - p.longitude) < 1e-5, `${mode} ${p.key} must shift`);
+        }
+        // Server and client engines must agree for the same mode
+        const client = calculateKPKundli({ ...base, ayanamshaMode: mode });
+        assert.ok(Math.abs(client.lagna.siderealLongitude - res.lagna.siderealLongitude) < 0.005, `${mode} Ascendant must match client engine`);
+        const moon = res.planets.find(p => p.key === 'Moon');
+        assert.ok(Math.abs(client.planets.find(p => p.key === 'Moon').longitude - moon.longitude) < 0.005, `${mode} Moon must match client engine`);
+    }
+});
+
+// 19. English ordinal suffixes used in aspect labels
+it("Formats English ordinals correctly (1st, 2nd, 3rd, 4th, 11th, 12th, 13th, 21st)", () => {
+    assert.deepStrictEqual([1, 2, 3, 4, 7, 10, 11, 12, 13, 21, 22, 23].map(toOrdinal),
+        ['1st', '2nd', '3rd', '4th', '7th', '10th', '11th', '12th', '13th', '21st', '22nd', '23rd']);
 });
 
 console.log(`\nKP TEST SUITE SUMMARY: ${passed} Passed, ${failed} Failed.`);

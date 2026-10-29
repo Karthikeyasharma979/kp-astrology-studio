@@ -3,9 +3,13 @@
  *
  * Manages method state, number selection, DRPE snapshot, Ruling Planets,
  * evaluation, settings persistence, and history.
+ *
+ * The answer is only revealed after "Get Answer". Changing any input that affects
+ * the judgment (method, system, seed, time, place, settings) clears the shown answer,
+ * so the visible result always matches the history entry recorded for it.
  */
 
-import { useState, useMemo, useCallback, useEffect } from 'react';
+import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import { getHoraryEntry, getHoraryTable } from '../kp/horaryTable.js';
 import { randomInRange, validateHoraryNumber } from '../kp/random.js';
 import { DEFAULT_TSP_SETTINGS, DEFAULT_CLASSIC_SETTINGS } from '../kp/gulbarga/types.js';
@@ -18,6 +22,7 @@ import {
     loadGulbargaHistory,
     addGulbargaHistoryItem,
     updateGulbargaOutcome,
+    deleteGulbargaHistoryItem,
     clearGulbargaHistory,
     calculateGulbargaAccuracy
 } from '../kp/gulbarga/history.js';
@@ -26,7 +31,17 @@ const METHOD_STORAGE_KEY = 'kp_gulbarga_method';
 const TSP_SETTINGS_KEY = 'kp_gulbarga_tsp_settings';
 const CLASSIC_SETTINGS_KEY = 'kp_gulbarga_classic_settings';
 
+// While the judgment time is "live", refresh it so the shown time and RPs stay current
+const LIVE_CLOCK_INTERVAL_MS = 30 * 1000;
+
+const DEFAULT_LAT = 17.3850;
+const DEFAULT_LON = 78.4867;
+
 export function useGulbarga() {
+    // 0. Whether the current inputs have been submitted with "Get Answer"
+    const [answered, setAnswered] = useState(false);
+    const clearAnswer = useCallback(() => setAnswered(false), []);
+
     // 1. Method Switch ('tsp' | 'classic')
     const [method, setMethodState] = useState(() => {
         if (typeof window !== 'undefined') {
@@ -40,6 +55,7 @@ export function useGulbarga() {
 
     const setMethod = useCallback((newMethod) => {
         setMethodState(newMethod);
+        setAnswered(false);
         try {
             localStorage.setItem(METHOD_STORAGE_KEY, newMethod);
         } catch (_) {}
@@ -67,6 +83,7 @@ export function useGulbarga() {
     });
 
     const updateTspSettings = useCallback((updates) => {
+        setAnswered(false);
         setTspSettings(prev => {
             const next = { ...prev, ...updates };
             try {
@@ -77,6 +94,7 @@ export function useGulbarga() {
     }, []);
 
     const updateClassicSettings = useCallback((updates) => {
+        setAnswered(false);
         setClassicSettings(prev => {
             const next = { ...prev, ...updates };
             try {
@@ -93,81 +111,93 @@ export function useGulbarga() {
 
     const setSystem = useCallback((newSys) => {
         setSystemState(newSys);
-        // Ensure current number is valid in new system or clamp (only if a number is already set)
-        const table = getHoraryTable(newSys);
-        setNumberRaw(prev => {
-            if (prev == null) return null;
-            const num = Number(prev);
-            if (!Number.isInteger(num) || num < 1 || num > table.length) {
-                setNumberInput('1');
-                return 1;
-            }
-            return num;
-        });
+        setAnswered(false);
     }, []);
 
-    // 4. Number selection & validation (Blank by default; user can type or click dice)
-    const [numberRaw, setNumberRaw] = useState(null);
+    // 4. Number selection. The typed text is the source of truth; its value and error are
+    //    re-derived whenever the system, method or reduce option changes.
     const [numberInput, setNumberInput] = useState('');
-    const [numberError, setNumberError] = useState(null);
 
     const reduceOptionActive = (method === 'classic')
         ? classicSettings.reduceLargeNumbers
         : tspSettings.reduceLargeNumbers;
 
-    const handleNumberChange = useCallback((val) => {
-        setNumberInput(val);
-        if (val === '' || val === null || String(val).trim() === '') {
-            setNumberRaw(null);
-            setNumberError(null);
-            return;
+    const numberCheck = useMemo(() => {
+        if (String(numberInput ?? '').trim() === '') {
+            return { value: null, error: null, reducedFrom: null };
         }
-        const check = validateHoraryNumber(val, effectiveSystem, reduceOptionActive, true);
-        if (check.valid) {
-            setNumberRaw(check.value);
-            setNumberError(null);
-        } else {
-            setNumberError(check.error || 'Invalid number');
+        const check = validateHoraryNumber(numberInput, effectiveSystem, reduceOptionActive, true);
+        if (!check.valid) {
+            return { value: null, error: check.error || 'Invalid number', reducedFrom: null };
         }
-    }, [effectiveSystem, reduceOptionActive]);
+        return { value: check.value, error: null, reducedFrom: check.reduced ? check.originalValue : null };
+    }, [numberInput, effectiveSystem, reduceOptionActive]);
 
-    const handleClearNumber = useCallback(() => {
-        setNumberInput('');
-        setNumberRaw(null);
-        setNumberError(null);
+    const numberRaw = numberCheck.value;
+    const numberError = numberCheck.error;
+
+    const handleNumberChange = useCallback((val) => {
+        setNumberInput(val == null ? '' : String(val));
+        setAnswered(false);
     }, []);
+
+    const handleClearNumber = useCallback(() => handleNumberChange(''), [handleNumberChange]);
 
     const randomizeNumber = useCallback(() => {
         const table = getHoraryTable(effectiveSystem);
-        const rand = randomInRange(table.length);
-        setNumberRaw(rand);
-        setNumberInput(String(rand));
-        setNumberError(null);
-    }, [effectiveSystem]);
+        handleNumberChange(String(randomInRange(table.length)));
+    }, [effectiveSystem, handleNumberChange]);
 
     // 5. Question text & Judgment Instant
     const [question, setQuestion] = useState('');
-    const [judgedAt, setJudgedAt] = useState(() => new Date());
-    const [isFrozen, setIsFrozen] = useState(false);
+    const [judgedAt, setJudgedAtState] = useState(() => new Date());
+    // 'live' follows the clock (and is stamped to the exact instant on "Get Answer");
+    // 'manual' keeps a time the user picked, or the instant of the last answer
+    const [timeMode, setTimeMode] = useState('live');
+
+    useEffect(() => {
+        if (timeMode !== 'live') return undefined;
+        const id = setInterval(() => setJudgedAtState(new Date()), LIVE_CLOCK_INTERVAL_MS);
+        return () => clearInterval(id);
+    }, [timeMode]);
+
+    // An answer judged on the live clock freezes the time while it is shown; once a new
+    // question starts (answer cleared), go back to the live clock
+    const resumeLiveAfterAnswerRef = useRef(false);
+
+    useEffect(() => {
+        if (answered || !resumeLiveAfterAnswerRef.current) return;
+        resumeLiveAfterAnswerRef.current = false;
+        setJudgedAtState(new Date());
+        setTimeMode('live');
+    }, [answered]);
+
+    const setJudgedAt = useCallback((date) => {
+        resumeLiveAfterAnswerRef.current = false;
+        setJudgedAtState(date);
+        setTimeMode('manual');
+        setAnswered(false);
+    }, []);
+
+    const setNowAsJudgmentTime = useCallback(() => {
+        setJudgedAtState(new Date());
+        setTimeMode('live');
+        setAnswered(false);
+    }, []);
 
     // Location for Judgment Moment
-    const [location, setLocation] = useState({
+    const [location, setLocationState] = useState({
         name: 'Hyderabad',
         displayName: 'Hyderabad, Telangana, India',
-        lat: 17.3850,
-        lon: 78.4867,
+        lat: DEFAULT_LAT,
+        lon: DEFAULT_LON,
         timezone: 'Asia/Kolkata',
         tzLabel: 'IST (UTC+05:30)'
     });
 
-    const setNowAsJudgmentTime = useCallback(() => {
-        const now = new Date();
-        setJudgedAt(now);
-        setIsFrozen(true);
-    }, []);
-
-    const freezeJudgmentInstant = useCallback(() => {
-        setIsFrozen(true);
+    const setLocation = useCallback((loc) => {
+        setLocationState(loc);
+        setAnswered(false);
     }, []);
 
     // 6. DRPE Planet Snapshot (Keyed strictly by snapshot date; cached and memoized)
@@ -204,11 +234,15 @@ export function useGulbarga() {
         const localDate = `${getPart('year')}-${getPart('month')}-${getPart('day')}`;
         const localTime = `${getPart('hour')}:${getPart('minute')}`;
 
+        // 0° latitude / longitude are valid places, so only fall back when not a number
+        const lat = Number(location?.lat);
+        const lon = Number(location?.lon);
+
         return getAdaptedRulingPlanets({
             date: localDate,
             time: localTime,
-            lat: Number(location?.lat) || 17.3850,
-            lon: Number(location?.lon) || 78.4867,
+            lat: Number.isFinite(lat) ? lat : DEFAULT_LAT,
+            lon: Number.isFinite(lon) ? lon : DEFAULT_LON,
             timezone: location?.timezone || 'Asia/Kolkata'
         });
     }, [method, judgedAt, location]);
@@ -216,16 +250,16 @@ export function useGulbarga() {
     // 8. Horary Number Entry Details (Classic falls back to Time Chart Lagna when seed is
     //    omitted; TSP requires a seed)
     const numberEntry = useMemo(() => {
-        if (numberRaw != null && Number.isInteger(Number(numberRaw)) && Number(numberRaw) >= 1) {
+        if (numberRaw != null) {
             try {
-                return getHoraryEntry(effectiveSystem, Number(numberRaw));
+                return getHoraryEntry(effectiveSystem, numberRaw);
             } catch {
                 return null;
             }
         }
 
         // If no seed number provided (Classic only): use Time Chart (Lagna at Judgment Instant)
-        if (method === 'classic' && rulingPlanets && rulingPlanets.lagna) {
+        if (method === 'classic' && !numberError && rulingPlanets && rulingPlanets.lagna) {
             const lagna = rulingPlanets.lagna;
             const signName = lagna.sign?.en || lagna.sign || '';
             return {
@@ -243,11 +277,13 @@ export function useGulbarga() {
         }
 
         return null;
-    }, [method, effectiveSystem, numberRaw, rulingPlanets]);
+    }, [method, effectiveSystem, numberRaw, numberError, rulingPlanets]);
 
-    // 9. Pure Evaluation Result (TSP or Classic)
+    const canAnswer = Boolean(numberEntry) && !numberError;
+
+    // 9. Pure Evaluation Result (TSP or Classic) - only once the user asked for it
     const result = useMemo(() => {
-        if (!numberEntry) return null;
+        if (!answered || !numberEntry) return null;
 
         if (method === 'tsp') {
             if (!snapshot || !snapshot.moonLords || !snapshot.planets) return null;
@@ -280,7 +316,7 @@ export function useGulbarga() {
                 snapshot?.planets || {}
             );
         }
-    }, [method, numberEntry, snapshot, tspSettings, rulingPlanets, classicSettings]);
+    }, [answered, method, numberEntry, snapshot, tspSettings, rulingPlanets, classicSettings]);
 
     // 10. History Tracking
     const [history, setHistory] = useState(() => loadGulbargaHistory());
@@ -298,6 +334,7 @@ export function useGulbarga() {
             system: effectiveSystem,
             number: numberRaw || null,
             numberLabel,
+            judgedAt: (judgedAt instanceof Date ? judgedAt : new Date(judgedAt)).toISOString(),
             ascLords: {
                 sign: numberEntry.sign,
                 signLord: numberEntry.signLord,
@@ -314,22 +351,41 @@ export function useGulbarga() {
 
         const updated = addGulbargaHistoryItem(item);
         setHistory(updated);
-    }, [result, numberEntry, question, method, effectiveSystem, numberRaw]);
+    }, [result, numberEntry, question, method, effectiveSystem, numberRaw, judgedAt]);
 
     // Record on the render after a request, so a place resolved during "Get Answer"
     // is already applied to the result being saved
     const [recordRequested, setRecordRequested] = useState(false);
-    const requestRecordJudgment = useCallback(() => setRecordRequested(true), []);
 
     useEffect(() => {
-        if (!recordRequested) return;
+        if (!recordRequested || !result) return;
         recordCurrentJudgment();
         setRecordRequested(false);
-    }, [recordRequested, recordCurrentJudgment]);
+    }, [recordRequested, result, recordCurrentJudgment]);
+
+    /**
+     * Submits the current inputs: stamps a live judgment time to this exact instant,
+     * reveals the answer and records it once in history.
+     */
+    const submitJudgment = useCallback(() => {
+        if (answered) return;
+        resumeLiveAfterAnswerRef.current = (timeMode === 'live');
+        if (timeMode === 'live') {
+            setJudgedAtState(new Date());
+        }
+        // Keep the judgment instant fixed while its answer is on screen
+        setTimeMode('manual');
+        setAnswered(true);
+        setRecordRequested(true);
+    }, [answered, timeMode]);
 
     const handleUpdateOutcome = useCallback((id, outcome) => {
         const updated = updateGulbargaOutcome(id, outcome);
         setHistory(updated);
+    }, []);
+
+    const handleDeleteHistoryItem = useCallback((id) => {
+        setHistory(deleteGulbargaHistoryItem(id));
     }, []);
 
     const handleClearHistory = useCallback(() => {
@@ -348,13 +404,17 @@ export function useGulbarga() {
         number: numberRaw,
         numberInput,
         numberError,
+        numberReducedFrom: numberCheck.reducedFrom,
         numberEntry,
         question,
         judgedAt,
+        timeMode,
         location,
         snapshot,
         rulingPlanets,
         result,
+        answered,
+        canAnswer,
         history,
         accuracyStats,
         tspSettings,
@@ -370,12 +430,12 @@ export function useGulbarga() {
         setJudgedAt,
         setLocation,
         setNowAsJudgmentTime,
-        freezeJudgmentInstant,
         updateTspSettings,
         updateClassicSettings,
-        recordCurrentJudgment,
-        requestRecordJudgment,
+        submitJudgment,
+        clearAnswer,
         handleUpdateOutcome,
+        handleDeleteHistoryItem,
         handleClearHistory
     };
 }

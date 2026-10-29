@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { KP_TRANSLATIONS, getLocalizedPlanet } from '../../utils/kpTranslations';
 import { getPlanetAspectHouses } from '../../utils/kp/kpSignificators';
+import { toOrdinal } from '../../utils/nakshatraUtils';
 import { Shield, Layers, Star, Eye, Sparkles } from 'lucide-react';
 
 export const KPSignificators = ({ significators, lang = 'te' }) => {
@@ -390,7 +391,7 @@ export const KPSignificators = ({ significators, lang = 'te' }) => {
                                                                 >
                                                                     {isTe ? getLocalizedPlanet(asp.planetKey, 'te') : asp.planetKey}
                                                                     <span className="text-[10px] opacity-75 font-mono ml-0.5">
-                                                                        ({isTe ? `${asp.span}వ` : `${asp.span}th`})
+                                                                        ({isTe ? `${asp.span}వ` : toOrdinal(asp.span)})
                                                                     </span>
                                                                 </span>
                                                             ))}
@@ -619,7 +620,7 @@ export const KPSignificators = ({ significators, lang = 'te' }) => {
                                                             >
                                                                 H{asp.house}
                                                                 <span className="text-[10px] opacity-75 font-mono ml-0.5">
-                                                                    ({isTe ? `${asp.span}వ` : `${asp.span}th`})
+                                                                    ({isTe ? `${asp.span}వ` : toOrdinal(asp.span)})
                                                                 </span>
                                                             </span>
                                                         ))}

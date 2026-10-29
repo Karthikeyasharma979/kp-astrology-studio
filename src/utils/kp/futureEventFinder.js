@@ -236,7 +236,9 @@ export function findFutureSupportivePeriods({
         ...rule,
         jointDBA: {
             ...(rule.jointDBA || {}),
-            houses: effectiveHouses
+            houses: effectiveHouses,
+            // Already resolved (or chosen by the user): don't re-add Badhaka / Maraka
+            housesResolved: true
         },
         housesToBeSignified: effectiveHouses
     };

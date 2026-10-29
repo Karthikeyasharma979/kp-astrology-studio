@@ -33,6 +33,7 @@ export const FutureEventTimingFinder = ({
     significators,
     activeRule,
     currentRequiredHouses = [],
+    ascSign = 1,
     lang = 'te',
     onViewDasha = null,
     onEvaluatePeriod = null
@@ -125,6 +126,7 @@ export const FutureEventTimingFinder = ({
                     matchCriteria,
                     minCoverageThreshold: Number(minCoverageThreshold),
                     customRequiredHouses: effectiveHouses,
+                    options: { ascSign },
                     isTe
                 });
 

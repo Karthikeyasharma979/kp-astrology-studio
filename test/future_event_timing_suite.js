@@ -578,6 +578,33 @@ it('19. Formatting and data consistency for responsive rendering', () => {
     assert.ok(['satisfied', 'partially-satisfied', 'afflicted', 'not-satisfied'].includes(candidate.status));
 });
 
+it('20. Custom required houses are not re-expanded with Badhaka / Maraka, and the default resolves them', () => {
+    const deathRule = KP_HOUSE_GROUPING_RULES.find(r => r.id === 'kp.c1.t1.r9.13'); // "Badhaka, Maraka, 12"
+    assert.ok(deathRule, 'Death rule not found');
+    const base = {
+        dashaResult,
+        significators: benchmarkSignificators,
+        rule: deathRule,
+        searchStartDate: '2027-01-01',
+        searchEndDate: '2029-01-01',
+        evaluationDepth: 2,
+        matchCriteria: MATCH_CRITERIA_OPTIONS.ANY,
+        options: { ascSign: 7 } // Libra (movable) -> Badhaka 11
+    };
+
+    const custom = findFutureSupportivePeriods({ ...base, customRequiredHouses: [12] });
+    assert.ok(custom.isValid && custom.results.length > 0, 'custom search must return periods');
+    for (const r of custom.results) {
+        assert.deepStrictEqual(r.requiredHouses, [12], 'user-chosen houses must be used as-is');
+    }
+
+    const resolved = findFutureSupportivePeriods(base);
+    assert.ok(resolved.isValid && resolved.results.length > 0, 'default search must return periods');
+    for (const r of resolved.results) {
+        assert.deepStrictEqual(r.requiredHouses, [2, 7, 11, 12], 'default search adds Badhaka 11 and Maraka 2, 7');
+    }
+});
+
 console.log(`\n=============================================================`);
 console.log(`FUTURE EVENT TIMING SUITE: ${passed} Passed, ${failed} Failed.`);
 console.log(`=============================================================\n`);

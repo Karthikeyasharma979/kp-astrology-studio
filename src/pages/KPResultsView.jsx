@@ -24,6 +24,7 @@ import { ReportGenerationModal } from '../components/report/ReportGenerationModa
 import { KP_TRANSLATIONS, getLocalizedPlanet, getLocalizedNakshatra } from '../utils/kpTranslations';
 import { safeSaveSessionResult, safeSaveSessionParams, safeClearEventAnalysisState } from '../utils/storageUtils';
 import { API_BASE_URL } from '../utils/apiConfig.js';
+import { getNakshatraAndPada } from '../utils/nakshatraUtils.js';
 
 export const KPResultsView = ({ lang = 'te', onLangChange }) => {
     const location = useLocation();
@@ -52,9 +53,10 @@ export const KPResultsView = ({ lang = 'te', onLangChange }) => {
 
     // Parse URL search parameters on mount (?mode=horary&kp=137&rot=7)
     const initialUrlParams = useMemo(() => {
-        if (typeof window === 'undefined') return { mode: 'natal', kp: null, rot: 1 };
+        if (typeof window === 'undefined') return { mode: null, kp: null, rot: 1 };
         const sp = new URLSearchParams(window.location.search);
-        const mode = sp.get('mode') === 'horary' ? 'horary' : 'natal';
+        // null when absent, so a cached chart's mode is only used if the URL says nothing
+        const mode = sp.has('mode') ? (sp.get('mode') === 'horary' ? 'horary' : 'natal') : null;
         const kpRaw = parseInt(sp.get('kp'), 10);
         const kp = (!isNaN(kpRaw) && kpRaw >= 1 && kpRaw <= 249) ? kpRaw : null;
         const rotRaw = parseInt(sp.get('rot'), 10);
@@ -64,11 +66,12 @@ export const KPResultsView = ({ lang = 'te', onLangChange }) => {
 
     const [chartMode, setChartMode] = useState(() => {
         if (location.state?.currentParams?.chartMode) return location.state.currentParams.chartMode;
+        if (initialUrlParams.mode) return initialUrlParams.mode;
         if (currentParams?.chartMode) return currentParams.chartMode;
-        return initialUrlParams.mode;
+        return 'natal';
     });
     const [horaryState, setHoraryState] = useState(() => {
-        const passedKp = location.state?.currentParams?.kpNumber ?? currentParams?.kpNumber ?? initialUrlParams.kp;
+        const passedKp = location.state?.currentParams?.kpNumber ?? initialUrlParams.kp ?? currentParams?.kpNumber;
         if (passedKp != null) {
             return { number: passedKp, source: 'user', generatedAt: Date.now() };
         }
@@ -96,6 +99,8 @@ export const KPResultsView = ({ lang = 'te', onLangChange }) => {
 
     // Horizontal Tab Navigation scrolling helpers
     const tabsContainerRef = useRef(null);
+    const tabsBarRef = useRef(null);
+    const tabPanelRef = useRef(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(false);
 
@@ -123,13 +128,20 @@ export const KPResultsView = ({ lang = 'te', onLangChange }) => {
         };
     }, [checkTabsScroll, activeTab]);
 
+    // Centers a tab button by scrolling only the tab strip. (Element.scrollIntoView would also
+    // scroll the window, fighting the jump to the panel top in handleTabClick.)
+    const centerTabButton = useCallback((tabId) => {
+        const el = tabsContainerRef.current;
+        const btn = el?.querySelector(`[data-tab-id="${tabId}"]`);
+        if (!el || !btn) return;
+        const btnRect = btn.getBoundingClientRect();
+        const left = el.scrollLeft + (btnRect.left - el.getBoundingClientRect().left) - (el.clientWidth - btnRect.width) / 2;
+        el.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
+    }, []);
+
     useEffect(() => {
-        if (!tabsContainerRef.current) return;
-        const btn = tabsContainerRef.current.querySelector(`[data-tab-id="${activeTab}"]`);
-        if (btn) {
-            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        }
-    }, [activeTab]);
+        centerTabButton(activeTab);
+    }, [activeTab, centerTabButton]);
 
     const handleTabsScroll = (direction) => {
         const el = tabsContainerRef.current;
@@ -152,13 +164,16 @@ export const KPResultsView = ({ lang = 'te', onLangChange }) => {
     };
 
     const handleTabClick = (tabId) => {
+        // When scrolled into a long tab, open the new tab at its top (just under the sticky
+        // tab bar) instead of mid-content. The panel container's top is the same for every
+        // tab, so this can run before the new tab renders.
+        const barRect = tabsBarRef.current?.getBoundingClientRect();
+        const panelRect = tabPanelRef.current?.getBoundingClientRect();
+        if (barRect && panelRect && panelRect.top < barRect.bottom) {
+            window.scrollBy({ top: panelRect.top - barRect.bottom - 12, behavior: 'auto' });
+        }
         setActiveTab(tabId);
-        setTimeout(() => {
-            const btn = tabsContainerRef.current?.querySelector(`[data-tab-id="${tabId}"]`);
-            if (btn) {
-                btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            }
-        }, 50);
+        setTimeout(() => centerTabButton(tabId), 50);
     };
 
     // Auto-refresh significators if loaded from older session cache without aspect indications
@@ -682,7 +697,11 @@ export const KPResultsView = ({ lang = 'te', onLangChange }) => {
                             <h1 className="text-3xl sm:text-4xl font-serif font-black text-gray-950 dark:text-white flex flex-wrap items-center gap-3">
                                 <span>{currentParams.name}</span>
                                 <span className="text-xs sm:text-sm font-sans font-bold px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-950/80 border border-amber-300 dark:border-amber-700/60 text-amber-900 dark:text-amber-200 capitalize">
-                                    {currentParams.gender === 'male' ? (isTe ? 'పురుషుడు' : 'Male') : (isTe ? 'స్త్రీ' : 'Female')}
+                                    {currentParams.gender === 'male'
+                                        ? (isTe ? 'పురుషుడు' : 'Male')
+                                        : currentParams.gender === 'female'
+                                            ? (isTe ? 'స్త్రీ' : 'Female')
+                                            : (isTe ? 'ఇతర' : 'Other')}
                                 </span>
                             </h1>
 
@@ -852,7 +871,14 @@ export const KPResultsView = ({ lang = 'te', onLangChange }) => {
                                         </span>
                                     </div>
                                     <div className="text-xs text-gray-500 dark:text-gray-400 font-mono">
-                                        {isTe ? `పాదం ${activeKpData.nakshatra?.pada || 1}` : `Pada ${activeKpData.nakshatra?.pada || 1}`}
+                                        {(() => {
+                                            // Chart results carry no pada; derive it from the Moon's longitude
+                                            const moonLon = activeKpData.planets?.find(p => p.key === 'Moon')?.longitude;
+                                            const pada = activeKpData.nakshatra?.pada
+                                                ?? (Number.isFinite(moonLon) ? getNakshatraAndPada(moonLon).pada : null);
+                                            if (!pada) return null;
+                                            return isTe ? `పాదం ${pada}` : `Pada ${pada}`;
+                                        })()}
                                     </div>
                                 </div>
                             </div>
@@ -882,7 +908,7 @@ export const KPResultsView = ({ lang = 'te', onLangChange }) => {
                 })()}
 
                 {/* Section C: Sticky Navigation Tabs with Scroll Arrows & Smooth Controls */}
-                <div className="bg-white/95 dark:bg-slate-900/95 p-1.5 sm:p-2 rounded-2xl border border-amber-200/80 dark:border-white/10 shadow-md backdrop-blur-md sticky top-16 sm:top-[74px] z-30 print:hidden flex items-center gap-1 sm:gap-2">
+                <div ref={tabsBarRef} className="bg-white/95 dark:bg-slate-900/95 p-1.5 sm:p-2 rounded-2xl border border-amber-200/80 dark:border-white/10 shadow-md backdrop-blur-md sticky top-16 sm:top-[74px] z-30 print:hidden flex items-center gap-1 sm:gap-2">
                     {/* Left Scroll Button */}
                     <button
                         type="button"
@@ -955,7 +981,7 @@ export const KPResultsView = ({ lang = 'te', onLangChange }) => {
                 </div>
 
                 {/* Section D: Active Tab Content Area - Persistent Panels Prevent Unintended Component Remounting */}
-                <div className="bg-white dark:bg-slate-900/90 rounded-3xl p-6 sm:p-8 border border-amber-200/80 dark:border-white/10 shadow-md min-h-[500px]">
+                <div ref={tabPanelRef} className="bg-white dark:bg-slate-900/90 rounded-3xl p-6 sm:p-8 border border-amber-200/80 dark:border-white/10 shadow-md min-h-[500px]">
                     {/* Tab 1: KP Chart */}
                     <div className={activeTab === 'chart' ? 'space-y-6' : 'hidden'}>
                         <div>
@@ -1079,10 +1105,8 @@ export const KPResultsView = ({ lang = 'te', onLangChange }) => {
                     {/* Tab 8: KP Event-Based Significator Analysis - Preserves Selection State In-Memory */}
                     <div className={activeTab === 'event-analysis' ? 'space-y-6' : 'hidden'}>
                         <KPEventSignificatorAnalysis
-                            kpData={{
-                                ...(displayKpResult || kpResult),
-                                birthInstantUtc: currentParams ? `${currentParams.birthDate}T${currentParams.birthTime}:00` : null
-                            }}
+                            kpData={displayKpResult || kpResult}
+                            birthDetails={currentParams}
                             lang={lang}
                             onLoadBenchmark={loadPreset1998}
                             onViewChart={() => setActiveTab('chart')}

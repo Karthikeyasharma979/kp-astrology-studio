@@ -114,6 +114,20 @@ export function formatUnitsToDMS(units, isSignEnd = false) {
 }
 
 /**
+ * Formats the end boundary of a span as "<Sign> D°MM'SS\"", naming the sign the end
+ * point actually falls in (a 1-27 nakshatra span can cross into the next sign).
+ * @param {string} startSign - Sign of the span start
+ * @param {number} endUnits
+ * @param {boolean} isSignEnd - End coincides with the end of the start sign
+ * @returns {string}
+ */
+function formatEndDMS(startSign, endUnits, isSignEnd) {
+    if (isSignEnd) return `${startSign} 30°00'00"`;
+    const endSign = ZODIAC_SIGNS[Math.floor(endUnits / SIGN) % 12].name;
+    return `${endSign} ${formatUnitsToDMS(endUnits)}`;
+}
+
+/**
  * Format arc-seconds relative to sign start into DMS string (compatibility)
  * @param {number} inSignSec
  * @param {boolean} [isSignEnd=false]
@@ -279,7 +293,7 @@ function buildKp249Table() {
             subLord: lords.subLord,
             subSubLord: lords.subSubLord,
             startDMS: `${lords.sign} ${formatUnitsToDMS(startUnits)}`,
-            endDMS: isSignEnd ? `${lords.sign} 30°00'00"` : `${lords.sign} ${formatUnitsToDMS(endUnits)}`,
+            endDMS: formatEndDMS(lords.sign, endUnits, isSignEnd),
             isSplit,
             splitPart
         });
@@ -344,7 +358,7 @@ function buildKp2193Table() {
             subLord: lords.subLord,
             subSubLord: lords.subSubLord,
             startDMS: `${lords.sign} ${formatUnitsToDMS(startUnits)}`,
-            endDMS: isSignEnd ? `${lords.sign} 30°00'00"` : `${lords.sign} ${formatUnitsToDMS(endUnits)}`
+            endDMS: formatEndDMS(lords.sign, endUnits, isSignEnd)
         });
     }
 
@@ -395,7 +409,7 @@ function buildKp27Table() {
             subLord: nLord,
             subSubLord: nLord,
             startDMS: `${lords.sign} ${formatUnitsToDMS(startUnits)}`,
-            endDMS: isSignEnd ? `${lords.sign} 30°00'00"` : `${lords.sign} ${formatUnitsToDMS(endUnits)}`
+            endDMS: formatEndDMS(lords.sign, endUnits, isSignEnd)
         });
     }
     return table;
@@ -461,6 +475,20 @@ export function getHoraryEntry(system, number) {
  */
 export function getKpNumberEntry(kpNo) {
     return getHoraryEntry('1-249', kpNo);
+}
+
+/**
+ * Maps an entry of any horary system (1-9, 1-27, 1-249, 1-2193) to the 1-249 KP number
+ * whose span contains the entry's start point. Uses exact integer units, so a start that
+ * sits on a boundary is never pushed into the previous span by float rounding.
+ * @param {{ startUnits: number }} entry
+ * @returns {number|null} 1..249, or null when the entry has no start position
+ */
+export function getKp249NumberForEntry(entry) {
+    if (!entry || !Number.isInteger(entry.startUnits)) return null;
+    const units = ((entry.startUnits % CIRCLE) + CIRCLE) % CIRCLE;
+    const match = KP_249_TABLE.find(item => units >= item.startUnits && units < item.endUnits);
+    return match ? match.no : null;
 }
 
 /**

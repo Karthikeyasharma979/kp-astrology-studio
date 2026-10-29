@@ -27,7 +27,7 @@ export const StepsList = ({
                     const isSatisfied = line.includes('SATISFIED');
                     const isNotSatisfied = line.includes('NOT satisfied') || line.includes('Missing');
                     const isPunarphoo = line.includes('Punarphoo');
-                    const isHeader = line.startsWith('ASCENDANT') || line.startsWith('MOON') || line.startsWith('Number lords');
+                    const isHeader = line.startsWith('ASCENDANT') || line.startsWith('MOON') || line.startsWith('Number lords') || line.startsWith('Time Chart Lagna lords') || line.startsWith('Ruling Planets');
                     const isSummary = line.includes('Hence according to');
 
                     let icon = null;

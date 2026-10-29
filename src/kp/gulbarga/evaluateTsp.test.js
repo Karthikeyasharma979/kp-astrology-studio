@@ -99,6 +99,7 @@ describe("Hand-written Specific Assertions from §9.1", () => {
         assert.strictEqual(res.decidedBy, 'SPECIAL_ASC_SS_MOON');
         assert.strictEqual(res.punarphoo.applied, true);
         assert.strictEqual(res.answer, 'NO');
+        assert.match(res.punarphoo.reason, /\(3rd whole-sign aspect\)/);
     });
 
     test("book-13 (121/249, 6-Apr-2014): 3/3 YES inverted to NO", () => {
@@ -150,5 +151,15 @@ describe("Hand-written Specific Assertions from §9.1", () => {
         const res = evaluateTsp(b08.ascLords, b08.moonLords, b08.planets, { ...DEFAULT_TSP_SETTINGS, specialRule3: true });
         assert.strictEqual(res.answer, 'YES');
         assert.strictEqual(res.decidedBy, 'SPECIAL_RULE_3');
+    });
+});
+
+describe("TSP explanation notation", () => {
+    test("Moon lords line uses the sign LORD (like the Ascendant line), not the sign name", () => {
+        const c = fixtures.cases.find(x => x.id === 'book-01');
+        const moonLords = { ...c.moonLords, sign: 'Taurus', signLord: 'Venus' };
+        const res = evaluateTsp(c.ascLords, moonLords, c.planets, DEFAULT_TSP_SETTINGS);
+        assert.strictEqual(res.explanation[1], 'MOON lords are Venus-Mars-Saturn-Saturn');
+        assert.strictEqual(res.explanation[0], 'ASCENDANT lords are Mars-Ketu-Saturn-Saturn');
     });
 });

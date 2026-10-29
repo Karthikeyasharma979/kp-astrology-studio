@@ -1,5 +1,5 @@
-import React from 'react';
-import { Sparkles, HelpCircle, Shield, Compass, BookOpen } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
+import { Sparkles } from 'lucide-react';
 import { useGulbarga } from '../hooks/useGulbarga.js';
 import { MethodSwitch } from '../components/gulbarga/MethodSwitch.jsx';
 import { QuestionCard } from '../components/gulbarga/QuestionCard.jsx';
@@ -10,6 +10,7 @@ import { ResultCard } from '../components/gulbarga/ResultCard.jsx';
 import { StepsList } from '../components/gulbarga/StepsList.jsx';
 import { SettingsPanel } from '../components/gulbarga/SettingsPanel.jsx';
 import { HistoryTable } from '../components/gulbarga/HistoryTable.jsx';
+import { InfoPanel } from '../components/gulbarga/InfoPanel.jsx';
 
 /**
  * Gulbarga Theory Page (KP Yes/No Shortcut: TSP + Classic Gulbarga)
@@ -24,13 +25,17 @@ export const GulbargaPage = ({ lang = 'te' }) => {
         number,
         numberInput,
         numberError,
+        numberReducedFrom,
         numberEntry,
         question,
         judgedAt,
+        timeMode,
         location,
         snapshot,
         rulingPlanets,
         result,
+        answered,
+        canAnswer,
         history,
         accuracyStats,
         tspSettings,
@@ -43,26 +48,30 @@ export const GulbargaPage = ({ lang = 'te' }) => {
         setJudgedAt,
         setLocation,
         setNowAsJudgmentTime,
-        freezeJudgmentInstant,
         updateTspSettings,
         updateClassicSettings,
-        requestRecordJudgment,
+        submitJudgment,
         handleUpdateOutcome,
+        handleDeleteHistoryItem,
         handleClearHistory
     } = useGulbarga();
 
-    const handleGetAnswer = () => {
-        freezeJudgmentInstant();
-        requestRecordJudgment();
-    };
+    // Bring the answer into view once it is revealed
+    const resultRef = useRef(null);
+    const showResult = answered && Boolean(result);
+    useEffect(() => {
+        if (showResult && resultRef.current) {
+            resultRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }, [showResult]);
 
     return (
         <div className="min-h-screen pb-24 font-sans">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 space-y-8">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 space-y-6 sm:space-y-8">
                 {/* 1. Header Section */}
                 <div className="text-center max-w-2xl mx-auto space-y-3">
                     <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-100 dark:bg-orange-950/70 border border-orange-300 dark:border-orange-700/60 text-orange-950 dark:text-orange-200 text-xs font-bold">
-                        <Sparkles className="w-4 h-4 text-orange-500 animate-pulse" />
+                        <Sparkles className="w-4 h-4 text-orange-500" />
                         <span>{isTe ? "గుల్బర్గా సిద్ధాంతం & TSP వేదిక" : "Dr. Kar's Theory of Short Prediction"}</span>
                     </div>
 
@@ -93,19 +102,33 @@ export const GulbargaPage = ({ lang = 'te' }) => {
                     numberInput={numberInput}
                     onNumberChange={handleNumberChange}
                     numberError={numberError}
+                    numberReducedFrom={numberReducedFrom}
                     onRandomize={randomizeNumber}
                     system={system}
                     method={method}
                     judgedAt={judgedAt}
+                    timeMode={timeMode}
                     onJudgedAtChange={setJudgedAt}
                     onSetNow={setNowAsJudgmentTime}
                     location={location}
                     onLocationChange={setLocation}
-                    onGetAnswer={handleGetAnswer}
+                    onGetAnswer={submitJudgment}
+                    answered={answered}
+                    canAnswer={canAnswer}
                     lang={lang}
                 />
 
-                {/* 4. Resolved Horary Number Chip */}
+                {/* 4. Theoretical Settings & Toggles (inputs to the judgment, so kept with the form) */}
+                <SettingsPanel
+                    method={method}
+                    tspSettings={tspSettings}
+                    onUpdateTspSettings={updateTspSettings}
+                    classicSettings={classicSettings}
+                    onUpdateClassicSettings={updateClassicSettings}
+                    lang={lang}
+                />
+
+                {/* 5. Resolved Horary Number Chip */}
                 {numberEntry && (
                     <NumberChip
                         entry={numberEntry}
@@ -114,7 +137,29 @@ export const GulbargaPage = ({ lang = 'te' }) => {
                     />
                 )}
 
-                {/* 5. Snapshot Card (TSP) or Ruling Planets Card (Classic) */}
+                {/* 6. Answer + step-by-step explanation (only after "Get Answer") */}
+                {showResult && (
+                    <div ref={resultRef} className="space-y-6 sm:space-y-8 scroll-mt-24">
+                        <ResultCard
+                            result={result}
+                            method={method}
+                            system={system}
+                            number={number}
+                            numberEntry={numberEntry}
+                            question={question}
+                            judgedAt={judgedAt}
+                            location={location}
+                            lang={lang}
+                        />
+
+                        <StepsList
+                            result={result}
+                            lang={lang}
+                        />
+                    </div>
+                )}
+
+                {/* 7. Snapshot Card (TSP) or Ruling Planets Card (Classic) */}
                 {method === 'tsp' ? (
                     <SnapshotCard
                         snapshot={snapshot}
@@ -130,46 +175,18 @@ export const GulbargaPage = ({ lang = 'te' }) => {
                     />
                 )}
 
-                {/* 6. Primary Result Card (Big YES / NO Banner) */}
-                {result && (
-                    <ResultCard
-                        result={result}
-                        method={method}
-                        system={system}
-                        number={number}
-                        numberEntry={numberEntry}
-                        judgedAt={judgedAt}
-                        location={location}
-                        lang={lang}
-                    />
-                )}
-
-                {/* 7. Step-by-Step Rule Explanation */}
-                {result && (
-                    <StepsList
-                        result={result}
-                        lang={lang}
-                    />
-                )}
-
-                {/* 8. Theoretical Settings & Toggles */}
-                <SettingsPanel
-                    method={method}
-                    tspSettings={tspSettings}
-                    onUpdateTspSettings={updateTspSettings}
-                    classicSettings={classicSettings}
-                    onUpdateClassicSettings={updateClassicSettings}
-                    lang={lang}
-                />
-
-                {/* 9. Query History & Live Accuracy Metrics */}
+                {/* 8. Query History & Live Accuracy Metrics */}
                 <HistoryTable
                     history={history}
                     accuracyStats={accuracyStats}
                     onUpdateOutcome={handleUpdateOutcome}
+                    onDeleteItem={handleDeleteHistoryItem}
                     onClearHistory={handleClearHistory}
                     lang={lang}
                 />
+
+                {/* 9. How it works */}
+                <InfoPanel lang={lang} />
             </div>
         </div>
     );

@@ -22,6 +22,7 @@
 import { DEFAULT_TSP_SETTINGS } from './types.js';
 import { getSignIndex, aspectsSign, SIGN_NAMES, EXTRA_ASPECTS } from './vedicAspects.js';
 import { agentsOf } from './nodeAgents.js';
+import { toOrdinal } from '../../utils/nakshatraUtils.js';
 
 /**
  * Normalizes lord names from diverse input structures
@@ -30,7 +31,8 @@ import { agentsOf } from './nodeAgents.js';
  */
 function normalizeLords(obj = {}) {
     return {
-        sign: obj.sign || obj.signName || '',
+        // Book notation lists the sign LORD (e.g. "Ve-Mo-Ke-Ma"), for both Ascendant and Moon
+        sign: obj.signLord || obj.sign || obj.signName || '',
         star: obj.star || obj.starLord || '',
         sub: obj.sub || obj.subLord || '',
         subSub: obj.subSub || obj.subSubLord || ''
@@ -227,7 +229,7 @@ export function evaluateTsp(rawAscLords, rawMoonLords, planets = {}, customSetti
             } else if (aspectsSign('Saturn', saturnSignIdx, moonSignIdx)) {
                 const dist = ((moonSignIdx - saturnSignIdx + 12) % 12) + 1;
                 punarphooApplied = true;
-                punarphooReason = `Saturn in ${saturnSignName} aspects Moon in ${moonSignName} (${dist}th whole-sign aspect).`;
+                punarphooReason = `Saturn in ${saturnSignName} aspects Moon in ${moonSignName} (${toOrdinal(dist)} whole-sign aspect).`;
             } else if (moonStar === 'Saturn') {
                 punarphooApplied = true;
                 punarphooReason = `Moon is in Saturn's star.`;

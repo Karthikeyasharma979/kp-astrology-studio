@@ -6,9 +6,29 @@ import { calculateKPKundli, KP_AYANAMSHA_MODES } from '../services/kpCalculator'
 import { calculateKPSignificators } from '../utils/kp/kpSignificators';
 import { safeSaveSessionResult } from '../utils/storageUtils';
 
+const benchmarkBirthDetails = (isTe) => ({
+    name: isTe ? 'రమేష్ శర్మ' : 'Ramesh Sharma',
+    gender: 'male',
+    birthDate: '1998-08-15',
+    birthTime: '10:30',
+    birthPlace: 'Hyderabad, India',
+    lat: 17.3850,
+    lon: 78.4867,
+    timezone: 'Asia/Kolkata'
+});
+
 export const KPEventAnalysisPage = ({ lang = 'te' }) => {
     const navigate = useNavigate();
     const isTe = lang === 'te';
+
+    // Local birth details for reports (the cached chart's own form input, else the benchmark)
+    const [birthDetails, setBirthDetails] = useState(() => {
+        try {
+            const params = sessionStorage.getItem('kp_studio_params');
+            if (params && sessionStorage.getItem('kp_studio_result')) return JSON.parse(params);
+        } catch (_) {}
+        return benchmarkBirthDetails(isTe);
+    });
 
     // Retrieve cached chart data or initialize with benchmark
     const [kpData, setKpData] = useState(() => {
@@ -59,6 +79,7 @@ export const KPEventAnalysisPage = ({ lang = 'te' }) => {
             chartLabel: isTe ? 'రమేష్ శర్మ (బెంచ్‌మార్క్ చార్ట్)' : 'Ramesh Sharma (Benchmark Chart)'
         };
         setKpData(data);
+        setBirthDetails(benchmarkBirthDetails(isTe));
         safeSaveSessionResult(data);
     };
 
@@ -90,6 +111,7 @@ export const KPEventAnalysisPage = ({ lang = 'te' }) => {
                 {/* Main Component */}
                 <KPEventSignificatorAnalysis
                     kpData={kpData}
+                    birthDetails={birthDetails}
                     lang={lang}
                     onLoadBenchmark={handleLoadBenchmark}
                     onViewChart={() => navigate('/chart')}

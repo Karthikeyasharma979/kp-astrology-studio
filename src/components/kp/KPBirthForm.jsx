@@ -70,7 +70,25 @@ export const KPBirthForm = ({ onCalculate, isCalculating, initialValues, lang = 
     };
 
     // Location state
-    const [selectedLocation, setSelectedLocation] = useState(POPULAR_LOCATIONS[0]);
+    // Restore the place of the chart being edited (or prefilled), else default to the first city
+    const [selectedLocation, setSelectedLocation] = useState(() => {
+        const lat = Number(initialValues?.lat);
+        const lon = Number(initialValues?.lon);
+        if (initialValues?.lat == null || initialValues?.lon == null || !Number.isFinite(lat) || !Number.isFinite(lon) || !initialValues?.timezone) {
+            return POPULAR_LOCATIONS[0];
+        }
+        const known = POPULAR_LOCATIONS.find(l => Math.abs(l.lat - lat) < 1e-4 && Math.abs(l.lon - lon) < 1e-4);
+        if (known) return known;
+        return {
+            id: 'initial',
+            name: initialValues.birthPlace || `${lat.toFixed(4)}, ${lon.toFixed(4)}`,
+            displayName: initialValues.birthPlace || `${lat.toFixed(4)}, ${lon.toFixed(4)}`,
+            lat,
+            lon,
+            timezone: initialValues.timezone,
+            tzLabel: initialValues.tzLabel || ''
+        };
+    });
     const [isCustom, setIsCustom] = useState(false);
     const [customCoords, setCustomCoords] = useState({
         lat: '17.3850',
@@ -80,8 +98,8 @@ export const KPBirthForm = ({ onCalculate, isCalculating, initialValues, lang = 
 
     // Advanced KP Configuration
     const [showAdvanced, setShowAdvanced] = useState(false);
-    const [ayanamshaMode, setAyanamshaMode] = useState(KP_AYANAMSHA_MODES.KP_NEW);
-    const [nodeMode, setNodeMode] = useState('mean');
+    const [ayanamshaMode, setAyanamshaMode] = useState(initialValues?.ayanamshaMode || KP_AYANAMSHA_MODES.KP_NEW);
+    const [nodeMode, setNodeMode] = useState(initialValues?.nodeMode || 'mean');
 
     const [formError, setFormError] = useState(null);
 

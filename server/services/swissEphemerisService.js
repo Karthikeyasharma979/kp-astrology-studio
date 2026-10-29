@@ -144,6 +144,9 @@ function calculateKPKundliSwiss({
 
     // 3. Configure KP Sidereal Ayanamsha
     const ayanamsha = getKPAyanamsha(jd_ut, ayanamshaMode);
+    // Swiss sidereal output (SEFLG_SIDEREAL) is always SE_SIDM_KRISHNAMURTI (KP_NEW);
+    // shift by the difference so KP_ORIGINAL / KP_STRAIGHT are actually applied.
+    const ayanamshaShift = ayanamsha - getKPAyanamsha(jd_ut, KP_AYANAMSHA_MODES.KP_NEW);
 
     // 4. Placidus House Cusps & Ascendant
     let cusps;
@@ -183,7 +186,7 @@ function calculateKPKundliSwiss({
         // hRes.data.houses contains 12 cusps
         const rawCusps = hRes.data.houses;
         cusps = rawCusps.map((siderealDeg, index) => {
-            const normSidereal = normalizeDeg(siderealDeg);
+            const normSidereal = normalizeDeg(siderealDeg - ayanamshaShift);
             const resolved = resolveKPLongitude(normSidereal);
             return {
                 houseNumber: index + 1,
@@ -200,7 +203,7 @@ function calculateKPKundliSwiss({
             };
         });
 
-        const ascendantDeg = normalizeDeg(hRes.data.points[0]);
+        const ascendantDeg = normalizeDeg(hRes.data.points[0] - ayanamshaShift);
         const lagnaResolved = resolveKPLongitude(ascendantDeg);
         lagnaCusp = {
             houseNumber: 1,
@@ -226,7 +229,7 @@ function calculateKPKundliSwiss({
         const sidRes = sweph.calc_ut(jd_ut, b.id, SID_FLAGS);
         const tropRes = sweph.calc_ut(jd_ut, b.id, TROP_FLAGS);
 
-        const siderealLon = normalizeDeg(sidRes.data[0]);
+        const siderealLon = normalizeDeg(sidRes.data[0] - ayanamshaShift);
         const tropicalLon = normalizeDeg(tropRes.data[0]);
         const speed = sidRes.data[3];
         const isRetrograde = (b.key !== 'Sun' && b.key !== 'Moon') && (speed < 0);
@@ -265,7 +268,7 @@ function calculateKPKundliSwiss({
     const rahuSidRes = sweph.calc_ut(jd_ut, nodeBodyId, SID_FLAGS);
     const rahuTropRes = sweph.calc_ut(jd_ut, nodeBodyId, TROP_FLAGS);
 
-    const rahuSidereal = normalizeDeg(rahuSidRes.data[0]);
+    const rahuSidereal = normalizeDeg(rahuSidRes.data[0] - ayanamshaShift);
     const ketuSidereal = normalizeDeg(rahuSidereal + 180.0);
 
     const rahuTropical = normalizeDeg(rahuTropRes.data[0]);
